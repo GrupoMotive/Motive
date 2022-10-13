@@ -1,6 +1,9 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { rootCertificates } from 'tls';
+import { Categoria } from './categoria/entities/categoria.entity';
+import { Produto } from './produto/entities/produto.entity';
+import { Usuario } from './usuario/entities/usuario.entity';
 
 @Module({
   imports: [
@@ -11,7 +14,7 @@ import { rootCertificates } from 'tls';
       username: 'root',
       password: 'root',
       database: 'db_motive',
-      entities: [],
+      entities: [Usuario,Categoria,Produto],
       synchronize: true,
     })
   ],

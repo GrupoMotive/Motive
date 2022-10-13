@@ -1,6 +1,5 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { rootCertificates } from 'tls';
 import { Categoria } from './categoria/entities/categoria.entity';
 import { Produto } from './produto/entities/produto.entity';
 import { Usuario } from './usuario/entities/usuario.entity';
@@ -14,13 +13,13 @@ import { Usuario } from './usuario/entities/usuario.entity';
       username: 'root',
       password: 'root',
       database: 'db_motive',
-      entities: [Usuario,Categoria,Produto],
+      entities: [Categoria, Usuario, Produto],
       synchronize: true,
     })
   ],
   controllers: [],
   providers: [],
 })
-export class AppModule {}
+export class AppModule { }
 
 

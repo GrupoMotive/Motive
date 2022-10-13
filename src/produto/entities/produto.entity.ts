@@ -1,28 +1,26 @@
 import { IsNotEmpty } from "class-validator";
 import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
-
-@Entity({name:'tb_produtos'})
-export class Produto{
+@Entity({ name: 'tb_produtos' })
+export class Produto {
 
     @PrimaryGeneratedColumn()
-    id:number
+    id: number
 
     @IsNotEmpty()
-    @Column({length:120,nullable: false})
-    nome:string
+    @Column({ length: 120, nullable: false })
+    nome: string
 
     @IsNotEmpty()
-    @Column({length:150,nullable:false})
-    local:string
+    @Column({ length: 150, nullable: false })
+    local: string
 
     @IsNotEmpty()
-    @Column({length:4,nullable:false})
-    valor:number
+    @Column({ nullable: false })
+    valor: number
 
     @IsNotEmpty()
-    @Column({length:45,nullable:false})
-    faixa_etaria:string
-
+    @Column({ length: 45, nullable: false })
+    faixa_etaria: string
 
 }

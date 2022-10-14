@@ -5,7 +5,7 @@ import { Repository } from "typeorm";
 
 
 @Injectable()
-export class CategoriaServices {
+export class CategoriaService {
 
     constructor(
         @InjectRepository(Categoria)

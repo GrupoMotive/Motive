@@ -11,6 +11,11 @@ export class ProdutoService {
     ) { }
 
     async create(produto: Produto): Promise<Produto> {
+
+        if (produto.valor >= 100) {
+            throw new HttpException('O valor é maior do que o permitido!', HttpStatus.BAD_REQUEST);
+        }
+
         return await this.produtoRepository.save(produto);
     }
 

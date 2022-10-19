@@ -1,7 +1,7 @@
 import { Body, Controller, Delete, Get, HttpCode, HttpStatus, Param, ParseIntPipe, Post, Put } from "@nestjs/common";
-import { Categoria } from "src/categoria/entities/categoria.entity";
 import { CategoriaService } from "src/categoria/services/categoria.service";
 import { DeleteResult } from "typeorm";
+import { Categoria } from "src/categoria/entities/categoria.entity";
 
 @Controller('/categoria')
 export class CategoriaController {
@@ -11,7 +11,7 @@ export class CategoriaController {
     ) { }
 
     @Post()
-    @HttpCode(HttpStatus.OK)
+    @HttpCode(HttpStatus.CREATED)
     callCreate(@Body() categoria: Categoria): Promise<Categoria> {
         return this.categoriaService.create(categoria);
     }

@@ -9,7 +9,7 @@ export class ProdutoController {
     ) { }
 
     @Post()
-    @HttpCode(HttpStatus.OK)
+    @HttpCode(HttpStatus.CREATED)
     callCreate(@Body() produto: Produto): Promise<Produto> {
         return this.produtoService.create(produto);
     }

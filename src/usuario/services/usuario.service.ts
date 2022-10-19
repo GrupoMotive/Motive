@@ -4,7 +4,6 @@ import { InjectRepository } from "@nestjs/typeorm";
 import { DeleteResult, ILike, Repository } from "typeorm";
 import { Usuario } from "src/usuario/entities/usuario.entity";
 
-
 @Injectable()
 export class UsuarioService {
     constructor(

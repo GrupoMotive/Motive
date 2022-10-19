@@ -15,12 +15,23 @@ export class ProdutoService {
     }
 
     async findAll(): Promise<Produto[]> {
-        return await this.produtoRepository.find()
+        return await this.produtoRepository.find({
+            relations: {
+                categoria: true
+            }
+        });
     }
 
     async findById(id: number): Promise<Produto> {
 
-        const buscarProduto = await this.produtoRepository.findOneBy({ id });
+        const buscarProduto = await this.produtoRepository.findOne({
+            where: {
+                id
+            },
+            relations: {
+                categoria: true
+            }
+        });
 
         if (!buscarProduto) {
             throw new HttpException('Produto não encontrado', HttpStatus.NOT_FOUND);
@@ -33,6 +44,9 @@ export class ProdutoService {
         return await this.produtoRepository.find({
             where: {
                 nome: ILike(`%${nome}%`)
+            },
+            relations: {
+                categoria: true
             }
         });
     }
@@ -41,9 +55,8 @@ export class ProdutoService {
 
         const buscaProduto = await this.findById(produto.id);
 
-        if (!buscaProduto || !produto.id) {
+        if (!buscaProduto || !produto.id)
             throw new HttpException('Produto não encontrado !', HttpStatus.NOT_FOUND);
-        }
 
         return await this.produtoRepository.save(produto);
 
@@ -51,13 +64,15 @@ export class ProdutoService {
 
     async delete(id: number): Promise<DeleteResult> {
 
-        const buscaProduto = await this.findById(id);
+        const buscaProduto = await this.findById(id)
 
-        if (!buscaProduto) {
+        if (!buscaProduto)
+
             throw new HttpException('Produto não encontrado!', HttpStatus.NOT_FOUND);
-        }
 
-        return await this.produtoRepository.delete(id);
+        return await this.produtoRepository.delete(id)
 
     }
 }
+
+

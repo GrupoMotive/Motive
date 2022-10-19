@@ -1,11 +1,11 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Categoria } from './categoria/entities/categoria.entity';
-import { CategoriaModule } from './categoria/entities/categoria.module';
+import { CategoriaModule } from './categoria/categoria.module';
 import { Produto } from './produto/entities/produto.entity';
-import { ProdutoModule } from './produto/entities/produto.module';
+import { ProdutoModule } from './produto/produto.module';
 import { Usuario } from './usuario/entities/usuario.entity';
-import { UsuarioModule } from './usuario/entities/usuario.module';
+import { UsuarioModule } from './usuario/usuario.module';
 
 @Module({
   imports: [

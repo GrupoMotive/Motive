@@ -16,7 +16,7 @@ export class Produto {
     local: string
 
     @IsNotEmpty()
-    @Column({ nullable: false })
+    @Column({ type: 'decimal', precision: 2, scale: 2, nullable: false })
     valor: number
 
     @IsNotEmpty()

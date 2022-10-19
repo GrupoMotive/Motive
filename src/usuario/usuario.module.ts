@@ -1,8 +1,8 @@
 import { Module } from "@nestjs/common";
 import { TypeOrmModule } from "@nestjs/typeorm";
-import { UsuarioController } from "src/controllers/usuario.controller";
-import { UsuarioService } from "src/services/usuario.service";
-import { Usuario } from "./usuario.entity"
+import { UsuarioController } from "src/usuario/controllers/usuario.controller";
+import { UsuarioService } from "src/usuario/services/usuario.service";
+import { Usuario } from "./entities/usuario.entity"
 
 
 @Module({
@@ -11,4 +11,4 @@ import { Usuario } from "./usuario.entity"
     providers: [UsuarioService],
     exports: [TypeOrmModule]
 })
-export class UsuarioModule {};
+export class UsuarioModule { };

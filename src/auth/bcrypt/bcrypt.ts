@@ -1,6 +1,7 @@
+import { Injectable } from "@nestjs/common";
 import * as bcrypt from "bcrypt"
 
-
+@Injectable()
 export class Bcrypt {
 
     async hashPassword(senha: string): Promise<string> {

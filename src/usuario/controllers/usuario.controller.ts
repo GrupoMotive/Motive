@@ -22,28 +22,11 @@ export class UsuarioController {
         return this.usuarioService.findAll();
     }
 
-    @Get('/:id')
-    @HttpCode(HttpStatus.OK)
-    callFindById(@Param('id', ParseIntPipe) id: number): Promise<Usuario> {
-        return this.usuarioService.findById(id);
-    }
-
-    @Get('/nome/:nome')
-    @HttpCode(HttpStatus.OK)
-    callFindByName(@Param('nome') nome: string): Promise<Usuario[]> {
-        return this.usuarioService.findByName(nome);
-    }
-
     @Put()
     @HttpCode(HttpStatus.OK)
     callUpdate(@Body() usuario: Usuario): Promise<Usuario> {
         return this.usuarioService.update(usuario);
     }
 
-    @Delete('/:id')
-    @HttpCode(HttpStatus.NO_CONTENT)
-    callDelete(@Param('id', ParseIntPipe) id: number) {
-        return this.usuarioService.delete(id);
-    }
 
 }

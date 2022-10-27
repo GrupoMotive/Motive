@@ -10,7 +10,7 @@ export class Bcrypt {
         return await bcrypt.hash(senha, salts)
     }
 
-    async comparePassword (senhaDigitada: string, senhaHash: string ): Promise <boolean> {
+    async comparePassword(senhaDigitada: string, senhaHash: string): Promise<boolean> {
 
         return await bcrypt.compare(senhaDigitada, senhaHash);
 

@@ -1,7 +1,8 @@
-import { Controller, Get, HttpCode, HttpStatus, Param, ParseIntPipe } from "@nestjs/common";
-import { Body, Delete, Post, Put } from "@nestjs/common/decorators";
+import { Controller, Get, HttpCode, HttpStatus } from "@nestjs/common";
+import { Body, Post, Put, UseGuards } from "@nestjs/common/decorators";
 import { UsuarioService } from "src/usuario/services/usuario.service";
 import { Usuario } from "src/usuario/entities/usuario.entity";
+import { JwtAuthGuard } from "src/auth/guards/jwt.guard";
 
 @Controller('/usuario')
 export class UsuarioController {
@@ -16,12 +17,14 @@ export class UsuarioController {
         return this.usuarioService.create(usuario);
     }
 
+    @UseGuards(JwtAuthGuard)
     @Get()
     @HttpCode(HttpStatus.OK)
     callFindAll(): Promise<Usuario[]> {
         return this.usuarioService.findAll();
     }
 
+    @UseGuards(JwtAuthGuard)
     @Put()
     @HttpCode(HttpStatus.OK)
     callUpdate(@Body() usuario: Usuario): Promise<Usuario> {

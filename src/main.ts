@@ -8,7 +8,7 @@ async function bootstrap() {
 
   const config = new DocumentBuilder()
   .setTitle('Motive')
-  .setDescription('Projeto Blog Pessoal')
+  .setDescription('Projeto Integrador Motive foi desenvolvido sobe a ODS 3 da ONU, a onde elaboramos uma desafiadora missão de como fazer um mundo melhor até 2030')
   .setContact("Motive","https://github.com/orgs/GrupoMotive/dashboard", "grupo1.generation.rj@email.com")
   .setVersion('1.0')
   .addBearerAuth()

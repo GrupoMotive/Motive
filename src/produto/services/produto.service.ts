@@ -2,15 +2,23 @@ import { HttpException, HttpStatus, Injectable } from "@nestjs/common";
 import { InjectRepository } from "@nestjs/typeorm";
 import { DeleteResult, ILike, Repository } from "typeorm";
 import { Produto } from "src/produto/entities/produto.entity";
+import { CategoriaService } from "src/categoria/services/categoria.service";
 
 @Injectable()
 export class ProdutoService {
     constructor(
         @InjectRepository(Produto)
-        private produtoRepository: Repository<Produto>
+        private produtoRepository: Repository<Produto>,
+        private categoriaService: CategoriaService
     ) { }
 
     async create(produto: Produto): Promise<Produto> {
+
+        const buscaCategoria = this.categoriaService.findById(produto.categoria.id);
+
+        if (!buscaCategoria) {
+            throw new HttpException("Categoria não existe", HttpStatus.BAD_REQUEST);
+        }
 
         if (produto.valor >= 100) {
             throw new HttpException('O valor é maior do que o permitido!', HttpStatus.BAD_REQUEST);

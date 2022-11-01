@@ -34,6 +34,6 @@ export class Produto {
     @ManyToOne(() => Categoria, (categoria) => categoria.product, {
         onDelete: 'CASCADE'
     })
-    categoria: Categoria[]
+    categoria: Categoria
 
 }

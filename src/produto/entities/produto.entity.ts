@@ -17,11 +17,10 @@ export class Produto {
 
     @IsNotEmpty()
     @Column({ length: 150, nullable: false })
-    @ApiProperty({example: "email@email.com.br"})
+    @ApiProperty({ example: "email@email.com.br" })
     local: string
 
     @IsNotEmpty()
-    @MinLength(8)
     @Column({ type: 'decimal', precision: 4, scale: 2, default: 0, nullable: false })
     @ApiProperty()
     valor: number

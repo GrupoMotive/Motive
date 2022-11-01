@@ -2,9 +2,12 @@ import { Body, Controller, Delete, Get, HttpCode, HttpStatus, Param, ParseIntPip
 import { ProdutoService } from "src/produto/services/produto.service";
 import { Produto } from "src/produto/entities/produto.entity";
 import { JwtAuthGuard } from "src/auth/guards/jwt.guard";
+import { ApiBearerAuth, ApiTags } from "@nestjs/swagger";
 
+@ApiTags('Produto')
 @UseGuards(JwtAuthGuard)
 @Controller('/produto')
+@ApiBearerAuth()
 export class ProdutoController {
     constructor(
         private readonly produtoService: ProdutoService
@@ -16,6 +19,7 @@ export class ProdutoController {
         return this.produtoService.create(produto);
     }
 
+    @UseGuards(JwtAuthGuard)
     @Get()
     @HttpCode(HttpStatus.OK)
     callFindAll(): Promise<Produto[]> {

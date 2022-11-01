@@ -3,9 +3,12 @@ import { CategoriaService } from "src/categoria/services/categoria.service";
 import { DeleteResult } from "typeorm";
 import { Categoria } from "src/categoria/entities/categoria.entity";
 import { JwtAuthGuard } from "src/auth/guards/jwt.guard";
+import { ApiBearerAuth, ApiTags } from "@nestjs/swagger";
 
+@ApiTags('Categoria')
 @UseGuards(JwtAuthGuard)
 @Controller('/categoria')
+@ApiBearerAuth()
 export class CategoriaController {
 
     constructor(

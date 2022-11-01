@@ -1,4 +1,10 @@
 <p align="center">
+  <img src="https://drive.google.com/file/d/16CSUJrQIKMbLKJmdfzAu6IoIK8tx0q5a/view" width="200" alt="Motive Logo" /></a>
+</p>
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+<p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
 

@@ -35,7 +35,7 @@ export class CategoriaController {
 
     @Get('/nome/:nome')
     @HttpCode(HttpStatus.OK)
-    findByName(@Param('nome', ParseIntPipe) nome: string): Promise<Categoria[]> {
+    findByName(@Param('nome') nome: string): Promise<Categoria[]> {
         return this.categoriaService.findByName(nome);
     }
 

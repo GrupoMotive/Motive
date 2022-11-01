@@ -17,7 +17,7 @@ export class Produto {
 
     @IsNotEmpty()
     @Column({ length: 150, nullable: false })
-    @ApiProperty({ example: "email@email.com.br" })
+    @ApiProperty()
     local: string
 
     @IsNotEmpty()

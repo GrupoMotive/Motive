@@ -7,6 +7,7 @@ import { ProdutoModule } from './produto/produto.module';
 import { Usuario } from './usuario/entities/usuario.entity';
 import { UsuarioModule } from './usuario/usuario.module';
 import { AuthModule } from './auth/auth.module';
+import { AppController } from './app.controller';
 
 @Module({
   imports: [
@@ -25,7 +26,7 @@ import { AuthModule } from './auth/auth.module';
     ProdutoModule,
     AuthModule
   ],
-  controllers: [],
+  controllers: [AppController],
   providers: [],
 })
 export class AppModule { }

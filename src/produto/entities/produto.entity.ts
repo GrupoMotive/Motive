@@ -30,7 +30,7 @@ export class Produto {
     @ApiProperty()
     faixa_etaria: string
 
-    @ApiProperty()
+    @ApiProperty({ type: () => Categoria })
     @ManyToOne(() => Categoria, (categoria) => categoria.product, {
         onDelete: 'CASCADE'
     })

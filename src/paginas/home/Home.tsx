@@ -3,6 +3,8 @@ import './Home.css';
 
 export function Home() {
     return (
-        <h1>isso é a Home</h1>
+        <>
+            <h1>isso é a Home</h1>
+        </>
     )
 }

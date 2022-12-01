@@ -12,13 +12,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import {
-  Link as RouterLink,
-  LinkProps as RouterLinkProps,
-  MemoryRouter,
-} from 'react-router-dom';
-import { StaticRouter } from 'react-router-dom/server';
-import Link from '@mui/material/Link';
+import { Link } from 'react-router-dom';
 
 interface Props {
   /**
@@ -37,26 +31,7 @@ const navItems = [
   { name: 'LOGIN', to: "/login" }
 ];
 
-const LinkBehavior = React.forwardRef<any, Omit<RouterLinkProps, 'to'>>(
-  (props, ref) => (
-    <RouterLink
-      ref={ref}
-      to="/material-ui/getting-started/installation/"
-      {...props}
-    />
-  ),
-);
-
-function Router(props: { children?: React.ReactNode }) {
-  const { children } = props;
-  if (typeof window === 'undefined') {
-    return <StaticRouter location="/">{children}</StaticRouter>;
-  }
-
-  return <MemoryRouter>{children}</MemoryRouter>;
-}
-
-export default function DrawerAppBar(props: Props) {
+export default function Navbar(props: Props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -85,7 +60,7 @@ export default function DrawerAppBar(props: Props) {
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: 'flex', height: "70px" }}>
       <AppBar component="nav">
         <Toolbar>
           <IconButton
@@ -105,16 +80,13 @@ export default function DrawerAppBar(props: Props) {
             MOTIVE
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-            <Router>
-              {navItems.map((item) => (
-                <Link component={RouterLink} to={item.to} key={item.name}>
-                  <Button key={item.name} sx={{ color: '#fff' }}>
-                    {item.name}
-                  </Button>
-                </Link>
-              ))}
-
-            </Router>
+            {navItems.map((item) => (
+              <Link to={item.to} key={item.name}>
+                <Button key={item.name} sx={{ color: '#fff' }}>
+                  {item.name}
+                </Button>
+              </Link>
+            ))}
           </Box>
         </Toolbar>
       </AppBar>

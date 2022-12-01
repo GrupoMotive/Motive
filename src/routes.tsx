@@ -1,22 +1,27 @@
-import { Route, BrowserRouter, Routes } from "react-router-dom";
-import { Aulas } from "./paginas/aulas/Aulas";
-import { Contato } from "./paginas/contato/Contato";
-import { Home } from "./paginas/home/Home";
-import { Login } from "./paginas/login/Login";
-import { Sobre } from "./paginas/sobre/Sobre";
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Footer from './components/static/footer';
+import Navbar from './components/static/navbar';
 
-
+import About from './pages/about';
+import Classes from './pages/classes';
+import Contact from './pages/contact';
+import Home from './pages/home';
+import Login from './pages/login';
 
 export default function RoutesApp() {
-    return (
-        <BrowserRouter>
-            <Routes>
-                <Route path='/' element={<Home />} />
-                <Route path='/aulas' element={<Aulas />} />
-                <Route path='/contato' element={<Contato />} />
-                <Route path='/sobre' element={<Sobre />} />
-                <Route path='/login' element={<Login />} />
-            </Routes>
-        </BrowserRouter>
-    )
+  return (
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/home' element={<Home />} />
+        <Route path='/aulas' element={<Classes />} />
+        <Route path='/contato' element={<Contact />} />
+        <Route path='/sobre' element={<About />} />
+        <Route path='/login' element={<Login />} />
+      </Routes>
+      <Footer />
+    </Router>
+  );
 }

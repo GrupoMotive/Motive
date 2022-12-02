@@ -1,0 +1,16 @@
+.textos1 {
+    font-weight: bold !important;
+}
+
+.imagem {
+    background-image: url(../../assets/115712857.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.text-decorator-none {
+    text-decoration: none;
+}

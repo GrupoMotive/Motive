@@ -8,6 +8,7 @@ import Classes from './pages/classes';
 import Contact from './pages/contact';
 import Home from './pages/home';
 import Login from './pages/login';
+import Register from './pages/register';
 
 export default function RoutesApp() {
   return (
@@ -20,6 +21,7 @@ export default function RoutesApp() {
         <Route path='/contato' element={<Contact />} />
         <Route path='/sobre' element={<About />} />
         <Route path='/login' element={<Login />} />
+        <Route path='/register' element={<Register />} />
       </Routes>
       <Footer />
     </Router>

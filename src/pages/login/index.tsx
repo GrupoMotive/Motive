@@ -21,7 +21,10 @@ function Login() {
     try {
       const response = await api.post('auth/login', data);
 
-      console.log(response)
+      localStorage.setItem("token", response.data.token);
+      localStorage.setItem("email", response.data.email);
+
+      navigate('/');
 
     } catch (error) {
       if (axios.isAxiosError(error)) {
@@ -43,11 +46,9 @@ function Login() {
             <TextField {...register('email')} id='email' label='email' variant='outlined' name='email' margin='normal' fullWidth />
             <TextField {...register('senha')} id='senha' label='senha' variant='outlined' name='senha' margin='normal' type='password' fullWidth />
             <Box marginTop={2} textAlign='center'>
-              <Link to='/home' className='text-decorator-none'>
-                <Button type='submit' variant='contained' color='primary'>
-                  Logar
-                </Button>
-              </Link>
+              <Button type='submit' variant='contained' color='primary'>
+                Logar
+              </Button>
             </Box>
           </form>
           <Box display='flex' justifyContent='center' marginTop={2}>

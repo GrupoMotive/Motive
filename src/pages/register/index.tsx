@@ -22,23 +22,20 @@ export default function Register() {
 
 
   async function handleRegister(data: FormValues) {
-    delete (data.confirmarSenha)
 
-    console.log(data);
+    try {
 
-
-    /* try {
       if (data.senha !== data.confirmarSenha) {
         alert('As senhas são diferentes');
       }
 
-      delete (data.confirmarSenha)
+      delete (data.confirmarSenha);
 
-      const response = await api.post('user', data);
+      const response = await api.post('usuario', data);
 
       alert('Cadastro realizado com sucesso!');
 
-      navigate('/');
+      navigate('/login');
 
     } catch (error) {
       if (axios.isAxiosError(error)) {
@@ -47,7 +44,7 @@ export default function Register() {
           alert(res.data.message);
       }
       console.log(error);
-    } */
+    }
   }
 
   return (

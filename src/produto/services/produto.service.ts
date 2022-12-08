@@ -14,6 +14,12 @@ export class ProdutoService {
 
     async create(produto: Produto): Promise<Produto> {
 
+        if(!produto.categoria || !produto.categoria.id){
+            throw new HttpException('Categoria não informada', HttpStatus.BAD_REQUEST);
+        }
+
+        await this.categoriaService.findById(produto.categoria.id);
+
         if (produto.valor >= 100) {
             throw new HttpException('O valor é maior do que o permitido!', HttpStatus.BAD_REQUEST);
         }

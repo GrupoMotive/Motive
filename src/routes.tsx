@@ -16,7 +16,6 @@ export default function RoutesApp() {
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/home' element={<Home />} />
         <Route path='/aulas' element={<Classes />} />
         <Route path='/contato' element={<Contact />} />
         <Route path='/sobre' element={<About />} />

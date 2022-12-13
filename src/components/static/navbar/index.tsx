@@ -13,6 +13,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
+import './style.css'
 
 interface Props {
   /**
@@ -42,7 +43,7 @@ export default function Navbar(props: Props) {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        MOTIVE
+        <img src="./Logo-Motive.png" alt="" />
       </Typography>
       <Divider />
       <List>
@@ -61,7 +62,7 @@ export default function Navbar(props: Props) {
 
   return (
     <Box sx={{ display: 'flex', justifyContent: "center", alignItems: "center", height: "70px", }}>
-      <AppBar component="nav" sx={{ height: "70px" }}>
+      <AppBar component="nav" color='transparent' sx={{ display: "flex", justifyContent: "center", height: "70px", boxShadow: "none" }}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -75,9 +76,9 @@ export default function Navbar(props: Props) {
           <Typography
             variant="h6"
             component="div"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'flex' }, alignItems: 'center' }}
           >
-            MOTIVE
+            <img src="./Logo-Motive.png" alt="logo" className='logo' />
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (

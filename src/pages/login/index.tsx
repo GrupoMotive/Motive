@@ -6,6 +6,7 @@ import './Login.css';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import api from '../../services/api';
+import Navbar from '../../components/static/navbar';
 
 type FormValues = {
   email: string
@@ -38,7 +39,13 @@ function Login() {
   }
 
   return (
-    <Grid container direction='row' justifyContent='center' alignItems='center' sx={{ height: "calc(100vh - 140px)" }}>
+    <Grid container direction='row' justifyContent='center' alignItems='center' sx={{ height: "100vh" }} className="imagem">
+
+      <Navbar />
+
+      <Grid xs={6}>
+
+      </Grid>
       <Grid alignItems='center' xs={6}>
         <Box paddingX={20}>
           <form onSubmit={handleSubmit(handleLogin)}>
@@ -61,9 +68,7 @@ function Login() {
           </Box>
         </Box>
       </Grid>
-      <Grid xs={6} className='imagem'>
 
-      </Grid>
     </Grid>
   );
 }

@@ -13,7 +13,6 @@ import Register from './pages/register';
 export default function RoutesApp() {
   return (
     <Router>
-      <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/aulas' element={<Classes />} />
@@ -22,7 +21,6 @@ export default function RoutesApp() {
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />
       </Routes>
-      <Footer />
     </Router>
   );
 }

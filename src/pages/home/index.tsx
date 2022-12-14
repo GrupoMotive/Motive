@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { Box } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 import api from "../../services/api";
 import Produtos from "../../models/produto";
 import { TokenState } from "../../store/tokens/tokensReducer";
 import { useSelector } from "react-redux";
 import Navbar from "../../components/static/navbar";
+import './Home.css'
 
 export default function Home() {
 
@@ -25,12 +26,15 @@ export default function Home() {
 
   return (
     <Box sx={{ height: "calc(100vh - 140px)" }}>
+      <Grid container direction='row' justifyContent='center' alignItems='center' sx={{ height: "100vh" }} className="imagemHome">
       <Navbar />
-      <h1>HOME</h1>
-
-
-
+      
+    </Grid>
     </Box>
+    
+    
   );
+
+
 }
 

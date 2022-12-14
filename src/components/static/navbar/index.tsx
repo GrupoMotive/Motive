@@ -40,8 +40,8 @@ export default function Navbar(props: Props) {
   const token = useSelector<TokenState, TokenState["tokens"]>(
     (state) => state.tokens
   );
-  const navigate = useNavigate ();
-  const dispatch = useDispatch ();
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
   const logout = () => {
     dispatch(addToken(''));
     toast.success('Deslogado com sucesso', {
@@ -54,8 +54,8 @@ export default function Navbar(props: Props) {
       draggable: true,
       progress: undefined,
       theme: "colored",
-      });
-        navigate('/login')
+    });
+    navigate('/login')
   };
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -67,7 +67,7 @@ export default function Navbar(props: Props) {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        <img src="./Logo-Motive.png" alt="" />
+        <img src="./WhiteLogo-Motive.png" alt="" />
       </Typography>
       <Divider />
       <List>
@@ -102,12 +102,12 @@ export default function Navbar(props: Props) {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'flex' }, alignItems: 'center' }}
           >
-            <img src="./Logo-Motive.png" alt="logo" className='logo' />
+            <img src="./WhiteLogo-Motive.png" alt="logo" className='logo' />
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => {
-              if (item.name == 'LOGIN' && token != '') {
-                return (<Button onClick={logout} sx={{ color: '#fff'}}>LOGOUT</Button>)
+              if (item.name === 'LOGIN' && token !== '') {
+                return (<Button onClick={logout} sx={{ color: '#fff' }}>LOGOUT</Button>)
               } else {
                 return (
                   <Link to={item.to} key={item.name}>

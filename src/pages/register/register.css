@@ -1,5 +1,5 @@
-.imagem2 {
-  background-image: url(../../assets/115712857.png);
+.imagem {
+  background-image: url(../../assets/registro.jpg);
   background-repeat: no-repeat;
   width: 100%;
   min-height: 100%;
@@ -9,8 +9,49 @@
 
 .textos2 {
   font-weight: bold !important;
+  color: #0DCA70;
 }
 
 .btnCancelar {
   margin-right: 20px !important;
+}
+
+.btnCadastrar {
+  margin-right: 20px !important;
+}
+
+.box-register {
+  background-color: rgb(0, 0, 0);
+  padding: 30px 30px 30px 30px;
+  border-radius: 10px;
+}
+
+.entrar-texto {
+  color: rgb (13, 202, 112);
+  font-size: 20px;
+}
+
+.campo-nome {
+  background-color: #303030;
+  border-radius: 5px;
+}
+
+.campo-email {
+  background-color: #303030;
+  border-radius: 5px;
+}
+
+.campo-foto {
+  background-color: #303030;
+  border-radius: 5px;
+}
+
+.campo-senha {
+  background-color: #303030;
+  border-radius: 5px;
+}
+
+.campo-confirmarSenha {
+  background-color: #303030;
+  border-radius: 5px;
 }

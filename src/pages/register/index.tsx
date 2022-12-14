@@ -5,7 +5,8 @@ import { useForm } from 'react-hook-form'
 import "./register.css"
 import axios from 'axios';
 import api from '../../services/api';
-import { Flip, toast } from 'react-toastify';
+import Navbar from '../../components/static/navbar';
+import { toast, Flip } from 'react-toastify';
 
 type FormValues = {
   nome: string
@@ -20,7 +21,6 @@ export default function Register() {
   const { register, handleSubmit } = useForm<FormValues>();
 
   const navigate = useNavigate();
-
 
   async function handleRegister(data: FormValues) {
 
@@ -58,10 +58,6 @@ export default function Register() {
         navigate('/login');
       }
 
-
-
-
-
     } catch (error) {
       if (axios.isAxiosError(error)) {
         const res = error.response;
@@ -83,24 +79,30 @@ export default function Register() {
   }
 
   return (
-    <Grid container direction='row' justifyContent='center' alignItems='center' sx={{ height: "calc(100vh - 140px)" }}>
-      <Grid item xs={6} className='imagem2'></Grid>
-      <Grid item xs={6} alignItems='center'>
-        <Box paddingX={10}>
-          <form onSubmit={handleSubmit(handleRegister)}>
-            <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className='textos2'>Cadastrar</Typography>
-            <TextField {...register('nome')} id='nome' label='nome' variant='outlined' name='nome' margin='normal' fullWidth />
-            <TextField {...register('email')} id='email' label='email' variant='outlined' name='email' margin='normal' fullWidth />
-            <TextField {...register('foto')} id='foto' label='foto' variant='outlined' name='foto' margin='normal' fullWidth />
-            <TextField {...register('senha')} id='senha' label='senha' variant='outlined' name='senha' margin='normal' type='password' fullWidth />
-            <TextField {...register('confirmarSenha')} id='confirmarSenha' label='confirmarSenha' variant='outlined' name='confirmarSenha' margin='normal' type='password' fullWidth />
+    <Grid container direction='row' justifyContent='center' alignItems='center' sx={{ height: "100vh" }} className="imagem">
+
+      <Navbar />
+
+      <Grid xs={6}>
+
+      </Grid>
+      <Grid alignItems='center' xs={6}>
+        <Box paddingX={20}>
+          <form onSubmit={handleSubmit(handleRegister)} className="box-register">
+            <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' sx={{ color: "#0DCA70" }}>Cadastrar</Typography>
+            <TextField {...register('nome')} id='nome' label='Nome' variant='filled' name='nome' margin='normal' fullWidth className='campo-nome' color='success' />
+            <TextField {...register('email')} id='email' label='Email' variant='filled' name='email' margin='normal' fullWidth className='campo-email' color='success' />
+            <TextField {...register('foto')} id='foto' label='Foto' variant='filled' name='foto' margin='normal' fullWidth className='campo-foto' color='success' />
+            <TextField {...register('senha')} id='senha' label='Senha' variant='filled' name='senha' margin='normal' type='password' fullWidth className='campo-senha' color='success' />
+            <TextField {...register('confirmarSenha')} id='Confirmar Senha' label='confirmarSenha' variant='filled' name='confirmarSenha' margin='normal' type='password' fullWidth className='campo-confirmarSenha' color='success' />
             <Box marginTop={2} textAlign='center'>
               <Link to='/login' className='text-decorator-none'>
-                <Button variant='contained' color='secondary' className='btnCancelar'>
+                <Button variant='contained' color='secondary' sx={{ backgroundColor: "#FF0000", ":hover": { backgroundColor: "#000" }, }}>
                   Cancelar
                 </Button>
               </Link>
-              <Button type='submit' variant='contained' color='primary'>
+              <Button
+                type='submit' variant='contained' sx={{ backgroundColor: "#0DCA70", ":hover": { backgroundColor: "#000" }, marginLeft: "30px" }}>
                 Cadastrar
               </Button>
             </Box>

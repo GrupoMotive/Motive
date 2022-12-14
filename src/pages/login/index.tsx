@@ -81,8 +81,8 @@ function Login() {
         <Box paddingX={20}>
           <form onSubmit={handleSubmit(handleLogin)} className="box-login">
             <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' sx={{ color: "#0DCA70", fontSize: "20px", fontFamily: ' rel="stylesheet"   href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"' }}>LOGIN</Typography>
-            <TextField {...register('email')} id='email' label='email' variant='filled' name='Email' margin='normal' color='success' fullWidth className='campo' />
-            <TextField {...register('senha')} id='senha' label='senha' variant='filled' name='Senha' margin='normal' type='password' color='success' fullWidth className='campo' />
+            <TextField {...register('email')} id='email' label='Email' variant='filled' name='email' margin='normal' color='success' fullWidth className='campo' />
+            <TextField {...register('senha')} id='senha' label='Senha' variant='filled' name='senha' margin='normal' type='password' color='success' fullWidth className='campo' />
             <Box marginTop={2} textAlign='center'>
               <Button type='submit' variant='contained' color='primary' className='botão-login' sx={{ backgroundColor: "#0DCA70", width: "251px", ":hover": { backgroundColor: "#000" } }}>
                 Login

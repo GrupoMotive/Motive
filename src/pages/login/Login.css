@@ -1,44 +1,41 @@
+.txt3 {
+  color: #303030;
+}
 
-.txt3{
-    color: #303030;
-  }
-  
-  .textos2 {
-    color:rgb(13, 202, 112);
-  }
-  
-  .box-login{
-    background-color: #000000 ;
-    padding: 30px 30px 30px 30px;
-    border-radius: 10px;
-  }
-  
-  .entrar-texto {
-    color:rgb(13, 202, 112);
-    font-size: 20px;
-  }
-  
-  .imagem {
-    background-image: url(../../assets/young-fitness-woman-runner.jpg);
-    background-repeat: no-repeat;
-    width: 100%;
-    min-height: 100%;
-    background-size: cover;
-    background-position: center;
-  }
-  
-  .text-decorator-none {
-    text-decoration: none;
-  }
-  
-  .botão-login{
-    width: 260px;
-  }
-  
-  
-  .campo{
-    background-color: #303030;
-    border-radius: 5px;
-  }
-  
-  
+.textos2 {
+  color: rgb(13, 202, 112);
+}
+
+.box-login {
+  background-color: #000000;
+  padding: 30px 30px 30px 30px;
+  border-radius: 10px;
+}
+
+.entrar-texto {
+  color: rgb(13, 202, 112);
+  font-size: 20px;
+}
+
+.imagem {
+  background-image: url(../../assets/back.jpg);
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.text-decorator-none {
+  text-decoration: none;
+}
+
+.botão-login {
+  width: 260px;
+}
+
+
+.campo {
+  background-color: #303030;
+  border-radius: 5px;
+}

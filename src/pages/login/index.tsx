@@ -48,7 +48,7 @@ function Login() {
         draggable: false,
         theme: "colored",
         progress: undefined,
-        });
+      });
 
     } catch (error) {
       if (axios.isAxiosError(error)) {
@@ -64,7 +64,7 @@ function Login() {
             draggable: false,
             theme: "colored",
             progress: undefined,
-            });
+          });
 
         }
       }
@@ -74,17 +74,17 @@ function Login() {
 
   return (
     <Grid container direction='row' justifyContent='center' alignItems='center' sx={{ height: "100vh" }} className="imagem">
-      <Navbar/>
+      <Navbar />
       <Grid xs={6}>
       </Grid>
       <Grid alignItems='center' xs={6}>
         <Box paddingX={20}>
-        <form onSubmit={handleSubmit(handleLogin)} className="box-login">
-            <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' sx={{color: "#0DCA70", fontSize: "20px", fontFamily: ' rel="stylesheet"   href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"'}}>LOGIN</Typography>
-            <TextField {...register('email')} id='email' label='email' variant='filled' name='Email' margin='normal' color='success' fullWidth className='campo'/>
+          <form onSubmit={handleSubmit(handleLogin)} className="box-login">
+            <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' sx={{ color: "#0DCA70", fontSize: "20px", fontFamily: ' rel="stylesheet"   href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"' }}>LOGIN</Typography>
+            <TextField {...register('email')} id='email' label='email' variant='filled' name='Email' margin='normal' color='success' fullWidth className='campo' />
             <TextField {...register('senha')} id='senha' label='senha' variant='filled' name='Senha' margin='normal' type='password' color='success' fullWidth className='campo' />
             <Box marginTop={2} textAlign='center'>
-              <Button type='submit' variant='contained' color='primary' className='botão-login' sx={{backgroundColor: "#0DCA70", width: "251px", ":hover": { backgroundColor: "#000"} }}>
+              <Button type='submit' variant='contained' color='primary' className='botão-login' sx={{ backgroundColor: "#0DCA70", width: "251px", ":hover": { backgroundColor: "#000" } }}>
                 Login
               </Button>
               <Box display='flex' justifyContent='center' marginTop={2}>

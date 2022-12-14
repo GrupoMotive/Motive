@@ -7,6 +7,11 @@
   background-position: center;
 }
 
+.logoImagem{
+  width: 290px;
+  padding: 18px;
+}
+
 .textos2 {
   font-weight: bold !important;
   color: #0DCA70;

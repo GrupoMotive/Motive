@@ -26,6 +26,11 @@
   background-position: center;
 }
 
+.logoImagem1{
+  width: 290px;
+  padding: 18px;
+}
+
 .text-decorator-none {
   text-decoration: none;
 }

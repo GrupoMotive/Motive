@@ -81,11 +81,14 @@ export default function Register() {
   return (
     <Grid container direction='row' justifyContent='center' alignItems='center' sx={{ height: "100vh" }} className="imagem1">
 
-      <Navbar />
 
-      <Grid xs={6}>
-
+      <Grid xs={6} alignSelf='flex-start' >
+        <Link to='/'>
+          <img src="./images/logo.png" alt="" className='logoImagem'/>
+        </Link>
       </Grid>
+
+
       <Grid alignItems='center' xs={6}>
         <Box paddingX={20}>
           <form onSubmit={handleSubmit(handleRegister)} className="box-register">

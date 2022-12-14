@@ -74,8 +74,11 @@ function Login() {
 
   return (
     <Grid container direction='row' justifyContent='center' alignItems='center' sx={{ height: "100vh" }} className="imagem2">
-      <Navbar />
-      <Grid xs={6}>
+      
+      <Grid xs={6} alignSelf='flex-start'>
+      <Link to='/'>
+          <img src="./images/logo.png" alt="" className='logoImagem1'/>
+        </Link>
       </Grid>
       <Grid alignItems='center' xs={6}>
         <Box paddingX={20}>

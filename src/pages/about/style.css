@@ -1,0 +1,8 @@
+.background-sobre {
+    background-image: url(../../assets/yog.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 350px;
+
+    text-align: center;
+}

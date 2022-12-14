@@ -3,8 +3,8 @@ import { Box } from "@mui/material";
 
 export default function Contact() {
   return (
-    <Box sx={{ height: "calc(100vh - 140px)" }}>
-      <h1>CONTACT</h1>
+    <Box>
+      <h2>Quem somos</h2>
     </Box>
 
   )

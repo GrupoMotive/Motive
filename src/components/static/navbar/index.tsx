@@ -12,8 +12,12 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './style.css'
+import { TokenState } from '../../../store/tokens/tokensReducer';
+import { useDispatch, useSelector } from 'react-redux';
+import { Flip, toast } from 'react-toastify';
+import { addToken } from '../../../store/tokens/actions';
 
 interface Props {
   /**
@@ -33,6 +37,26 @@ const navItems = [
 ];
 
 export default function Navbar(props: Props) {
+  const token = useSelector<TokenState, TokenState["tokens"]>(
+    (state) => state.tokens
+  );
+  const navigate = useNavigate ();
+  const dispatch = useDispatch ();
+  const logout = () => {
+    dispatch(addToken(''));
+    toast.success('Deslogado com sucesso', {
+      transition: Flip,
+      position: "top-right",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+      });
+        navigate('/login')
+  };
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -81,13 +105,19 @@ export default function Navbar(props: Props) {
             <img src="./Logo-Motive.png" alt="logo" className='logo' />
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-            {navItems.map((item) => (
-              <Link to={item.to} key={item.name}>
-                <Button key={item.name} sx={{ color: '#fff' }}>
-                  {item.name}
-                </Button>
-              </Link>
-            ))}
+            {navItems.map((item) => {
+              if (item.name == 'LOGIN' && token != '') {
+                return (<Button onClick={logout} sx={{ color: '#fff'}}>LOGOUT</Button>)
+              } else {
+                return (
+                  <Link to={item.to} key={item.name}>
+                    <Button key={item.name} sx={{ color: '#fff' }}>
+                      {item.name}
+                    </Button>
+                  </Link>
+                )
+              }
+            })}
           </Box>
         </Toolbar>
       </AppBar>

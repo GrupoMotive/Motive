@@ -4,6 +4,7 @@ import api from "../../services/api";
 import Produtos from "../../models/produto";
 import { TokenState } from "../../store/tokens/tokensReducer";
 import { useSelector } from "react-redux";
+import Navbar from "../../components/static/navbar";
 
 export default function Home() {
 
@@ -24,6 +25,7 @@ export default function Home() {
 
   return (
     <Box sx={{ height: "calc(100vh - 140px)" }}>
+      <Navbar />
       <h1>HOME</h1>
 
 

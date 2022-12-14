@@ -94,7 +94,7 @@ export default function Register() {
             <TextField {...register('email')} id='email' label='Email' variant='filled' name='email' margin='normal' fullWidth className='campo-email' color='success' />
             <TextField {...register('foto')} id='foto' label='Foto' variant='filled' name='foto' margin='normal' fullWidth className='campo-foto' color='success' />
             <TextField {...register('senha')} id='senha' label='Senha' variant='filled' name='senha' margin='normal' type='password' fullWidth className='campo-senha' color='success' />
-            <TextField {...register('confirmarSenha')} id='Confirmar Senha' label='confirmarSenha' variant='filled' name='confirmarSenha' margin='normal' type='password' fullWidth className='campo-confirmarSenha' color='success' />
+            <TextField {...register('confirmarSenha')} id='Confirmar Senha' label='Confirmar Senha' variant='filled' name='confirmarSenha' margin='normal' type='password' fullWidth className='campo-confirmarSenha' color='success' />
             <Box marginTop={2} textAlign='center'>
               <Link to='/login' className='text-decorator-none'>
                 <Button variant='contained' color='secondary' sx={{ backgroundColor: "#FF0000", ":hover": { backgroundColor: "#000" }, }}>

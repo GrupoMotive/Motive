@@ -97,12 +97,12 @@ export default function Register() {
             <TextField {...register('confirmarSenha')} id='Confirmar Senha' label='Confirmar Senha' variant='filled' name='confirmarSenha' margin='normal' type='password' fullWidth className='campo-confirmarSenha' color='success' />
             <Box marginTop={2} textAlign='center'>
               <Link to='/login' className='text-decorator-none'>
-                <Button variant='contained' color='secondary' sx={{ backgroundColor: "#FF0000", ":hover": { backgroundColor: "#000", border: '1px solid #FF0000' }, }}>
+                <Button variant='contained' color='secondary' sx={{ backgroundColor: "#FF0000", border: '1px solid #FF0000', ":hover": { backgroundColor: "#000", border: '1px solid #FF0000' }, }}>
                   Cancelar
                 </Button>
               </Link>
               <Button
-                type='submit' variant='contained' sx={{ backgroundColor: "#0DCA70", ":hover": { backgroundColor: "#000", border: '1px solid #0DCA70' }, marginLeft: "30px" }}>
+                type='submit' variant='contained' sx={{ backgroundColor: "#0DCA70", border: '1px solid #0DCA70', ":hover": { backgroundColor: "#000", border: '1px solid #0DCA70' }, marginLeft: "30px" }}>
                 Cadastrar
               </Button>
             </Box>

@@ -79,7 +79,7 @@ export default function Register() {
   }
 
   return (
-    <Grid container direction='row' justifyContent='center' alignItems='center' sx={{ height: "100vh" }} className="imagem">
+    <Grid container direction='row' justifyContent='center' alignItems='center' sx={{ height: "100vh" }} className="imagem1">
 
       <Navbar />
 

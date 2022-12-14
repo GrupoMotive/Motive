@@ -73,7 +73,7 @@ function Login() {
   }
 
   return (
-    <Grid container direction='row' justifyContent='center' alignItems='center' sx={{ height: "100vh" }} className="imagem">
+    <Grid container direction='row' justifyContent='center' alignItems='center' sx={{ height: "100vh" }} className="imagem2">
       <Navbar />
       <Grid xs={6}>
       </Grid>

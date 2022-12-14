@@ -84,7 +84,7 @@ function Login() {
             <TextField {...register('email')} id='email' label='Email' variant='filled' name='email' margin='normal' color='success' fullWidth className='campo' />
             <TextField {...register('senha')} id='senha' label='Senha' variant='filled' name='senha' margin='normal' type='password' color='success' fullWidth className='campo' />
             <Box marginTop={2} textAlign='center'>
-              <Button type='submit' variant='contained' color='primary' className='botão-login' sx={{ backgroundColor: "#0DCA70", width: "251px", ":hover": { backgroundColor: "#000", border: '1px solid #0DCA70' } }}>
+              <Button type='submit' variant='contained' color='primary' className='botão-login' sx={{ backgroundColor: "#0DCA70", border: '1px solid #0DCA70', width: "251px", ":hover": { backgroundColor: "#000", border: '1px solid #0DCA70' } }}>
                 Login
               </Button>
               <Box display='flex' justifyContent='center' marginTop={2}>

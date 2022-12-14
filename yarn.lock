@@ -1883,6 +1883,16 @@
   resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.11.6.tgz#cee20bd55e68a1720bdab363ecf0c821ded4cd45"
   integrity sha512-50/17A98tWUfQ176raKiOGXuYpLyyVMkxxG6oylzL3BPOlA6ADGdK7EYunSa4I064xerltq9TGXs8HmOk5E+vw==
 
+"@reduxjs/toolkit@^1.9.1":
+  version "1.9.1"
+  resolved "https://registry.yarnpkg.com/@reduxjs/toolkit/-/toolkit-1.9.1.tgz#4c34dc4ddcec161535288c60da5c19c3ef15180e"
+  integrity sha512-HikrdY+IDgRfRYlCTGUQaiCxxDDgM1mQrRbZ6S1HFZX5ZYuJ4o8EstNmhTwHdPl2rTmLxzwSu0b3AyeyTlR+RA==
+  dependencies:
+    immer "^9.0.16"
+    redux "^4.2.0"
+    redux-thunk "^2.4.2"
+    reselect "^4.1.7"
+
 "@remix-run/router@1.0.3":
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/@remix-run/router/-/router-1.0.3.tgz#953b88c20ea00d0eddaffdc1b115c08474aa295d"
@@ -5375,7 +5385,7 @@ ignore@^5.2.0:
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-5.2.1.tgz#c2b1f76cb999ede1502f3a226a9310fdfe88d46c"
   integrity sha512-d2qQLzTJ9WxQftPAuEQpSPmKqzxePjzVbpAVv62AQ64NTL+wR4JkrVqR/LqFsFEUsHDAiId52mJteHDFuDkElA==
 
-immer@^9.0.7:
+immer@^9.0.16, immer@^9.0.7:
   version "9.0.16"
   resolved "https://registry.yarnpkg.com/immer/-/immer-9.0.16.tgz#8e7caab80118c2b54b37ad43e05758cdefad0198"
   integrity sha512-qenGE7CstVm1NrHQbMh8YaSzTZTFNP3zPqr3YU0S0UY441j4bJTg4A2Hh5KAhwgaiU6ZZ1Ar6y/2f4TblnMReQ==
@@ -8069,10 +8079,10 @@ react-scripts@5.0.1:
   optionalDependencies:
     fsevents "^2.3.2"
 
-react-toastify@8.0.3:
-  version "8.0.3"
-  resolved "https://registry.yarnpkg.com/react-toastify/-/react-toastify-8.0.3.tgz#7fbf65f69ec357aab8dd03c1496f9177aa92409a"
-  integrity sha512-rv3koC7f9lKKSkdpYgo/TGzgWlrB/aaiUInF1DyV7BpiM4kyTs+uhu6/r8XDMtBY2FOIHK+FlK3Iv7OzpA/tCA==
+react-toastify@^9.1.1:
+  version "9.1.1"
+  resolved "https://registry.yarnpkg.com/react-toastify/-/react-toastify-9.1.1.tgz#9280caea4a13dc1739c350d90660a630807bf10b"
+  integrity sha512-pkFCla1z3ve045qvjEmn2xOJOy4ZciwRXm1oMPULVkELi5aJdHCN/FHnuqXq8IwGDLB7PPk2/J6uP9D8ejuiRw==
   dependencies:
     clsx "^1.1.1"
 
@@ -8149,7 +8159,12 @@ redent@^3.0.0:
     indent-string "^4.0.0"
     strip-indent "^3.0.0"
 
-redux@*, redux@^4.0.0:
+redux-thunk@^2.4.2:
+  version "2.4.2"
+  resolved "https://registry.yarnpkg.com/redux-thunk/-/redux-thunk-2.4.2.tgz#b9d05d11994b99f7a91ea223e8b04cf0afa5ef3b"
+  integrity sha512-+P3TjtnP0k/FEjcBL5FZpoovtvrTNT/UXd4/sluaSyrURlSlhLSzEdfsTBW7WsKB6yPvgd7q/iZPICFjW4o57Q==
+
+redux@*, redux@^4.0.0, redux@^4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/redux/-/redux-4.2.0.tgz#46f10d6e29b6666df758780437651eeb2b969f13"
   integrity sha512-oSBmcKKIuIR4ME29/AeNUnl5L+hvBq7OaJWzaptTQJAntaPvxIJqfnjbaEiCzzaIz+XmVILfqAM3Ob0aXLPfjA==
@@ -8253,6 +8268,11 @@ requires-port@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/requires-port/-/requires-port-1.0.0.tgz#925d2601d39ac485e091cf0da5c6e694dc3dcaff"
   integrity sha512-KigOCHcocU3XODJxsu8i/j8T9tzT4adHiecwORRQ0ZZFcp7ahwXuRU1m+yuO90C5ZUyGeGfocHDI14M3L3yDAQ==
+
+reselect@^4.1.7:
+  version "4.1.7"
+  resolved "https://registry.yarnpkg.com/reselect/-/reselect-4.1.7.tgz#56480d9ff3d3188970ee2b76527bd94a95567a42"
+  integrity sha512-Zu1xbUt3/OPwsXL46hvOOoQrap2azE7ZQbokq61BQfiXvhewsKDwhMeZjTX9sX0nvw1t/U5Audyn1I9P/m9z0A==
 
 resolve-cwd@^3.0.0:
   version "3.0.0"

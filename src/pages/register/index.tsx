@@ -5,6 +5,7 @@ import { useForm } from 'react-hook-form'
 import "./register.css"
 import axios from 'axios';
 import api from '../../services/api';
+import { Flip, toast } from 'react-toastify';
 
 type FormValues = {
   nome: string
@@ -26,22 +27,56 @@ export default function Register() {
     try {
 
       if (data.senha !== data.confirmarSenha) {
-        alert('As senhas são diferentes');
+        toast.error('As senhas são diferentes', {
+          transition: Flip,
+          position: "top-right",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: false,
+          draggable: false,
+          theme: "colored",
+          progress: undefined,
+        });
+      } else {
+        delete (data.confirmarSenha);
+
+        await api.post('usuario', data);
+
+        toast.success('Cadastro realizado com sucesso', {
+          transition: Flip,
+          position: "top-right",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: false,
+          draggable: false,
+          theme: "colored",
+          progress: undefined,
+        });
+
+        navigate('/login');
       }
 
-      delete (data.confirmarSenha);
 
-      await api.post('usuario', data);
 
-      alert('Cadastro realizado com sucesso!');
 
-      navigate('/login');
 
     } catch (error) {
       if (axios.isAxiosError(error)) {
         const res = error.response;
         if (res)
-          alert(res.data.message);
+          toast.error(`${res.data.message}`, {
+            transition: Flip,
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: false,
+            theme: "colored",
+            progress: undefined,
+          })
       }
       console.log(error);
     }

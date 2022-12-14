@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Box, Button, Grid, TextField, Typography } from '@mui/material';
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -7,6 +7,12 @@ import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import api from '../../services/api';
 import Navbar from '../../components/static/navbar';
+import { useDispatch } from 'react-redux';
+import { addToken } from '../../store/tokens/actions';
+import { Flip, toast } from 'react-toastify'
+import { flip } from '@popperjs/core';
+
+
 
 type FormValues = {
   email: string
@@ -15,23 +21,51 @@ type FormValues = {
 
 function Login() {
   const { register, handleSubmit } = useForm<FormValues>();
-
+  const dispatch = useDispatch();
+  const [token, setToken] = useState('');
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (token !== '') {
+      dispatch(addToken(token));
+      navigate('/')
+    }
+  }, [token])
 
   async function handleLogin(data: FormValues) {
     try {
       const response = await api.post('auth/login', data);
 
-      localStorage.setItem("token", response.data.token);
-      localStorage.setItem("email", response.data.email);
+      setToken(response.data.token);
 
-      navigate('/');
+      toast.success('Usuário logado com sucesso', {
+        transition: Flip,
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        theme: "colored",
+        progress: undefined,
+        });
 
     } catch (error) {
       if (axios.isAxiosError(error)) {
         const res = error.response;
         if (res) {
-          alert(res.data.message);
+          toast.error('Senha ou e-mail incorretos', {
+            transition: Flip,
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: false,
+            theme: "colored",
+            progress: undefined,
+            });
+
         }
       }
       console.log(error);

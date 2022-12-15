@@ -1,0 +1,15 @@
+.card{
+    background: url("https://mui.com/static/images/cards/contemplative-reptile.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 13rem;
+    display: flex;
+    align-items: flex-end;
+}
+
+.content{
+    background-color: rgba(1, 255, 132, 0.877);
+    width: 100%;
+    padding: 0px !important;
+}
+

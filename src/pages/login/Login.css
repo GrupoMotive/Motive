@@ -44,3 +44,10 @@
   background-color: #303030;
   border-radius: 5px;
 }
+
+@media(min-width: 740px){
+  .box-login {
+    height: 390px;
+    width: 330px;
+  }
+}

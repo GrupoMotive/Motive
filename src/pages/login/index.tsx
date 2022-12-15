@@ -75,19 +75,19 @@ function Login() {
   return (
     <Grid container direction='row' justifyContent='center' alignItems='center' sx={{ height: "100vh" }} className="imagem2">
 
-      <Grid xs={6} alignSelf='flex-start'>
+      <Grid item xs={12} sm={12} md={12} lg={6} xl={6} alignSelf='flex-start'>
         <Link to='/'>
           <img src="./images/logo.png" alt="" className='logoImagem1' />
         </Link>
       </Grid>
-      <Grid alignItems='center' xs={6}>
+      <Grid item alignItems='center' xs={12} sm={12} md={12} lg={6} xl={6}>
         <Box paddingX={20}>
           <form onSubmit={handleSubmit(handleLogin)} className="box-login">
             <Typography variant='h3' gutterBottom component='h3' align='center' sx={{ color: "#0DCA70", fontSize: "24px", fontWeight: 'bold', }}>LOGIN</Typography>
             <TextField {...register('email')} id='email' label='Email' variant='filled' name='email' margin='normal' color='green' fullWidth className='campo' inputProps={{ style: { color: "#efeeee" } }} />
             <TextField {...register('senha')} id='senha' label='Senha' variant='filled' name='senha' margin='normal' type='password' color='green' fullWidth className='campo' inputProps={{ style: { color: "#efeeee" } }} />
             <Box marginTop={2} textAlign='center'>
-              <Button type='submit' variant='contained' color='primary' className='botão-login' sx={{ backgroundColor: "#0DCA70", border: '1px solid #0DCA70', width: "251px", ":hover": { backgroundColor: "#000", border: '1px solid #0DCA70' } }}>
+              <Button type='submit' variant='contained' color='primary' className='botão-login' sx={{ backgroundColor: "#0DCA70", border: '1px solid #0DCA70', width: "100%", ":hover": { backgroundColor: "#000", border: '1px solid #0DCA70' } }}>
                 Login
               </Button>
               <Box display='flex' justifyContent='center' marginTop={2}>

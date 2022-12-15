@@ -12,23 +12,30 @@ const theme = createTheme({
       main: '#64748B',
       contrastText: '#fff',
     },
+    green: {
+      main: "#0DCA70"
+    }
   },
 });
 
 declare module '@mui/material/styles' {
   interface Palette {
     neutral: Palette['primary'];
+    green: Palette['secondary'];
   }
 
   // allow configuration using `createTheme`
   interface PaletteOptions {
     neutral?: PaletteOptions['primary'];
+    green?: PaletteOptions['secondary'];
+
   }
 }
 // Update the Button's color prop options
 declare module '@mui/material' {
   interface TextFieldPropsColorOverrides {
     neutral: true;
+    green: true;
   }
 }
 

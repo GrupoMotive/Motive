@@ -26,16 +26,13 @@ export default function Home() {
   }, [produtos.length])
 
   return (
-    
+
     <Box sx={{ height: "calc(100vh - 140px)" }}>
       <Grid container direction='row' justifyContent='center' alignItems='center' sx={{ height: "100vh" }} className="imagemHome">
-      <Navbar />
-    </Grid>
-    <Footer />
+        <Navbar />
+      </Grid>
+      <Footer />
     </Box>
-  
-    
-    
   );
 
 

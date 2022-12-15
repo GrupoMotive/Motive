@@ -32,9 +32,6 @@ declare module '@mui/material' {
   }
 }
 
-
-
-
 function App() {
   return (
     <>

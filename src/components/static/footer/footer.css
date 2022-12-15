@@ -4,3 +4,15 @@
     color: #eee;
     font-size: 14px;
   }
+  .LinkFooter {
+    display: flex;
+    align-items: center;
+    color:#FFF;
+    
+  }
+  .link {
+    color: #FFF;
+  }
+  .link:hover {
+     color: #00F
+  }

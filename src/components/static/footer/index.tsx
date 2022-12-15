@@ -37,26 +37,32 @@ export default function Footer() {
           <Grid item xs={12} sm={4}>
             <Box borderBottom={3} borderColor={"#0DCA70"} pb={1}>LINKS ÚTEIS</Box>
             <Box pt={3} pb={1} borderBottom={2} borderColor={"#101522"}>
-              <Link to="/sobre" className="LinkFooter" >
+              <Link to='/' className="LinkFooter" onClick={() => {
+                window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+              }}>
                 <ChevronRightIcon sx={{ color: "#0DCA70", fontSize: 30 }} />
-                <Typography sx={{ color: "white", ":hover": { opacity: 0.7} , transition: "0.2s all"}}>
-                  Sobre
+                <Typography sx={{ color: "white", ":hover": { opacity: 0.7 }, transition: "0.2s all" }}>
+                  Home
                 </Typography>
               </Link>
             </Box>
             <Box pt={1} pb={1} borderBottom={2} borderColor={"#101522"}>
-              <Link to='/aulas' className="LinkFooter">
+              <Link to='/aulas' className="LinkFooter" onClick={() => {
+                window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+              }}>
                 <ChevronRightIcon sx={{ color: "#0DCA70", fontSize: 30 }} />
-                <Typography sx={{ color: "white", ":hover": { opacity: 0.7} , transition: "0.2s all"}}>
+                <Typography sx={{ color: "white", ":hover": { opacity: 0.7 }, transition: "0.2s all" }}>
                   Aulas
                 </Typography>
               </Link>
             </Box>
             <Box pt={1} pb={1} borderBottom={2} borderColor={"#101522"}>
-              <Link to='/' className="LinkFooter">
+            <Link to="/sobre" className="LinkFooter" onClick={() => {
+                window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+              }}>
                 <ChevronRightIcon sx={{ color: "#0DCA70", fontSize: 30 }} />
-                <Typography sx={{ color: "white", ":hover": { opacity: 0.7} , transition: "0.2s all"}}>
-                  Contact
+                <Typography sx={{ color: "white", ":hover": { opacity: 0.7 }, transition: "0.2s all" }}>
+                  Sobre
                 </Typography>
               </Link>
             </Box>
@@ -64,28 +70,28 @@ export default function Footer() {
           <Grid item xs={12} sm={4}>
             <Box borderBottom={3} borderColor={"#0DCA70"} pb={1}>DÚVIDAS, SUGESTÕES E ELOGIOS:</Box>
             <Box pt={3} pb={1} borderBottom={2} borderColor={"#101522"}>
-              <Link to="/" className="LinkFooter" >
+              <a href="https://grupo1.generation.rj@gmail.com" className="LinkFooter" >
                 <MailOutlineIcon sx={{ color: "#0DCA70", fontSize: 30 }} />
-                <Typography pl={1} sx={{ color: "white", ":hover": { opacity: 0.7} , transition: "0.2s all"}}>
+                <Typography pl={1} sx={{ color: "white", ":hover": { opacity: 0.7 }, transition: "0.2s all" }}>
                   grupo1.generation.rj@gmail.com
                 </Typography>
-              </Link>
+              </a>
             </Box>
             <Box pt={1} pb={1} borderBottom={2} borderColor={"#101522"}>
               <Link to='/' className="LinkFooter">
                 <WhatsAppIcon sx={{ color: "#0DCA70", fontSize: 30 }} />
-                <Typography pl={1} sx={{ color: "white", ":hover": { opacity: 0.7} , transition: "0.2s all"}}>
+                <Typography pl={1} sx={{ color: "white", ":hover": { opacity: 0.7 }, transition: "0.2s all" }}>
                   +55 21 99132-3526
                 </Typography>
               </Link>
             </Box>
             <Box pt={1} pb={1} borderBottom={2} borderColor={"#101522"}>
-              <Link to='https://github.com/GrupoMotive' className="LinkFooter">
+              <a href='https://github.com/GrupoMotive' className="LinkFooter">
                 <GitHubIcon sx={{ color: "#0DCA70", fontSize: 30 }} />
-                <Typography pl={1} sx={{ color: "white", ":hover": { opacity: 0.7} , transition: "0.2s all"}}>
-                https://github.com/GrupoMotive
+                <Typography pl={1} sx={{ color: "white", ":hover": { opacity: 0.7 }, transition: "0.2s all" }}>
+                  https://github.com/GrupoMotive
                 </Typography>
-              </Link>
+              </a>
             </Box>
           </Grid>
         </Grid>

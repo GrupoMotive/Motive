@@ -1,68 +1,88 @@
 .imagemHome {
-  background-image: url(../../assets/hero-bg-filter.jpg);
-  background-repeat: no-repeat;
-  width: 100%;
-  min-height: 100%;
-  background-size: cover;
-  background-position: center;
+    background-image: url(../../assets/hero-bg-filter.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100%;
+    background-size: cover;
+    background-position: center;
 }
 
-.h1 {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: aliceblue;
+.TituloHome {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: aliceblue;
 
 }
 
-.h3 {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: aliceblue;
+.SubTituloHome {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: aliceblue;
 }
 
 
 .animationfade {
-  animation: fadeIn 1.5s;
+    animation: fadeIn 1.5s;
 }
 
 @keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: scale(0%);
-  }
+    0% {
+        opacity: 0;
+        transform: scale(0%);
+    }
 
-  100% {
+    100% {
+        opacity: 1;
+        transform: scale(100%);
+    }
+}
+
+.tag {
+    background-color: rgb(0, 0, 0);
+}
+
+.tag {
     opacity: 1;
-    transform: scale(100%);
-  }
-}
-
-.tag {
-  background-color: rgb(0, 0, 0);
-}
-
-.tag {
-  opacity: 1;
-  transform: translate(0, 10vh);
-  transition: all 1s;
+    transform: translate(0, 10vh);
+    transition: all 1s;
 }
 
 
 .tag.visible {
-  opacity: 1;
-  transform: translate(0, 0);
+    opacity: 1;
+    transform: translate(0, 0);
 }
 
 .yellow {
-  background-color: lightyellow;
+    background-color: lightyellow;
 }
 
 .red {
-  background-color: lightcoral;
+    background-color: lightcoral;
 }
 
 .blue {
-  background-color: lightblue;
+    background-color: lightblue;
 }
 
 .green {
-  background-color: lightgreen;
+    background-color: lightgreen;
 }
+
+
+.fundo{
+    background-color: rgba(255, 255, 255, 0.877);
+    width: 40%;
+    height: 29%;
+    padding: 10px;
+}
+
+.imageCarousel {
+    align-items: center;
+    width: 90%;
+    height: 70%;
+}
+
+.carousel {
+    width: 100%;
+}
+
+

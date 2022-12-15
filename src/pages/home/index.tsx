@@ -9,6 +9,8 @@ import './Home.css'
 import Footer from "../../components/static/footer";
 import { margin } from "@mui/system";
 import { FormatAlignJustify } from "@material-ui/icons";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from "react-responsive-carousel";
 
 export default function Home() {
 
@@ -31,13 +33,13 @@ export default function Home() {
     <Box className="imagemHome">
       <Navbar />
       <Grid container xs={12} justifyContent='center' alignItems='center'  >
-        <Grid item xs={8} display='flex' flexDirection='column' justifyContent='center' className="animationfade" >
+        <Grid item xs={8} display='flex' flexDirection='column' justifyContent='center' className="animationfade">
 
-          <Typography sx={{ fontWeight: 'bold', fontSize: '65px', }} className='h1' lineHeight='100%' align="center" >
-            VOCÊ MAIS <span style={{ color: '#0DCA70', }}>SAUDÁVEL</span> <br /> COM ATIVIDADES AO AR LIVRE.
+          <Typography sx={{ fontWeight: 'bold', fontSize: '65px', }} className='TituloHome' lineHeight='100%' align="center" >
+            <br /> <br />  VOCÊ MAIS <span style={{ color: '#0DCA70', }}>SAUDÁVEL</span> <br /> COM ATIVIDADES AO AR LIVRE.
           </Typography>
 
-          <Typography sx={{ fontWeight: 'bold', fontSize: '30px', paddingTop: '10px' }} className='h3' align="center" >
+          <Typography sx={{ fontWeight: 'bold', fontSize: '30px', paddingTop: '10px' }} className='SubTituloHome' align="center" >
             Atividades físicas e esportes em geral são a melhor forma de cuidar da saúde.
             Motivamos você a se exercitar!
           </Typography>
@@ -45,18 +47,49 @@ export default function Home() {
 
         </Grid>
 
+        <Box
+          display='flex'
+          justifyContent='center'
+          margin='100px'
+          padding='10px'
+          className="fundo"
+          borderRadius='20px'
+        >
+
+          <Carousel>
+
+            <div className="imageCarousel">
+              <img src="./bgaulas.jpg" />
+              <p className="legend ">A vida em um constante movimento</p>
+            </div>
+            <div className="imageCarousel">
+              <img src="./images/Erika.png" />
+              <p className="legend ">Viva a vida</p>
+            </div>
+            <div className="imageCarousel">
+              <img src="./images/Nat.jpg" />
+              <p className="legend ">Tente não morrer vivendo</p>
+            </div>
+            <div className="imageCarousel">
+              <img src="./images/Nat.jpg" />
+              <p className="legend ">Tente não morrer vivendo</p>
+            </div>
+            <div className="imageCarousel">
+              <img src="./images/Nat.jpg" />
+              <p className="legend ">Tente não morrer vivendo</p>
+            </div>
+            <div className="imageCarousel">
+              <img src="./images/Nat.jpg" />
+              <p className="legend ">Tente não morrer vivendo</p>
+            </div>
+          </Carousel>
+
+        </Box>
+
       </Grid>
-
-      <Box display='flex' justifyContent='column' >
-        <Typography sx={{ fontWeight: 'bold', fontSize: '100px', paddingTop: '10px' }} className=''>
-
-
-        </Typography>
-      </Box>
 
       <Footer />
     </Box>
-
 
 
   );

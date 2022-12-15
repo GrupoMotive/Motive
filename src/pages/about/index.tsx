@@ -1,7 +1,9 @@
 import React from "react";
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Divider, Grid, Typography } from "@mui/material";
 import { GitHub, LinkedIn } from "@material-ui/icons";
 import './style.css'
+import { shadows } from '@mui/system';
+import Navbar from "../../components/static/navbar";
 
 export default function About() {
 
@@ -10,16 +12,21 @@ export default function About() {
 
   return (
     <Box>
-      <Box sx={{
-        backgroundImage: 'url(./yog.jpg)',
-        height: '350px',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'left'
-
+      <Box minHeight="55vh"
+        width="100%"
+        py={6}
+        px={{ xs: 2, lg: 0 }}
+        mx={-2}
+        sx={{
+          backgroundImage: 'url(./yog.jpg)',
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          display: "grid",
+          placeItems: "center",
       }}>
+
+      < Navbar/>
+
         <Typography variant="h2" sx={{
           fontWeight: 'bold',
           color: 'white',
@@ -27,19 +34,43 @@ export default function About() {
 
         }}>
           Somos a Motive!
+          <Divider color="#0DCA70" sx={{
+            height: 4, 
+            width: '100px',
+            borderRadius: '5px',
+            position: "center",
+          }} />
+          
         </Typography>
       </Box>
+      
 
-      <Box sx={{
-        paddingX: '40px'
+      <Box minHeight="25rem" alignItems="center" sx={{
+          p: 2,
+          mx: { xs: 2, lg: 3 },
+          mt: -8,
+          mb: 4,
+          boxShadow: 3,          
+          backgroundColor: "#fff",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          display: "grid",
+          borderRadius: '16px',
+          
       }}>
 
         <Typography variant="subtitle1" sx={{
           fontWeight: 'bold',
-          padding: '30px'
+          padding: '30px',
         }}
         >
-          Quem somos
+          <h2> Quem somos </h2>
+          <Divider color="#0DCA70" sx={{
+            height: 4, 
+            width: '100px',
+            borderRadius: '5px',
+          }} />
+
 
         </Typography >
 
@@ -61,7 +92,15 @@ export default function About() {
         <Typography variant="subtitle1" sx={{
           fontWeight: 'bold',
           padding: '30px'
-        }}> Conceito  </Typography >
+        }}> <h2> Conceito </h2>
+
+        <Divider color="#0DCA70" sx={{
+            height: 4, 
+            width: '100px',
+            borderRadius: '5px',
+          }} />
+        
+        </Typography >
 
         <Typography sx={{
           paddingX: '30px'
@@ -72,7 +111,14 @@ export default function About() {
         <Typography variant="subtitle1" sx={{
           fontWeight: 'bold',
           padding: '30px'
-        }}> Colaboradores
+        }}>  <h2> Colaboradores </h2>
+
+        <Divider color="#0DCA70" sx={{
+            height: 4, 
+            width: '100px',
+            borderRadius: '5px',
+          }} />
+
         </Typography >
 
         <Grid container
@@ -220,7 +266,7 @@ export default function About() {
             </div>
           </Grid>
 
-         <Grid item xs={4} sx={{
+         <Grid item xs={4} sx={{ 
             display: 'flex',
             justifyContent: "center"
           }}>

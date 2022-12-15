@@ -88,11 +88,6 @@
     border: 2px solid #0dca70;
 }
 
-#membros .description .social-media svg:hover
-{
-    transform: scale(1.1);
-    color: #F21B3F;
-}
 
 #membros .membro:hover::before
 {
@@ -103,3 +98,9 @@
 {
     width: 50%;
 }
+
+#membros .membro::shadow
+{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+

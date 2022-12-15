@@ -6,6 +6,7 @@ import { TokenState } from "../../store/tokens/tokensReducer";
 import { useSelector } from "react-redux";
 import Navbar from "../../components/static/navbar";
 import './Home.css'
+import Footer from "../../components/static/footer";
 
 export default function Home() {
 
@@ -28,8 +29,8 @@ export default function Home() {
     <Box sx={{ height: "calc(100vh - 140px)" }}>
       <Grid container direction='row' justifyContent='center' alignItems='center' sx={{ height: "100vh" }} className="imagemHome">
       <Navbar />
-      
     </Grid>
+    <Footer />
     </Box>
     
     

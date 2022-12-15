@@ -4,6 +4,9 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import GitHubIcon from '@mui/icons-material/GitHub';
 import { Link } from "react-router-dom";
 import './footer.css'
 
@@ -34,18 +37,18 @@ export default function Footer() {
           <Grid item xs={12} sm={4}>
             <Box borderBottom={3} borderColor={"#0DCA70"} pb={1}>LINKS ÚTEIS</Box>
             <Box pt={3} pb={1} borderBottom={2} borderColor={"#101522"}>
-              <Link to="/" className="LinkFooter" >
+              <Link to="/sobre" className="LinkFooter" >
                 <ChevronRightIcon sx={{ color: "#0DCA70", fontSize: 30 }} />
                 <Typography sx={{ color: "white", ":hover": { opacity: 0.7} , transition: "0.2s all"}}>
-                  Contact
+                  Sobre
                 </Typography>
               </Link>
             </Box>
             <Box pt={1} pb={1} borderBottom={2} borderColor={"#101522"}>
-              <Link to='/' className="LinkFooter">
+              <Link to='/aulas' className="LinkFooter">
                 <ChevronRightIcon sx={{ color: "#0DCA70", fontSize: 30 }} />
                 <Typography sx={{ color: "white", ":hover": { opacity: 0.7} , transition: "0.2s all"}}>
-                  Contact
+                  Aulas
                 </Typography>
               </Link>
             </Box>
@@ -59,28 +62,28 @@ export default function Footer() {
             </Box>
           </Grid>
           <Grid item xs={12} sm={4}>
-            <Box borderBottom={3} borderColor={"#0DCA70"} pb={1}>CONTATO</Box>
+            <Box borderBottom={3} borderColor={"#0DCA70"} pb={1}>DÚVIDAS, SUGESTÕES E ELOGIOS:</Box>
             <Box pt={3} pb={1} borderBottom={2} borderColor={"#101522"}>
               <Link to="/" className="LinkFooter" >
-                <ChevronRightIcon sx={{ color: "#0DCA70", fontSize: 30 }} />
-                <Typography sx={{ color: "white", ":hover": { opacity: 0.7} , transition: "0.2s all"}}>
-                  Contact
+                <MailOutlineIcon sx={{ color: "#0DCA70", fontSize: 30 }} />
+                <Typography pl={1} sx={{ color: "white", ":hover": { opacity: 0.7} , transition: "0.2s all"}}>
+                  grupo1.generation.rj@gmail.com
                 </Typography>
               </Link>
             </Box>
             <Box pt={1} pb={1} borderBottom={2} borderColor={"#101522"}>
               <Link to='/' className="LinkFooter">
-                <ChevronRightIcon sx={{ color: "#0DCA70", fontSize: 30 }} />
-                <Typography sx={{ color: "white", ":hover": { opacity: 0.7} , transition: "0.2s all"}}>
-                  Contact
+                <WhatsAppIcon sx={{ color: "#0DCA70", fontSize: 30 }} />
+                <Typography pl={1} sx={{ color: "white", ":hover": { opacity: 0.7} , transition: "0.2s all"}}>
+                  +55 21 99132-3526
                 </Typography>
               </Link>
             </Box>
             <Box pt={1} pb={1} borderBottom={2} borderColor={"#101522"}>
-              <Link to='/' className="LinkFooter">
-                <ChevronRightIcon sx={{ color: "#0DCA70", fontSize: 30 }} />
-                <Typography sx={{ color: "white", ":hover": { opacity: 0.7} , transition: "0.2s all"}}>
-                  Contact
+              <Link to='https://github.com/GrupoMotive' className="LinkFooter">
+                <GitHubIcon sx={{ color: "#0DCA70", fontSize: 30 }} />
+                <Typography pl={1} sx={{ color: "white", ":hover": { opacity: 0.7} , transition: "0.2s all"}}>
+                https://github.com/GrupoMotive
                 </Typography>
               </Link>
             </Box>

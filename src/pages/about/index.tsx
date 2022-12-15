@@ -4,6 +4,7 @@ import { GitHub, LinkedIn } from "@material-ui/icons";
 import './style.css'
 import { shadows } from '@mui/system';
 import Navbar from "../../components/static/navbar";
+import Footer from "../../components/static/footer";
 
 export default function About() {
 
@@ -295,6 +296,10 @@ export default function About() {
         </Grid>
 
       </Box>
+
+      <br></br>
+      <Footer />
+
 
     </Box>
   )

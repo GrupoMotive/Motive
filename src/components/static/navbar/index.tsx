@@ -31,7 +31,6 @@ const drawerWidth = 240;
 const navItems = [
   { name: "HOME", to: "/" },
   { name: 'AULAS', to: "/aulas" },
-  { name: 'CONTATO', to: "/contato" },
   { name: 'SOBRE', to: "/sobre" },
   { name: 'LOGIN', to: "/login" }
 ];
@@ -97,13 +96,14 @@ export default function Navbar(props: Props) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography
-            variant="h6"
+          <Box
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'flex' }, alignItems: 'center' }}
           >
-            <img src="./WhiteLogo-Motive.png" alt="logo" className='logo' />
-          </Typography>
+            <Link to='/'>
+              <img src="./WhiteLogo-Motive.png" alt="logo" className='logo' />
+            </Link>
+          </Box>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => {
               if (item.name === 'LOGIN' && token !== '') {

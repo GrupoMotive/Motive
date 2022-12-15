@@ -6,3 +6,73 @@
     background-size: cover;
     background-position: center;
 }
+
+.h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: aliceblue;
+
+}
+
+.h3 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: aliceblue;
+}
+
+
+.animationfade {
+    animation: fadeIn 1.5s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(100%);
+    }
+}
+
+h2 {
+    margin: 0;
+    padding: 0;
+  }
+  h2 {
+    color: white;
+    font-size: 20rem;
+    text-align: center;
+  }
+  section {
+    height: 100vh;
+  }
+
+  .tag {
+    background-color: rgb(0, 0, 0);
+}
+  
+  .tag {
+    opacity: 1;
+    transform: translate(0, 10vh);
+    transition: all 1s;
+  }
+
+  
+  .tag.visible {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  
+  .yellow {
+    background-color: lightyellow;
+  }
+  .red {
+    background-color: lightcoral;
+  }
+  .blue {
+    background-color: lightblue;
+  }
+  .green {
+    background-color: lightgreen;
+  }

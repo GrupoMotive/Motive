@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Box, Grid } from "@mui/material";
+import { Box, colors, Grid, Typography } from "@mui/material";
 import api from "../../services/api";
 import Produtos from "../../models/produto";
 import { TokenState } from "../../store/tokens/tokensReducer";
@@ -7,6 +7,8 @@ import { useSelector } from "react-redux";
 import Navbar from "../../components/static/navbar";
 import './Home.css'
 import Footer from "../../components/static/footer";
+import { margin } from "@mui/system";
+import { FormatAlignJustify } from "@material-ui/icons";
 
 export default function Home() {
 
@@ -26,15 +28,38 @@ export default function Home() {
   }, [produtos.length])
 
   return (
+    <Box className="imagemHome">
+      <Navbar />
+      <Grid container xs={12} justifyContent='center' alignItems='center'  >
+        <Grid item xs={8} display='flex' flexDirection='column' justifyContent='center' className="animationfade" >
 
-    <Box sx={{ height: "calc(100vh - 140px)" }}>
-      <Grid container direction='row' justifyContent='center' alignItems='center' sx={{ height: "100vh" }} className="imagemHome">
-        <Navbar />
+          <Typography sx={{ fontWeight: 'bold', fontSize: '65px', }} className='h1' lineHeight='100%' align="center" >
+            VOCÊ MAIS <span style={{ color: '#0DCA70', }}>SAUDÁVEL</span> <br /> COM ATIVIDADES AO AR LIVRE.
+          </Typography>
+
+          <Typography sx={{ fontWeight: 'bold', fontSize: '30px', paddingTop: '10px' }} className='h3' align="center" >
+            Atividades físicas e esportes em geral são a melhor forma de cuidar da saúde.
+            Motivamos você a se exercitar!
+          </Typography>
+
+
+        </Grid>
+
       </Grid>
+
+      <Box display='flex' justifyContent='column' >
+        <Typography sx={{ fontWeight: 'bold', fontSize: '100px', paddingTop: '10px' }} className=''>
+
+
+        </Typography>
+      </Box>
+
       <Footer />
     </Box>
+
+
+
   );
 
 
 }
-

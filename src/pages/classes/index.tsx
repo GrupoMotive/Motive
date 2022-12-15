@@ -17,11 +17,11 @@ export default function Classes() {
   }, [produtos.length])
 
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: "calc(100vh - 140px)" }}>
+    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
       <Typography sx={{ fontWeight: 'bold', fontSize: '30px', marginY: '30px' }} > Aulas </Typography>
-      <Grid container sx={{ width: '90%', overflow: "auto" }}>
+      <Grid container sx={{ width: '90%' }}>
         {produtos.map(produto => (
-          <Grid item xs={4}>
+          <Grid item xs={4} sx={{ display: 'flex', justifyContent: 'center', marginY: "10px" }}>
             <MediaCard titulo={produto.nome} local={produto.local} key={produto.id} />
           </Grid>
         ))}

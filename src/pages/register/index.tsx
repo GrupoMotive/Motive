@@ -84,7 +84,7 @@ export default function Register() {
 
       <Grid xs={6} alignSelf='flex-start' >
         <Link to='/'>
-          <img src="./images/logo.png" alt="" className='logoImagem'/>
+          <img src="./images/logo.png" alt="" className='logoImagem' />
         </Link>
       </Grid>
 
@@ -92,12 +92,12 @@ export default function Register() {
       <Grid alignItems='center' xs={6}>
         <Box paddingX={20}>
           <form onSubmit={handleSubmit(handleRegister)} className="box-register">
-            <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' sx={{ color: "#0DCA70" }}>Cadastrar</Typography>
-            <TextField {...register('nome')} id='nome' label='Nome' variant='filled' name='nome' margin='normal' fullWidth className='campo-nome' color='success' />
-            <TextField {...register('email')} id='email' label='Email' variant='filled' name='email' margin='normal' fullWidth className='campo-email' color='success' />
-            <TextField {...register('foto')} id='foto' label='Foto' variant='filled' name='foto' margin='normal' fullWidth className='campo-foto' color='success' />
-            <TextField {...register('senha')} id='senha' label='Senha' variant='filled' name='senha' margin='normal' type='password' fullWidth className='campo-senha' color='success' />
-            <TextField {...register('confirmarSenha')} id='Confirmar Senha' label='Confirmar Senha' variant='filled' name='confirmarSenha' margin='normal' type='password' fullWidth className='campo-confirmarSenha' color='success' />
+            <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' sx={{ color: "#0DCA70", fontWeight: "bold", fontSize: "24px" }}>CADASTRAR</Typography>
+            <TextField {...register('nome')} id='nome' label='Nome' variant='filled' name='nome' margin='normal' fullWidth className='campo-nome' color='green' inputProps={{ style: { color: "#efeeee" } }} />
+            <TextField {...register('email')} id='email' label='Email' variant='filled' name='email' margin='normal' fullWidth className='campo-email' color='green' inputProps={{ style: { color: "#efeeee" } }} />
+            <TextField {...register('foto')} id='foto' label='Foto' variant='filled' name='foto' margin='normal' fullWidth className='campo-foto' color='green' inputProps={{ style: { color: "#efeeee" } }} />
+            <TextField {...register('senha')} id='senha' label='Senha' variant='filled' name='senha' margin='normal' type='password' fullWidth className='campo-senha' color='green' inputProps={{ style: { color: "#efeeee" } }} />
+            <TextField {...register('confirmarSenha')} id='Confirmar Senha' label='Confirmar Senha' variant='filled' name='confirmarSenha' margin='normal' type='password' fullWidth className='campo-confirmarSenha' color='green' inputProps={{ style: { color: "#efeeee" } }} />
             <Box marginTop={2} textAlign='center'>
               <Link to='/login' className='text-decorator-none'>
                 <Button variant='contained' color='secondary' sx={{ backgroundColor: "#FF0000", border: '1px solid #FF0000', ":hover": { backgroundColor: "#000", border: '1px solid #FF0000' }, }}>

@@ -7,6 +7,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import './card.css';
 import { Grid } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 interface CardProps {
   titulo: string,
@@ -28,6 +29,8 @@ export default function MediaCard({ titulo, local }: CardProps) {
           </Grid>
           <Grid item xs={3}>
             <CardActions>
+              <Link to="/produto">
+              
               <Button className='btn-comprar' sx={{
                 backgroundColor: "black",
                 color: "white",
@@ -35,6 +38,7 @@ export default function MediaCard({ titulo, local }: CardProps) {
                 fontFamily: 'monospace',
                 ":hover": {backgroundColor: "black", opacity: 0.8}
               }}>Comprar</Button>
+              </Link>
             </CardActions>
           </Grid>
         </Grid>

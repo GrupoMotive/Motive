@@ -5,12 +5,15 @@ import Footer from './components/static/footer';
 import Navbar from './components/static/navbar';
 
 import About from './pages/about';
+import Check from './pages/check/Check';
 import Classes from './pages/classes';
 import Contact from './pages/contact';
 import Home from './pages/home';
 import Login from './pages/login';
+import Product from './pages/product';
 import Register from './pages/register';
 import store from './store/store';
+
 
 export default function RoutesApp() {
   return (
@@ -24,6 +27,9 @@ export default function RoutesApp() {
             <Route path='/sobre' element={<About />} />
             <Route path='/login' element={<Login />} />
             <Route path='/register' element={<Register />} />
+            <Route path='/produto' element={<Product />} />
+            <Route path='/check' element={<Check />} />
+
           </Routes>
         </Router>
       </Provider>

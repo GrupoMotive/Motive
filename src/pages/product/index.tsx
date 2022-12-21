@@ -47,7 +47,9 @@ export default function Product() {
 
         <Grid container
           justifyContent="center"
-          alignItems="center">
+          alignItems="center"
+          sx = {{ borderRadius: '16px' }}
+          >
 
           <Grid container item>
             <Box
@@ -56,7 +58,7 @@ export default function Product() {
               borderRadius="xl"
               boxShadow="xl"
               mb={6}
-              sx={{ overflow: "hidden" }}
+              sx={{ overflow: "hidden", borderRadius: '16px' }}
             >
               <Grid container spacing={2}>
                 <Grid
@@ -68,6 +70,7 @@ export default function Product() {
                   className='bgProduct'
                   sx={{
                     alignContent: "center",
+                    borderRadius: '16px'
                   }}
                 >
                   <Box
@@ -78,7 +81,8 @@ export default function Product() {
                     height="100%"
                   >
                     <Box py={6} pr={6} pl={{ xs: 6, sm: 12 }} my="auto">
-                      <Box display="flex" p={1}>
+                      <Box display="flex" p={1} sx= {{ borderRadius: '16px' }}
+                      >
 
                       </Box>
 
@@ -91,7 +95,7 @@ export default function Product() {
                   </Box>
                 </Grid>
                 <Grid item xs={12} lg={7}>
-                  <Box component="form" p={2} method="post">
+                  <Box component="form" p={2} method="post" sx= {{ borderRadius: '16px' }}>
                     <Box px={3} py={{ xs: 2, sm: 6 }}>
                       <Typography variant="h2" mb={1}>
                         Você escolheu Yoga
@@ -110,9 +114,9 @@ export default function Product() {
                         textAlign="right"
                         ml="auto"
                       >
-                        <Button color="info" onClick={routeChange}>
-                          Comprar aula
-                        </Button>
+                        
+                      <button onClick={routeChange}> MATRICULE-SE </button>
+                        
                       </Grid>
                     </Box>
                   </Box>

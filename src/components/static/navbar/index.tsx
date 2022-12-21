@@ -18,6 +18,7 @@ import { TokenState } from '../../../store/tokens/tokensReducer';
 import { useDispatch, useSelector } from 'react-redux';
 import { Flip, toast } from 'react-toastify';
 import { addToken } from '../../../store/tokens/actions';
+import whiteLogo from '../../../assets/images/WhiteLogo-Motive.png'
 
 interface Props {
   /**
@@ -66,7 +67,7 @@ export default function Navbar(props: Props) {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        <img src="./WhiteLogo-Motive.png" alt="" />
+        <img src={whiteLogo} alt="logo" />
       </Typography>
       <Divider />
       <List>
@@ -101,7 +102,7 @@ export default function Navbar(props: Props) {
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'flex' }, alignItems: 'center' }}
           >
             <Link to='/'>
-              <img src="./WhiteLogo-Motive.png" alt="logo" className='logo' />
+              <img src={whiteLogo} alt="logo" className='logo' />
             </Link>
           </Box>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>

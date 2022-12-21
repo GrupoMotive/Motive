@@ -5,8 +5,8 @@ import { useForm } from 'react-hook-form'
 import "./register.css"
 import axios from 'axios';
 import api from '../../services/api';
-import Navbar from '../../components/static/navbar';
 import { toast, Flip } from 'react-toastify';
+import logo from '../../assets/images/WhiteLogo-Motive.png'
 
 type FormValues = {
   nome: string
@@ -84,7 +84,7 @@ export default function Register() {
 
       <Grid xs={6} alignSelf='flex-start' >
         <Link to='/'>
-          <img src="./images/logo.png" alt="" className='logoImagem' />
+          <img src={logo} alt="" className='logo' />
         </Link>
       </Grid>
 

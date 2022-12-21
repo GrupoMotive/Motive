@@ -1,5 +1,10 @@
-#membros .membro
-{
+.bgaulas {
+    background-image: url(../../assets/images/bgaulas.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#membros .membro {
     margin: 20px 15px;
     border-radius: 15px;
     width: 200px;
@@ -15,8 +20,7 @@
     cursor: pointer;
 }
 
-#membros .membro::after
-{
+#membros .membro::after {
     position: absolute;
     top: 0;
     left: 0;
@@ -27,8 +31,7 @@
     background: #0dca70;
 }
 
-#membros .membro::before
-{
+#membros .membro::before {
     position: absolute;
     top: 0;
     right: 0;
@@ -39,16 +42,14 @@
     background: #0dca70;
 }
 
-#membros img
-{
+#membros img {
     border-radius: 50%;
     transition: all 1s;
 }
 
 
 
-#membros .social-media
-{
+#membros .social-media {
     position: absolute;
     background-color: #0dca70;
     bottom: 0;
@@ -64,43 +65,35 @@
     color: #fff;
 }
 
-#membros .description .social-media svg
-{
+#membros .description .social-media svg {
     font-size: 30px;
     transition: all 1s;
 }
 
-#membros .membro:hover .social-media
-{
+#membros .membro:hover .social-media {
     width: 100%;
     opacity: 1;
 }
 
-#membros .membro:hover
-{
-    background-color: rgba(8,61,119,0.2);
+#membros .membro:hover {
+    background-color: rgba(8, 61, 119, 0.2);
     transform: scale(1.01);
 }
 
-#membros .membro:hover img
-{
+#membros .membro:hover img {
     transform: scale(1.1);
     border: 2px solid #0dca70;
 }
 
 
-#membros .membro:hover::before
-{
+#membros .membro:hover::before {
     width: 50%;
 }
 
-#membros .membro:hover::after
-{
+#membros .membro:hover::after {
     width: 50%;
 }
 
-#membros .membro
-{
+#membros .membro {
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
-

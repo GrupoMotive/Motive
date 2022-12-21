@@ -1,6 +1,5 @@
-
 import React, { useEffect, useState } from "react";
-import { alpha, Box, Divider, Grid, InputAdornment, InputBase, styled, TextField, Typography } from "@mui/material";
+import { Box, Divider, Grid, TextField, Typography } from "@mui/material";
 import IconButton from "@material-ui/core/IconButton";
 import Produtos from "../../models/produto";
 import api from "../../services/api";
@@ -15,45 +14,8 @@ type FormValues = {
   search: string
 }
 
-const Search = styled('div')(({ theme }) => ({
-  position: 'relative',
-  borderRadius: theme.shape.borderRadius,
-  backgroundColor: alpha(theme.palette.common.white, 0.6),
-  '&:hover': {
-    backgroundColor: alpha(theme.palette.common.white, 0.7),
-  },
-  marginRight: theme.spacing(2),
-  marginLeft: 0,
-  [theme.breakpoints.up('sm')]: {
-    marginLeft: theme.spacing(3),
-    width: 'auto',
-  },
-}));
-
-const SearchIconWrapper = styled('div')(({ theme }) => ({
-  padding: theme.spacing(0, 2),
-  height: '100%',
-  position: 'absolute',
-  pointerEvents: 'none',
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-}));
-
-const StyledInputBase = styled(TextField)(({ theme }) => ({
-  color: 'inherit',
-  '& .MuiInputBase-input': {
-    padding: theme.spacing(1, 1, 1, 0),
-    // vertical padding + font size from searchIcon
-    paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-    transition: theme.transitions.create('width'),
-    width: '600px',
-  },
-}));
-
 export default function Classes() {
   const [produtos, setProdutos] = useState<Produtos[]>([])
-  const [isSearch, setIsSerach] = useState(false);
   const { register, handleSubmit } = useForm<FormValues>()
 
 
@@ -80,10 +42,8 @@ export default function Classes() {
       <Box minHeight="55vh"
         width="100%"
         py={6}
+        className="bgaulas"
         sx={{
-          backgroundImage: 'url(./bgaulas.jpg)',
-          backgroundSize: "cover",
-          backgroundPosition: "center",
           display: "grid",
           placeItems: "center",
         }}>

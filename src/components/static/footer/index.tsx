@@ -9,6 +9,7 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { Link } from "react-router-dom";
 import './footer.css'
+import whiteLogo from '../../../assets/images/WhiteLogo-Motive.png'
 
 
 export default function Footer() {
@@ -23,7 +24,7 @@ export default function Footer() {
         <Grid container spacing={5}>
           <Grid item xs={12} sm={4}>
             <Box>
-              <img src="/WhiteLogo-Motive.png" alt="WhiteLogoMotive" height={50} width={200} />
+              <img src={whiteLogo} alt="logo" height={50} width={200} />
             </Box>
             <Box pr={15}>
               <Typography>
@@ -57,7 +58,7 @@ export default function Footer() {
               </Link>
             </Box>
             <Box pt={1} pb={1} borderBottom={2} borderColor={"#101522"}>
-            <Link to="/sobre" className="LinkFooter" onClick={() => {
+              <Link to="/sobre" className="LinkFooter" onClick={() => {
                 window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
               }}>
                 <ChevronRightIcon sx={{ color: "#0DCA70", fontSize: 30 }} />

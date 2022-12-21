@@ -1,0 +1,11 @@
+.bgCheck {
+    background-image: url(../../assets/images/yog.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.check {
+    background-image: url(../../assets//images/check.png);
+    background-size: cover;
+    background-position: center;
+}

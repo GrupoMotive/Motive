@@ -1,5 +1,5 @@
 .imagemHome {
-    background-image: url(../../assets/hero-bg-filter.jpg);
+    background-image: url(../../assets/images/hero-bg-filter.jpg);
     background-repeat: no-repeat;
     width: 100%;
     min-height: 100%;
@@ -68,7 +68,7 @@
 }
 
 
-.fundo{
+.fundo {
     background-color: rgba(255, 255, 255, 0.877);
     width: 40%;
     height: 29%;
@@ -84,5 +84,3 @@
 .carousel {
     width: 100%;
 }
-
-

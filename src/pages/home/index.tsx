@@ -1,24 +1,17 @@
 import React, { useEffect, useState } from "react";
-import { Box, colors, Grid, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import api from "../../services/api";
 import Produtos from "../../models/produto";
-import { TokenState } from "../../store/tokens/tokensReducer";
-import { useSelector } from "react-redux";
 import Navbar from "../../components/static/navbar";
 import './Home.css'
 import Footer from "../../components/static/footer";
-import { margin } from "@mui/system";
-import { FormatAlignJustify } from "@material-ui/icons";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
+import Weslley from '../../assets/images/Wesley.jpg'
 
 export default function Home() {
 
   const [produtos, setProdutos] = useState<Produtos[]>([])
-
-  const token = useSelector<TokenState, TokenState["tokens"]>(
-    (state) => state.tokens
-  );
 
   async function BuscaProduto() {
     const res = await api.get('produto');
@@ -59,27 +52,27 @@ export default function Home() {
           <Carousel>
 
             <div className="imageCarousel">
-              <img src="./bgaulas.jpg" />
+              <img src={Weslley} alt="weslley" />
               <p className="legend ">A vida em um constante movimento</p>
             </div>
             <div className="imageCarousel">
-              <img src="./images/Erika.png" />
+              <img src={Weslley} alt="weslley" />
               <p className="legend ">Viva a vida</p>
             </div>
             <div className="imageCarousel">
-              <img src="./images/Nat.jpg" />
+              <img src={Weslley} alt="weslley" />
               <p className="legend ">Tente não morrer vivendo</p>
             </div>
             <div className="imageCarousel">
-              <img src="./images/Nat.jpg" />
+              <img src={Weslley} alt="weslley" />
               <p className="legend ">Tente não morrer vivendo</p>
             </div>
             <div className="imageCarousel">
-              <img src="./images/Nat.jpg" />
+              <img src={Weslley} alt="weslley" />
               <p className="legend ">Tente não morrer vivendo</p>
             </div>
             <div className="imageCarousel">
-              <img src="./images/Nat.jpg" />
+              <img src={Weslley} alt="weslley" />
               <p className="legend ">Tente não morrer vivendo</p>
             </div>
           </Carousel>

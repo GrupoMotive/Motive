@@ -1,3 +1,9 @@
+.bgaulas {
+    background-image: url(../../assets/images/bgaulas.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
 #membros .membro {
     margin: 20px 15px;
     border-radius: 15px;

@@ -1,10 +1,16 @@
 import React from "react";
 import { Box, Divider, Grid, Typography } from "@mui/material";
 import { GitHub, LinkedIn } from "@material-ui/icons";
-import './style.css'
-import { shadows } from '@mui/system';
 import Navbar from "../../components/static/navbar";
 import Footer from "../../components/static/footer";
+import Bruno from '../../assets/images/Brunoo.jpg'
+import Erika from '../../assets/images/Erika.png'
+import Mauricio from '../../assets/images/Mauricio.jpg'
+import Nat from '../../assets/images/Nat.jpg'
+import Wallace from '../../assets/images/Wallace.jpg'
+import Ygor from '../../assets/images/Ygor.jpg'
+import Weslley from '../../assets/images/Wesley.jpg'
+import './style.css'
 
 export default function About() {
 
@@ -17,16 +23,13 @@ export default function About() {
         width="100%"
         py={6}
         px={{ xs: 2, lg: 0 }}
-        mx={-2}
+        className="bgaulas"
         sx={{
-          backgroundImage: 'url(./yog.jpg)',
-          backgroundSize: "cover",
-          backgroundPosition: "center",
           display: "grid",
           placeItems: "center",
-      }}>
+        }}>
 
-      < Navbar/>
+        < Navbar />
 
         <Typography variant="h2" sx={{
           fontWeight: 'bold',
@@ -36,28 +39,28 @@ export default function About() {
         }}>
           Somos a Motive!
           <Divider color="#0DCA70" sx={{
-            height: 4, 
+            height: 4,
             width: '100px',
             borderRadius: '5px',
             position: "center",
           }} />
-          
+
         </Typography>
       </Box>
-      
+
 
       <Box minHeight="25rem" alignItems="center" sx={{
-          p: 2,
-          mx: { xs: 2, lg: 3 },
-          mt: -8,
-          mb: 4,
-          boxShadow: 3,          
-          backgroundColor: "#fff",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          display: "grid",
-          borderRadius: '16px',
-          
+        p: 2,
+        mx: { xs: 2, lg: 3 },
+        mt: -8,
+        mb: 4,
+        boxShadow: 3,
+        backgroundColor: "#fff",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        display: "grid",
+        borderRadius: '16px',
+
       }}>
 
         <Typography variant="subtitle1" sx={{
@@ -67,7 +70,7 @@ export default function About() {
         >
           <h2> Quem somos </h2>
           <Divider color="#0DCA70" sx={{
-            height: 4, 
+            height: 4,
             width: '100px',
             borderRadius: '5px',
           }} />
@@ -95,12 +98,12 @@ export default function About() {
           padding: '30px'
         }}> <h2> Conceito </h2>
 
-        <Divider color="#0DCA70" sx={{
-            height: 4, 
+          <Divider color="#0DCA70" sx={{
+            height: 4,
             width: '100px',
             borderRadius: '5px',
           }} />
-        
+
         </Typography >
 
         <Typography sx={{
@@ -114,8 +117,8 @@ export default function About() {
           padding: '30px'
         }}>  <h2> Colaboradores </h2>
 
-        <Divider color="#0DCA70" sx={{
-            height: 4, 
+          <Divider color="#0DCA70" sx={{
+            height: 4,
             width: '100px',
             borderRadius: '5px',
           }} />
@@ -134,16 +137,15 @@ export default function About() {
           }}>
             <div id='membros'>
               <div className="membro">
-                <img width={150} height={150} src='./images/Brunoo.jpg' />
-
+                <img width={150} height={150} src={Bruno} alt='Foto do colaborador Bruno' />
 
                 <h2> Bruno Pina </h2>
                 <div className="social-media">
                   <a href="https://github.com/Pina98 ">
-                  <GitHub color="primary" /> 
+                    <GitHub color="primary" />
                   </a>
                   <a href="https://www.linkedin.com/in/brunopinatrotta/ ">
-                  <LinkedIn />
+                    <LinkedIn />
                   </a>
 
                 </div>
@@ -157,16 +159,16 @@ export default function About() {
           }}>
             <div id='membros'>
               <div className="membro">
-                <img width={150} height={150} src='./images/Erika.png' />
+                <img width={150} height={150} src={Erika} alt='Foto da colaboradora Erika' />
 
 
                 <h2> Erika Beatriz </h2>
                 <div className="social-media">
                   <a href="https://github.com/ErikaBeatrizz">
-                  <GitHub  color="primary" />
+                    <GitHub color="primary" />
                   </a>
-                  <a href= "https://www.linkedin.com/in/erikabeatrizf/">
-                  <LinkedIn />
+                  <a href="https://www.linkedin.com/in/erikabeatrizf/">
+                    <LinkedIn />
                   </a>
 
                 </div>
@@ -180,16 +182,16 @@ export default function About() {
           }}>
             <div id='membros'>
               <div className="membro">
-                <img width={150} height={150} src='./images/Ygor.jpg' />
+                <img width={150} height={150} src={Ygor} alt='Foto do colaborador Ygor' />
 
 
                 <h2> Igor Lima </h2>
                 <div className="social-media">
-                <a href="https://github.com/igor02b1">
-                  <GitHub  color="primary" />
+                  <a href="https://github.com/igor02b1">
+                    <GitHub color="primary" />
                   </a>
-                  <a href= "https://www.linkedin.com/in/igor-de-lima-da-silva-a40770244/">
-                  <LinkedIn />
+                  <a href="https://www.linkedin.com/in/igor-de-lima-da-silva-a40770244/">
+                    <LinkedIn />
                   </a>
 
                 </div>
@@ -203,16 +205,15 @@ export default function About() {
           }}>
             <div id='membros'>
               <div className="membro">
-                <img width={150} height={150} src='./images/Mauricio.jpg' />
-
+                <img width={150} height={150} src={Mauricio} alt='Foto do colaborador Mauricio' />
 
                 <h2> Mauricio Carvalho </h2>
                 <div className="social-media">
-                <a href="https://github.com/CarvalhoZD">
-                  <GitHub  color="primary" />
+                  <a href="https://github.com/CarvalhoZD">
+                    <GitHub color="primary" />
                   </a>
-                  <a href= "https://www.linkedin.com/in/mauriciocarvalhojb/">
-                  <LinkedIn />
+                  <a href="https://www.linkedin.com/in/mauriciocarvalhojb/">
+                    <LinkedIn />
                   </a>
 
                 </div>
@@ -226,16 +227,16 @@ export default function About() {
           }}>
             <div id='membros'>
               <div className="membro">
-                <img width={150} height={150} src='./images/Nat.jpg' />
+                <img width={150} height={150} src={Nat} alt='Foto da colaborada Natália' />
 
 
                 <h2> Natalia Nery </h2>
                 <div className="social-media">
-                <a href="https://github.com/NataliaNery14">
-                  <GitHub  color="primary" />
+                  <a href="https://github.com/NataliaNery14">
+                    <GitHub color="primary" />
                   </a>
-                  <a href= "https://www.linkedin.com/in/nat%C3%A1lia-dos-santos-nery-897a72248/">
-                  <LinkedIn />
+                  <a href="https://www.linkedin.com/in/nat%C3%A1lia-dos-santos-nery-897a72248/">
+                    <LinkedIn />
                   </a>
 
                 </div>
@@ -249,17 +250,17 @@ export default function About() {
           }}>
             <div id='membros'>
               <div className="membro">
-                <img width={150} height={150} src='./images/Wallace.jpg' />
+                <img width={150} height={150} src={Wallace} alt='Foto do colaborador Wallace' />
 
 
                 <h2> Wallace Araujo </h2>
                 <div className="social-media">
-                  
-                <a href="https://github.com/WallaceArauj">
-                  <GitHub  color="primary" />
+
+                  <a href="https://github.com/WallaceArauj">
+                    <GitHub color="primary" />
                   </a>
-                  <a href= "https://www.linkedin.com/in/wallacearaujo27/">
-                  <LinkedIn />
+                  <a href="https://www.linkedin.com/in/wallacearaujo27/">
+                    <LinkedIn />
                   </a>
 
                 </div>
@@ -267,40 +268,33 @@ export default function About() {
             </div>
           </Grid>
 
-         <Grid item xs={4} sx={{ 
+          <Grid item xs={4} sx={{
             display: 'flex',
             justifyContent: "center"
           }}>
             <div id='membros'>
               <div className="membro">
-                <img width={150} height={150} src='./images/Wesley.jpg' />
+                <img width={150} height={150} src={Weslley} alt='Foto do colaborador Weslley' />
 
 
                 <h2> Weslley Matos </h2>
                 <div className="social-media">
-                  
-                <a href="https://github.com/Leeymattos">
-                  <GitHub  color="primary" />
+
+                  <a href="https://github.com/Leeymattos">
+                    <GitHub color="primary" />
                   </a>
 
-                  <a href= "https://www.linkedin.com/in/weslley-matos-b267651b1/">
-                  <LinkedIn />
+                  <a href="https://www.linkedin.com/in/weslley-matos-b267651b1/">
+                    <LinkedIn />
                   </a>
 
                 </div>
               </div>
             </div>
           </Grid>
-
-
         </Grid>
-
       </Box>
-
-      <br></br>
       <Footer />
-
-
     </Box>
   )
 } 

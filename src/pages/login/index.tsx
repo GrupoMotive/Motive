@@ -1,18 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { Box, Button, Grid, TextField, Typography } from '@mui/material';
 import { Link, useNavigate } from 'react-router-dom';
-
-import './Login.css';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import api from '../../services/api';
-import Navbar from '../../components/static/navbar';
 import { useDispatch } from 'react-redux';
 import { addToken } from '../../store/tokens/actions';
 import { Flip, toast } from 'react-toastify'
-import { flip } from '@popperjs/core';
-
-
+import logo from '../../assets/images/WhiteLogo-Motive.png'
+import './Login.css';
 
 type FormValues = {
   email: string
@@ -77,7 +73,7 @@ function Login() {
 
       <Grid item xs={12} sm={12} md={12} lg={6} xl={6} alignSelf='flex-start'>
         <Link to='/'>
-          <img src="./images/logo.png" alt="" className='logoImagem1' />
+          <img src={logo} alt="" className='logo' />
         </Link>
       </Grid>
       <Grid item alignItems='center' xs={12} sm={12} md={12} lg={6} xl={6}>

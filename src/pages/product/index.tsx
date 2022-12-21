@@ -48,8 +48,8 @@ export default function Product() {
         <Grid container
           justifyContent="center"
           alignItems="center"
-          sx = {{ borderRadius: '16px' }}
-          >
+          sx={{ borderRadius: '16px' }}
+        >
 
           <Grid container item>
             <Box
@@ -81,7 +81,7 @@ export default function Product() {
                     height="100%"
                   >
                     <Box py={6} pr={6} pl={{ xs: 6, sm: 12 }} my="auto">
-                      <Box display="flex" p={1} sx= {{ borderRadius: '16px' }}
+                      <Box display="flex" p={1} sx={{ borderRadius: '16px' }}
                       >
 
                       </Box>
@@ -95,7 +95,7 @@ export default function Product() {
                   </Box>
                 </Grid>
                 <Grid item xs={12} lg={7}>
-                  <Box component="form" p={2} method="post" sx= {{ borderRadius: '16px' }}>
+                  <Box component="form" p={2} method="post" sx={{ borderRadius: '16px' }}>
                     <Box px={3} py={{ xs: 2, sm: 6 }}>
                       <Typography variant="h2" mb={1}>
                         Você escolheu Yoga
@@ -114,9 +114,9 @@ export default function Product() {
                         textAlign="right"
                         ml="auto"
                       >
-                        
-                      <button onClick={routeChange}> MATRICULE-SE </button>
-                        
+
+                        <button onClick={routeChange} className='buttonProduct'> MATRICULE-SE </button>
+
                       </Grid>
                     </Box>
                   </Box>

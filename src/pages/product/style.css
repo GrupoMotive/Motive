@@ -4,7 +4,7 @@
     background-position: center;
 }
 
-button {
+.buttonProduct {
     --color: #0DCA70;
     font-family: inherit;
     display: inline-block;
@@ -21,9 +21,9 @@ button {
     border-radius: 20px;
     font-weight: 500;
     color: var(--color);
-   }
-   
-   button:before {
+}
+
+.buttonProduct:before {
     content: "";
     position: absolute;
     z-index: -1;
@@ -31,24 +31,24 @@ button {
     height: 150px;
     width: 200px;
     border-radius: 50%;
-   }
-   
-   button:hover {
+}
+
+.buttonProduct:hover {
     color: #fff;
-   }
-   
-   button:before {
+}
+
+.buttonProduct:before {
     top: 100%;
     left: 100%;
     transition: all .7s;
-   }
-   
-   button:hover:before {
+}
+
+.buttonProduct:hover:before {
     top: -30px;
     left: -30px;
-   }
-   
-   button:active:before {
+}
+
+.buttonProduct:active:before {
     background: #0DCA70;
     transition: background 0s;
-   }
+}

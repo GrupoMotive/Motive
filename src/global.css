@@ -7,3 +7,10 @@
 a {
   text-decoration: none;
 }
+
+.toast-style {
+  --toastify-color-success: #0DCA70;
+  --toastify-color-error: #e74c3c;
+  --toastify-toast-width: 300px;
+  --toastify-toast-min-height: 50px;
+}

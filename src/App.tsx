@@ -45,7 +45,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <RoutesApp />
-        <ToastContainer />
+        <ToastContainer className={'toast-style'}/>
       </ThemeProvider>
     </>
   );

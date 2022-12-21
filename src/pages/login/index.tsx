@@ -10,6 +10,7 @@ import { Flip, toast } from 'react-toastify'
 import logo from '../../assets/images/WhiteLogo-Motive.png'
 import './Login.css';
 
+
 type FormValues = {
   email: string
   senha: string
@@ -37,7 +38,7 @@ function Login() {
       toast.success('Usuário logado com sucesso', {
         transition: Flip,
         position: "top-right",
-        autoClose: 2000,
+        autoClose: 1000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: false,
@@ -53,7 +54,7 @@ function Login() {
           toast.error('Senha ou e-mail incorretos', {
             transition: Flip,
             position: "top-right",
-            autoClose: 2000,
+            autoClose: 1500,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: false,

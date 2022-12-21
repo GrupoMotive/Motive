@@ -30,7 +30,7 @@ export default function Register() {
         toast.error('As senhas são diferentes', {
           transition: Flip,
           position: "top-right",
-          autoClose: 2000,
+          autoClose: 1500,
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: false,
@@ -46,7 +46,7 @@ export default function Register() {
         toast.success('Cadastro realizado com sucesso', {
           transition: Flip,
           position: "top-right",
-          autoClose: 2000,
+          autoClose: 1000,
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: false,
@@ -65,7 +65,7 @@ export default function Register() {
           toast.error(`${res.data.message}`, {
             transition: Flip,
             position: "top-right",
-            autoClose: 2000,
+            autoClose: 1500,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: false,
@@ -100,7 +100,7 @@ export default function Register() {
             <TextField {...register('confirmarSenha')} id='Confirmar Senha' label='Confirmar Senha' variant='filled' name='confirmarSenha' margin='normal' type='password' fullWidth className='campo-confirmarSenha' color='green' inputProps={{ style: { color: "#efeeee" } }} />
             <Box marginTop={2} textAlign='center'>
               <Link to='/login' className='text-decorator-none'>
-                <Button variant='contained' color='secondary' sx={{ backgroundColor: "#FF0000", border: '1px solid #FF0000', ":hover": { backgroundColor: "#000", border: '1px solid #FF0000' }, }}>
+                <Button variant='contained' color='secondary' sx={{ backgroundColor: "#e74c3c", border: '1px solid #e74c3c', ":hover": { backgroundColor: "#000", border: '1px solid #e74c3c' }, }}>
                   Cancelar
                 </Button>
               </Link>

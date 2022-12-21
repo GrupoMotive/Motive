@@ -8,8 +8,8 @@ import { useDispatch } from 'react-redux';
 import { addToken } from '../../store/tokens/actions';
 import { Flip, toast } from 'react-toastify'
 import logo from '../../assets/images/WhiteLogo-Motive.png'
+import backgroundImg from '../../assets/images/back.jpg'
 import './Login.css';
-
 
 type FormValues = {
   email: string
@@ -27,7 +27,7 @@ function Login() {
       dispatch(addToken(token));
       navigate('/')
     }
-  }, [token])
+  }, [token, dispatch, navigate])
 
   async function handleLogin(data: FormValues) {
     try {
@@ -70,7 +70,14 @@ function Login() {
   }
 
   return (
-    <Grid container direction='row' justifyContent='center' alignItems='center' sx={{ height: "100vh" }} className="imagem2">
+    <Grid container direction='row' justifyContent='center' alignItems='center' sx={{
+      backgroundImage: `url(${backgroundImg})`,
+      backgroundRepeat: 'no-repeat',
+      width: '100%',
+      height: '100vh',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+    }}>
 
       <Grid item xs={12} sm={12} md={12} lg={6} xl={6} alignSelf='flex-start'>
         <Link to='/'>

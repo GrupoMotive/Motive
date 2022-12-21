@@ -10,6 +10,7 @@ import Nat from '../../assets/images/Nat.jpg'
 import Wallace from '../../assets/images/Wallace.jpg'
 import Ygor from '../../assets/images/Ygor.jpg'
 import Weslley from '../../assets/images/Wesley.jpg'
+import bgSobre from '../../assets/images/yog.jpg'
 import './style.css'
 
 export default function About() {
@@ -23,8 +24,10 @@ export default function About() {
         width="100%"
         py={6}
         px={{ xs: 2, lg: 0 }}
-        className="bgaulas"
         sx={{
+          backgroundImage: `url(${bgSobre})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
           display: "grid",
           placeItems: "center",
         }}>

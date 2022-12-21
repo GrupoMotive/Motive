@@ -1,10 +1,10 @@
 import React from 'react';
 import { CssBaseline } from '@mui/material';
+import { ToastContainer } from 'react-toastify';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import 'react-toastify/dist/ReactToastify.css';
 import RoutesApp from './routes';
 import "./global.css"
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 const theme = createTheme({
   palette: {
@@ -45,7 +45,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <RoutesApp />
-        <ToastContainer className={'toast-style'}/>
+        <ToastContainer className={'toast-style'} />
       </ThemeProvider>
     </>
   );

@@ -7,6 +7,7 @@ import axios from 'axios';
 import api from '../../services/api';
 import { toast, Flip } from 'react-toastify';
 import logo from '../../assets/images/WhiteLogo-Motive.png'
+import backgroundImg from '../../assets/images/cadastro2.jpg'
 
 type FormValues = {
   nome: string
@@ -79,7 +80,14 @@ export default function Register() {
   }
 
   return (
-    <Grid container direction='row' justifyContent='center' alignItems='center' sx={{ height: "100vh" }} className="imagem1">
+    <Grid container direction='row' justifyContent='center' alignItems='center' sx={{
+      backgroundImage: `url(${backgroundImg})`,
+      backgroundRepeat: 'no-repeat',
+      width: '100%',
+      height: '100vh',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+    }}>
 
 
       <Grid xs={6} alignSelf='flex-start' >

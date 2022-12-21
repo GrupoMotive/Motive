@@ -1,9 +1,11 @@
 import React from "react";
-import { Box, Button, Grid, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import Navbar from "../../components/static/navbar";
 import Footer from "../../components/static/footer";
 import { useNavigate } from "react-router-dom";
 import './style.css'
+import bgProduct from '../../assets/images/yog.jpg'
+
 export default function Product() {
 
   let navigate = useNavigate();
@@ -23,6 +25,9 @@ export default function Product() {
         px={{ xs: 2, lg: 0 }}
         className='bgProduct'
         sx={{
+          backgroundImage: `url(${bgProduct})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
           display: "grid",
           placeItems: "center",
         }}>

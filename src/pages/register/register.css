@@ -1,12 +1,3 @@
-.imagem1 {
-  background-image: url(../../assets/images/cadastro2.jpg);
-  background-repeat: no-repeat;
-  width: 100%;
-  min-height: 100%;
-  background-size: cover;
-  background-position: center;
-}
-
 .logoImagem {
   height: 64px;
   margin-left: 24px;

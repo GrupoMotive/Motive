@@ -4,26 +4,38 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import './card.css';
 import { Grid } from '@mui/material';
 import { Link } from 'react-router-dom';
 
 interface CardProps {
   titulo: string,
-  local: string
+  valor: number,
+  foto_url: string
 }
 
-export default function MediaCard({ titulo, local }: CardProps) {
+export default function MediaCard({ titulo, valor, foto_url }: CardProps) {
   return (
-    <Card className='card'>
-      <CardContent className='content' sx={{ height: "35%" }}>
+    <Card sx={{
+      background: `url(${foto_url})`,
+      backgroundSize: "100%",
+      backgroundRepeat: "no-repeat",
+      height: "16rem",
+      display: "flex",
+      alignItems: "flex-end",
+    }}>
+      <CardContent sx={{
+        height: "35%",
+        backgroundColor: "rgba(1, 255, 132, 0.877)",
+        width: "100%",
+        padding: "0px",
+      }}>
         <Grid container sx={{ justifyContent: 'space-between', alignItems: "center" }}>
           <Grid item xs={8}>
             <Typography sx={{ fontWeight: "bold", fontSize: "20px", marginLeft: "10px" }} color="#000">
               {titulo}
             </Typography>
             <Typography sx={{ marginLeft: "10px", width: "100%", height: "50px" }} variant="body2" color="#000">
-              {local}
+              R${valor}
             </Typography>
           </Grid>
           <Grid item xs={4} >

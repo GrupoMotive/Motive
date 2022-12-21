@@ -1,8 +1,6 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Footer from './components/static/footer';
-import Navbar from './components/static/navbar';
 
 import About from './pages/about';
 import Check from './pages/check/Check';
@@ -13,7 +11,6 @@ import Login from './pages/login';
 import Product from './pages/product';
 import Register from './pages/register';
 import store from './store/store';
-
 
 export default function RoutesApp() {
   return (

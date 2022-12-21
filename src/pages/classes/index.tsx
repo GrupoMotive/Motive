@@ -7,8 +7,8 @@ import MediaCard from "../../components/dynamics/card";
 import Footer from "../../components/static/footer";
 import Navbar from "../../components/static/navbar";
 import SearchIcon from '@mui/icons-material/Search';
+import bgAulas from '../../assets/images/bgaulas.jpg'
 import { useForm } from 'react-hook-form'
-import './style.css'
 
 type FormValues = {
   search: string
@@ -42,8 +42,10 @@ export default function Classes() {
       <Box minHeight="55vh"
         width="100%"
         py={6}
-        className="bgaulas"
         sx={{
+          backgroundImage: `url(${bgAulas})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
           display: "grid",
           placeItems: "center",
         }}>
@@ -73,8 +75,6 @@ export default function Classes() {
           color: 'white',
           paddingX: '30px',
           marginY: "30px"
-
-
         }}>
           Aulas Disponíveis
           <Divider color="#0DCA70" sx={{
@@ -102,11 +102,10 @@ export default function Classes() {
         <Grid container spacing={4} sx={{ width: '100%', }}>
           {produtos.map(produto => (
             <Grid item xs={4} sx={{ marginY: "5px" }}>
-              <MediaCard titulo={produto.nome} local={produto.local} key={produto.id} />
+              <MediaCard titulo={produto.nome} foto_url={produto.foto_url} valor={produto.valor} key={produto.id} />
             </Grid>
           ))}
         </Grid>
-
       </Box>
       <Footer />
     </Box>

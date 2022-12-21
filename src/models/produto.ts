@@ -3,8 +3,8 @@ import Categoria from "./categoria";
 export default interface Produtos {
     id: number,
     nome: string,
-    local: string,
-    faixa_etaria: string,
-    valor: string,
+    descricao: string,
+    foto_url: string
+    valor: number,
     categoria: Categoria
 }

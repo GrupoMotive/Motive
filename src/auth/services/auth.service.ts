@@ -4,6 +4,7 @@ import { IUsuarioTrafegavel } from "src/interfaces/IUsuarioTrafegavel";
 import { IUsuarioLogin } from "src/interfaces/IUsuárioLogin";
 import { UsuarioService } from "src/usuario/services/usuario.service";
 import { Bcrypt } from "../bcrypt/bcrypt";
+import { UsuarioLogin } from "../entities/usuarioLogin";
 
 @Injectable()
 export class AuthService {
@@ -31,7 +32,7 @@ export class AuthService {
     return null;
   }
 
-  login(usuario: IUsuarioLogin) {
+  login(usuario: UsuarioLogin) {
     const payload = {
       sub: 'Motive',
       email: usuario.email

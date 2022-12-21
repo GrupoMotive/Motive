@@ -1,7 +1,7 @@
 import { Body, Controller, HttpCode, Post, UseGuards } from "@nestjs/common";
 import { HttpStatus } from "@nestjs/common/enums";
 import { ApiTags } from "@nestjs/swagger";
-import { IUsuarioLogin } from "src/interfaces/IUsuárioLogin";
+import { UsuarioLogin } from "../entities/usuarioLogin";
 import { LocalAuthGuard } from "../guards/local.guard";
 import { AuthService } from "../services/auth.service";
 
@@ -15,7 +15,7 @@ export class AuthController {
     @UseGuards(LocalAuthGuard)
     @Post('/login')
     @HttpCode(HttpStatus.OK)
-    login(@Body() usuario: IUsuarioLogin) {
+    login(@Body() usuario: UsuarioLogin) {
         return this.authService.login(usuario)
     }
 }

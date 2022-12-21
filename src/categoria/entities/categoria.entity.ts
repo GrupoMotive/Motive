@@ -18,7 +18,7 @@ export class Categoria {
     @ApiProperty()
     @IsNotEmpty()
     @Column({ length: 100, nullable: false })
-    municipio: string
+    faixa_etaria: string
 
     @ApiProperty()
     @OneToMany(() => Produto, (produto) => produto.categoria)

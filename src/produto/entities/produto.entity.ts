@@ -16,9 +16,9 @@ export class Produto {
     nome: string
 
     @IsNotEmpty()
-    @Column({ length: 150, nullable: false })
+    @Column({ length: 4000, nullable: false })
     @ApiProperty()
-    local: string
+    foto_url: string
 
     @IsNotEmpty()
     @Column({ type: 'decimal', precision: 4, scale: 2, default: 0, nullable: false })
@@ -26,9 +26,9 @@ export class Produto {
     valor: number
 
     @IsNotEmpty()
-    @Column({ length: 45, nullable: false })
+    @Column({ length: 4000, nullable: false })
     @ApiProperty()
-    faixa_etaria: string
+    descricao: string
 
     @ApiProperty({ type: () => Categoria })
     @ManyToOne(() => Categoria, (categoria) => categoria.product, {

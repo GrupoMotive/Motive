@@ -54,9 +54,10 @@ export default function Home() {
           width: "100%",
           display: "flex",
           alignItems: "center",
-          justifyContent: "center"
+          justifyContent: "center",
+          flexDirection: "column"
         }}>
-        <Typography>
+        <Typography sx={{ marginBottom: "15px" }}>
           Aulas Recentes
         </Typography>
         {produtos.map(produto => (

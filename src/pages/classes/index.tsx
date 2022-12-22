@@ -93,7 +93,7 @@ export default function Classes() {
         mt: -8,
         mb: 4,
         boxShadow: 3,
-        backgroundColor: "#fff",
+        backgroundColor: "#f5f5f5",
         backgroundSize: "cover",
         backgroundPosition: "center",
         display: "grid",

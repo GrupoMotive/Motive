@@ -19,7 +19,7 @@
     height: 60px;
     border-radius: 50%;
     stroke-width: 4;
-    stroke: #fff;
+    stroke: #f5f5f5ff;
     stroke-miterlimit: 10;
     box-shadow: inset 0px 0px 0px #0DCA70;
     animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;

@@ -92,13 +92,13 @@ export default function Register() {
 
       <Grid xs={6} alignSelf='flex-start' >
         <Link to='/'>
-          <img src={logo} alt="" className='logo' />
+          <img src={logo} alt="" className='logo-register' />
         </Link>
       </Grid>
 
 
       <Grid alignItems='center' xs={6}>
-        <Box paddingX={20}>
+        <Box paddingX={20} sx={{height: 500, width: 800}}>
           <form onSubmit={handleSubmit(handleRegister)} className="box-register">
             <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' sx={{ color: "#0DCA70", fontWeight: "bold", fontSize: "24px" }}>CADASTRAR</Typography>
             <TextField {...register('nome')} id='nome' label='Nome' variant='filled' name='nome' margin='normal' fullWidth className='campo-nome' color='green' inputProps={{ style: { color: "#efeeee" } }} />

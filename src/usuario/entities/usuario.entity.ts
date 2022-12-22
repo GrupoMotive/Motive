@@ -9,23 +9,23 @@ export class Usuario {
     @ApiProperty()
     id: number
 
-    @IsNotEmpty()
+    @IsNotEmpty({ message: "Nome não informado!" })
     @Column({ length: 100, nullable: false })
     @ApiProperty()
     nome: string
 
-    @IsEmail()
+    @IsEmail({}, { message: "Email inválido!" })
     @Column({ length: 255, nullable: false })
     @ApiProperty()
     email: string
 
     @MinLength(8)
-    @IsNotEmpty()
+    @IsNotEmpty({ message: "Senha não informada!" })
     @Column({ length: 255, nullable: false })
     @ApiProperty()
     senha: string
 
-    @IsNotEmpty()
+    @IsNotEmpty({ message: "Foto não informada!" })
     @Column({ length: 5000, nullable: false })
     @ApiProperty()
     foto: string

@@ -141,13 +141,14 @@ export default function About() {
             <div id='membros'>
               <div className="membro">
                 <img width={150} height={150} src={Bruno} alt='Foto do colaborador Bruno' />
-
-                <h2> Bruno Pina </h2>
+                
+                <h2 style={{ paddingTop: "5px" }}> Bruno Pina </h2>
+                
                 <div className="social-media">
-                  <a href="https://github.com/Pina98 ">
+                  <a href="https://github.com/Pina98 " target="_blank">
                     <GitHub htmlColor="white" />
                   </a>
-                  <a href="https://www.linkedin.com/in/brunopinatrotta/ ">
+                  <a href="https://www.linkedin.com/in/brunopinatrotta/ " target="_blank">
                     <LinkedIn  htmlColor="white"/>
                   </a>
 
@@ -165,12 +166,12 @@ export default function About() {
                 <img width={150} height={150} src={Erika} alt='Foto da colaboradora Erika' />
 
 
-                <h2> Erika Beatriz </h2>
+                <h2 style={{ paddingTop: "5px" }} > Erika Beatriz </h2>
                 <div className="social-media">
-                  <a href="https://github.com/ErikaBeatrizz">
+                  <a href="https://github.com/ErikaBeatrizz" target="_blank">
                     <GitHub  htmlColor="white" />
                   </a>
-                  <a href="https://www.linkedin.com/in/erikabeatrizf/">
+                  <a href="https://www.linkedin.com/in/erikabeatrizf/" target="_blank">
                     <LinkedIn  htmlColor="white" />
                   </a>
 
@@ -188,12 +189,12 @@ export default function About() {
                 <img width={150} height={150} src={Ygor} alt='Foto do colaborador Ygor' />
 
 
-                <h2> Igor Lima </h2>
+                <h2 style={{ paddingTop: "5px" }} > Igor Lima </h2>
                 <div className="social-media">
-                  <a href="https://github.com/igor02b1">
+                  <a href="https://github.com/igor02b1" target="_blank">
                     <GitHub  htmlColor="white" />
                   </a>
-                  <a href="https://www.linkedin.com/in/igor-de-lima-da-silva-a40770244/">
+                  <a href="https://www.linkedin.com/in/igor-de-lima-da-silva-a40770244/" target="_blank">
                     <LinkedIn  htmlColor="white" />
                   </a>
 
@@ -210,12 +211,12 @@ export default function About() {
               <div className="membro">
                 <img width={150} height={150} src={Mauricio} alt='Foto do colaborador Mauricio' />
 
-                <h2> Mauricio Carvalho </h2>
+                <h2 style={{ paddingTop: "5px" }} > Mauricio Carvalho </h2>
                 <div className="social-media">
-                  <a href="https://github.com/CarvalhoZD">
+                  <a href="https://github.com/CarvalhoZD" target="_blank">
                     <GitHub  htmlColor="white" />
                   </a>
-                  <a href="https://www.linkedin.com/in/mauriciocarvalhojb/">
+                  <a href="https://www.linkedin.com/in/mauriciocarvalhojb/" target="_blank">
                     <LinkedIn  htmlColor="white" />
                   </a>
 
@@ -233,12 +234,12 @@ export default function About() {
                 <img width={150} height={150} src={Nat} alt='Foto da colaborada Natália' />
 
 
-                <h2> Natalia Nery </h2>
+                <h2 style={{ paddingTop: "5px" }} > Natalia Nery </h2>
                 <div className="social-media">
-                  <a href="https://github.com/NataliaNery14">
+                  <a href="https://github.com/NataliaNery14" target="_blank">
                     <GitHub  htmlColor="white" />
                   </a>
-                  <a href="https://www.linkedin.com/in/nat%C3%A1lia-dos-santos-nery-897a72248/">
+                  <a href="https://www.linkedin.com/in/nat%C3%A1lia-dos-santos-nery-897a72248/" target="_blank">
                     <LinkedIn  htmlColor="white" />
                   </a>
 
@@ -256,13 +257,13 @@ export default function About() {
                 <img width={150} height={150} src={Wallace} alt='Foto do colaborador Wallace' />
 
 
-                <h2> Wallace Araujo </h2>
+                <h2 style={{ paddingTop: "5px" }} > Wallace Araujo </h2>
                 <div className="social-media">
 
-                  <a href="https://github.com/WallaceArauj">
+                  <a href="https://github.com/WallaceArauj" target="_blank">
                     <GitHub  htmlColor="white" />
                   </a>
-                  <a href="https://www.linkedin.com/in/wallacearaujo27/">
+                  <a href="https://www.linkedin.com/in/wallacearaujo27/" target="_blank">
                     <LinkedIn  htmlColor="white" />
                   </a>
 
@@ -280,14 +281,14 @@ export default function About() {
                 <img width={150} height={150} src={Weslley} alt='Foto do colaborador Weslley' />
 
 
-                <h2> Weslley Matos </h2>
+                <h2 style={{ paddingTop: "5px" }} > Weslley Matos </h2>
                 <div className="social-media">
 
-                  <a href="https://github.com/Leeymattos">
+                  <a href="https://github.com/Leeymattos" target="_blank">
                     <GitHub  htmlColor="white" />
                   </a>
 
-                  <a href="https://www.linkedin.com/in/weslley-matos-b267651b1/">
+                  <a href="https://www.linkedin.com/in/weslley-matos-b267651b1/" target="_blank">
                     <LinkedIn  htmlColor="white" />
                   </a>
 

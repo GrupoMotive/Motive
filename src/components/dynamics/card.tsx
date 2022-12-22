@@ -33,7 +33,7 @@ export default function MediaCard({ titulo, valor, foto_url, id }: CardProps) {
         <Grid container sx={{ justifyContent: 'space-between', alignItems: "center" }}>
           <Grid item xs={8}>
             <Typography sx={{ fontWeight: "bold", fontSize: "20px", marginLeft: "10px", marginTop: "5px" }} color="#000">
-              {titulo}
+              {titulo.toUpperCase()}
             </Typography>
 
             <Typography sx={{ marginLeft: "10px", width: "100%", height: "50px", marginTop: "10px", fontSize: "18px" }} color="#000">

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Divider, Grid, Typography } from "@mui/material";
 import api from "../../services/api";
 import Produtos from "../../models/produto";
 import Navbar from "../../components/static/navbar";
@@ -42,30 +42,54 @@ export default function Home() {
               Motivamos você a se exercitar!
             </Typography>
 
-
           </Grid>
 
         </Grid>
       </Box>
 
-      <Grid container spacing={4}
-        sx={{
-          height: '100vh',
-          width: "100%",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          flexDirection: "column"
+      <Box sx={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        height: '100vh',
+        width: "100%",
+        padding: "50px",
+        flexDirection: "column"
+      }}>
+        <Typography variant="h2" sx={{
+          fontWeight: 'bold',
+          color: '#101522',
+          paddingX: '30px',
+          marginBottom: "100px"
         }}>
-        <Typography sx={{ marginBottom: "15px" }}>
           Aulas Recentes
+          <Divider color="#0DCA70" sx={{
+            height: 4,
+            width: '100px',
+            borderRadius: '5px',
+          }} />
+
         </Typography>
-        {produtos.map(produto => (
-          <Grid item xs={4} sx={{ marginY: "5px" }}>
-            <MediaCard titulo={produto.nome} foto_url={produto.foto_url} valor={produto.valor} id={String(produto.id)} key={produto.id} />
-          </Grid>
-        ))}
-      </Grid>
+        <Grid container spacing={4}
+          sx={{
+
+          }}>
+
+          {produtos.map((produto, i) => {
+            if (i >= 3)
+              return (<></>)
+            else {
+              return (
+                <Grid item xs={4} sx={{ marginY: "5px" }}>
+                  <MediaCard titulo={produto.nome} foto_url={produto.foto_url} valor={produto.valor} id={String(produto.id)} key={produto.id} />
+                </Grid>
+              )
+            }
+
+          })}
+
+        </Grid>
+      </Box>
       <Footer />
     </>
   );

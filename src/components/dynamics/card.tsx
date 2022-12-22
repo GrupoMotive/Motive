@@ -11,9 +11,10 @@ interface CardProps {
   titulo: string,
   valor: number,
   foto_url: string
+  id: string
 }
 
-export default function MediaCard({ titulo, valor, foto_url }: CardProps) {
+export default function MediaCard({ titulo, valor, foto_url, id }: CardProps) {
   return (
     <Card sx={{
       background: `url(${foto_url})`,
@@ -31,25 +32,25 @@ export default function MediaCard({ titulo, valor, foto_url }: CardProps) {
       }}>
         <Grid container sx={{ justifyContent: 'space-between', alignItems: "center" }}>
           <Grid item xs={8}>
-            <Typography sx={{ fontWeight: "bold", fontSize: "20px", marginLeft: "10px" }} color="#000">
+            <Typography sx={{ fontWeight: "bold", fontSize: "20px", marginLeft: "10px", marginTop: "5px" }} color="#000">
               {titulo}
             </Typography>
-            <Typography sx={{ marginLeft: "10px", width: "100%", height: "50px" }} variant="body2" color="#000">
-              R${valor}
+
+            <Typography sx={{ marginLeft: "10px", width: "100%", height: "50px", marginTop: "10px", fontSize: "18px" }} color="#000">
+              {Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' })
+                .format(valor)}
             </Typography>
           </Grid>
           <Grid item xs={4} >
             <CardActions>
-              <Link to="/produto">
-
-                <Button className='btn-comprar' sx={{
+              <Link to={`/produto/:${id}`}>
+                <Button sx={{
                   backgroundColor: "black",
                   color: "white",
                   width: "8rem",
-                  fontFamily: 'monospace',
                   transition: "0.2s all",
-                  ":hover": { backgroundColor: "#030303" }
-                }}>Comprar</Button>
+                  ":hover": { backgroundColor: "#191919" }
+                }}>Saiba mais</Button>
               </Link>
             </CardActions>
           </Grid>

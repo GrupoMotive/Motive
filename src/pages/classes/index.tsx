@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Box, Divider, Grid, TextField, Typography } from "@mui/material";
-import IconButton from "@material-ui/core/IconButton";
+import { Box, Divider, Grid, IconButton, TextField, Typography } from "@mui/material";
 import Produtos from "../../models/produto";
 import api from "../../services/api";
 import MediaCard from "../../components/dynamics/card";
@@ -46,20 +45,36 @@ export default function Classes() {
           backgroundImage: `url(${bgAulas})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
-          display: "grid",
-          placeItems: "center",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center"
         }}>
 
         < Navbar />
 
+        <Typography variant="h2" sx={{
+          fontWeight: 'bold',
+          color: 'white',
+          paddingX: '30px',
+          marginY: "30px",
+        }}>
+          Aulas Disponíveis
+          <Divider color="#0DCA70" sx={{
+            height: 4,
+            width: '100px',
+            borderRadius: '5px',
+          }} />
+
+        </Typography>
         <form onSubmit={handleSubmit(handleGetProducts)}>
           <TextField
             {...register('search')}
             label="Buscar Aulas"
             color='green'
-            sx={{ backgroundColor: "gray", borderRadius: "8px", width: "600px" }}
+            sx={{ backgroundColor: "#f5f5f5", borderRadius: "8px", width: "600px", marginBottom: "60px" }}
             variant="filled"
-            inputProps={{ style: { color: "#efeeee" } }}
+            inputProps={{ style: { color: "#2e2e2e" } }}
             InputProps={{
               endAdornment: (
                 <IconButton>
@@ -70,21 +85,7 @@ export default function Classes() {
           />
         </form>
 
-        <Typography variant="h2" sx={{
-          fontWeight: 'bold',
-          color: 'white',
-          paddingX: '30px',
-          marginY: "30px"
-        }}>
-          Aulas Disponíveis
-          <Divider color="#0DCA70" sx={{
-            height: 4,
-            width: '100px',
-            borderRadius: '5px',
-            position: "center",
-          }} />
 
-        </Typography>
       </Box>
       <Box minHeight="25rem" alignItems="center" sx={{
         p: 2,
@@ -102,7 +103,7 @@ export default function Classes() {
         <Grid container spacing={4} sx={{ width: '100%', }}>
           {produtos.map(produto => (
             <Grid item xs={4} sx={{ marginY: "5px" }}>
-              <MediaCard titulo={produto.nome} foto_url={produto.foto_url} valor={produto.valor} key={produto.id} />
+              <MediaCard titulo={produto.nome} foto_url={produto.foto_url} valor={produto.valor} id={String(produto.id)} key={produto.id} />
             </Grid>
           ))}
         </Grid>

@@ -12,7 +12,6 @@ import Ygor from '../../assets/images/Ygor.jpg'
 import Weslley from '../../assets/images/Wesley.jpg'
 import bgSobre from '../../assets/images/yog.jpg'
 import './style.css'
-import { textAlign } from "@mui/system";
 
 export default function About() {
 
@@ -29,8 +28,9 @@ export default function About() {
           backgroundImage: `url(${bgSobre})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
-          display: "grid",
-          placeItems: "center",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center"
         }}>
 
         < Navbar />
@@ -38,8 +38,7 @@ export default function About() {
         <Typography variant="h2" sx={{
           fontWeight: 'bold',
           color: 'white',
-          paddingX: '50px'
-
+          paddingX: '50px',
         }}>
           Somos a Motive!
           <Divider color="#0DCA70" sx={{

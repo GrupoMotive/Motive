@@ -83,11 +83,19 @@ export default function Check() {
                 <Grid item xs={12} lg={7}>
                   <Box component="form" p={2} method="post">
                     <Box px={3} py={{ xs: 2, sm: 6 }}>
-                      <Typography variant="h2" mb={1}>
-                        Parabéns!
+                      
+                      
+                      <Typography variant="h2" mb={2} sx= {{ fontWeight: 'bold' }}>
+                        Parabéns! 
+                        <svg className="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                        <circle className="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                        <path className="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                      </svg>
                       </Typography>
+                      
+                      
                       <Typography variant="body1" color="text" mb={2}>
-                        Você adiquiriu a aula. Bom treino!
+                        Você adquiriu a aula! Confira todas as informações no e-mail cadastrado. Bom treino!
                       </Typography>
                     </Box>
                     <Box pt={0.5} pb={3} px={3}>

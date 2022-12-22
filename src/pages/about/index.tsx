@@ -12,6 +12,7 @@ import Ygor from '../../assets/images/Ygor.jpg'
 import Weslley from '../../assets/images/Wesley.jpg'
 import bgSobre from '../../assets/images/yog.jpg'
 import './style.css'
+import { textAlign } from "@mui/system";
 
 export default function About() {
 

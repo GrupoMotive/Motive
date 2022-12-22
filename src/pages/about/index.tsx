@@ -145,10 +145,10 @@ export default function About() {
                 <h2> Bruno Pina </h2>
                 <div className="social-media">
                   <a href="https://github.com/Pina98 ">
-                    <GitHub color="primary" />
+                    <GitHub htmlColor="white" />
                   </a>
                   <a href="https://www.linkedin.com/in/brunopinatrotta/ ">
-                    <LinkedIn />
+                    <LinkedIn  htmlColor="white"/>
                   </a>
 
                 </div>
@@ -168,10 +168,10 @@ export default function About() {
                 <h2> Erika Beatriz </h2>
                 <div className="social-media">
                   <a href="https://github.com/ErikaBeatrizz">
-                    <GitHub color="primary" />
+                    <GitHub  htmlColor="white" />
                   </a>
                   <a href="https://www.linkedin.com/in/erikabeatrizf/">
-                    <LinkedIn />
+                    <LinkedIn  htmlColor="white" />
                   </a>
 
                 </div>
@@ -191,10 +191,10 @@ export default function About() {
                 <h2> Igor Lima </h2>
                 <div className="social-media">
                   <a href="https://github.com/igor02b1">
-                    <GitHub color="primary" />
+                    <GitHub  htmlColor="white" />
                   </a>
                   <a href="https://www.linkedin.com/in/igor-de-lima-da-silva-a40770244/">
-                    <LinkedIn />
+                    <LinkedIn  htmlColor="white" />
                   </a>
 
                 </div>
@@ -213,10 +213,10 @@ export default function About() {
                 <h2> Mauricio Carvalho </h2>
                 <div className="social-media">
                   <a href="https://github.com/CarvalhoZD">
-                    <GitHub color="primary" />
+                    <GitHub  htmlColor="white" />
                   </a>
                   <a href="https://www.linkedin.com/in/mauriciocarvalhojb/">
-                    <LinkedIn />
+                    <LinkedIn  htmlColor="white" />
                   </a>
 
                 </div>
@@ -236,10 +236,10 @@ export default function About() {
                 <h2> Natalia Nery </h2>
                 <div className="social-media">
                   <a href="https://github.com/NataliaNery14">
-                    <GitHub color="primary" />
+                    <GitHub  htmlColor="white" />
                   </a>
                   <a href="https://www.linkedin.com/in/nat%C3%A1lia-dos-santos-nery-897a72248/">
-                    <LinkedIn />
+                    <LinkedIn  htmlColor="white" />
                   </a>
 
                 </div>
@@ -260,10 +260,10 @@ export default function About() {
                 <div className="social-media">
 
                   <a href="https://github.com/WallaceArauj">
-                    <GitHub color="primary" />
+                    <GitHub  htmlColor="white" />
                   </a>
                   <a href="https://www.linkedin.com/in/wallacearaujo27/">
-                    <LinkedIn />
+                    <LinkedIn  htmlColor="white" />
                   </a>
 
                 </div>
@@ -284,11 +284,11 @@ export default function About() {
                 <div className="social-media">
 
                   <a href="https://github.com/Leeymattos">
-                    <GitHub color="primary" />
+                    <GitHub  htmlColor="white" />
                   </a>
 
                   <a href="https://www.linkedin.com/in/weslley-matos-b267651b1/">
-                    <LinkedIn />
+                    <LinkedIn  htmlColor="white" />
                   </a>
 
                 </div>

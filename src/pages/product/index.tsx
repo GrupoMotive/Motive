@@ -4,7 +4,7 @@ import Navbar from "../../components/static/navbar";
 import Footer from "../../components/static/footer";
 import { useNavigate } from "react-router-dom";
 import './style.css'
-import bgProduct from '../../assets/images/yog.jpg'
+import bgProduct from '../../assets/images/bgproduct.jpg'
 
 export default function Product() {
 

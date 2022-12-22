@@ -1,5 +1,5 @@
 .bgProduct {
-    background-image: url(../../assets/images/yog.jpg);
+    background-image: url(../../assets/images/checkk.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -8,10 +8,10 @@
     --color: #0DCA70;
     font-family: inherit;
     display: inline-block;
+    align-items: stretch;
     width: 10em;
     height: 2.6em;
     line-height: 2.5em;
-    margin: 20px;
     position: relative;
     overflow: hidden;
     border: 2px solid var(--color);
@@ -30,7 +30,7 @@
     background: var(--color);
     height: 150px;
     width: 200px;
-    border-radius: 50%;
+    border-radius: 100%;
 }
 
 .buttonProduct:hover {

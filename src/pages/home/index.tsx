@@ -6,9 +6,7 @@ import Navbar from "../../components/static/navbar";
 import './Home.css'
 import Footer from "../../components/static/footer";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import capoeira from '../../assets/images/capoeira.jpg'
-import danca from '../../assets/images/danca.jpg'
-import yoga from '../../assets/images/yoga2.jpg'
+import MediaCard from "../../components/dynamics/card";
 
 export default function Home() {
 
@@ -21,51 +19,54 @@ export default function Home() {
 
   useEffect(() => {
     BuscaProduto()
-  }, [produtos.length])
+  }, [])
 
   return (
     <>
-    <Box className="imagemHome">
-      <Navbar />
-      <Grid container xs={12} justifyContent='center' alignItems='center'  >
+      <Box className="imagemHome">
+        <Navbar />
+        <Grid container xs={12} justifyContent='center' alignItems='center'  >
 
-        <Grid item xs={8} display='flex' flexDirection='column' justifyContent='center' alignItems='center' className="animationfade"
-        sx={{
-          height: "calc(100vh - 80px)",
+          <Grid item xs={8} display='flex' flexDirection='column' justifyContent='center' alignItems='center' className="animationfade"
+            sx={{
+              height: "calc(100vh - 80px)",
 
-        }}>
+            }}>
 
-          <Typography sx={{ fontWeight: 'bold', fontSize: '65px', }} className='TituloHome' lineHeight='100%' align="center" >
-            <br /> <br />  VOCÊ MAIS <span style={{ color: '#0DCA70', }}>SAUDÁVEL</span> <br /> COM ATIVIDADES AO AR LIVRE.
-          </Typography>
+            <Typography sx={{ fontWeight: 'bold', fontSize: '65px', }} className='TituloHome' lineHeight='100%' align="center" >
+              <br /> <br />  VOCÊ MAIS <span style={{ color: '#0DCA70', }}>SAUDÁVEL</span> <br /> COM ATIVIDADES AO AR LIVRE.
+            </Typography>
 
-          <Typography sx={{ fontWeight: 'bold', fontSize: '30px', paddingTop: '10px' }} className='SubTituloHome' align="center" >
-            Atividades físicas e esportes em geral são a melhor forma de cuidar da saúde.
-            Motivamos você a se exercitar!
-          </Typography>
+            <Typography sx={{ fontWeight: 'bold', fontSize: '30px', paddingTop: '10px' }} className='SubTituloHome' align="center" >
+              Atividades físicas e esportes em geral são a melhor forma de cuidar da saúde.
+              Motivamos você a se exercitar!
+            </Typography>
 
+
+          </Grid>
 
         </Grid>
-
-        </Grid>
-    </Box>
-    <Box className="box-cards">
-          <div className="div-cards">
-            <img src="https://i.ibb.co/mS7YCdV/yoga2.jpg" alt="dança" className="cards-home" />
-            <p className="legend ">A vida em um constante movimento</p>
-          </div>
-          <div className="div-cards">
-            <img src="https://i.ibb.co/ZGCDC00/dan-a.jpg" alt="capoeira" className="cards-home" />
-            <p className="legend ">Viva a vida</p>
-          </div>
-          <div className="div-cards">
-            <img src="https://i.ibb.co/Hq379Jj/capoeira.jpg" alt="yoga" className="cards-home"  />
-            <p className="legend ">Tente não morrer vivendo</p>
-          </div> 
       </Box>
-    <Footer />
+
+      <Grid container spacing={4}
+        sx={{
+          height: '100vh',
+          width: "100%",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center"
+        }}>
+        <Typography>
+          Aulas Recentes
+        </Typography>
+        {produtos.map(produto => (
+          <Grid item xs={4} sx={{ marginY: "5px" }}>
+            <MediaCard titulo={produto.nome} foto_url={produto.foto_url} valor={produto.valor} id={String(produto.id)} key={produto.id} />
+          </Grid>
+        ))}
+      </Grid>
+      <Footer />
     </>
   );
-
 
 }

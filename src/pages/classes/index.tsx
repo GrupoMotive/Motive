@@ -99,7 +99,6 @@ export default function Classes() {
         display: "grid",
         borderRadius: '16px',
       }}>
-
         <Grid container spacing={4} sx={{ width: '100%', }}>
           {produtos.map(produto => (
             <Grid item xs={4} sx={{ marginY: "5px" }}>
@@ -107,6 +106,7 @@ export default function Classes() {
             </Grid>
           ))}
         </Grid>
+
       </Box>
       <Footer />
     </Box>

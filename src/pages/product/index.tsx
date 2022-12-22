@@ -34,7 +34,7 @@ export default function Product() {
       navigate("/login")
 
     }
-  }, [token])
+  }, [token, navigate])
 
   useEffect(() => {
     if (id !== undefined) {

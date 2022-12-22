@@ -35,7 +35,7 @@ export default function Check() {
       navigate("/login")
 
     }
-  }, [token])
+  }, [token, navigate])
 
   useEffect(() => {
     if (id !== undefined) {

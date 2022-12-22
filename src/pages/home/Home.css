@@ -77,10 +77,18 @@
 
 .imageCarousel {
     align-items: center;
-    width: 90%;
-    height: 70%;
+    width: 30px;
+    height: 30px;
 }
 
-.carousel {
-    width: 100%;
+.cards-home{
+    width: 300px;
+    height: 300px;
+}
+
+.box-cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 300px;
 }

@@ -101,15 +101,16 @@ export default function Product() {
                 </Grid>
                 <Grid item xs={12} lg={7}>
                   <Box component="form" p={2} method="post" sx={{ borderRadius: '16px' }}>
-                    <Box px={3} py={{ xs: 2, sm: 6 }}>
+                    <Box px={4} py={{ xs: 2, sm: 6 }}>
                       <Typography variant="h2" mb={1} sx= {{ fontWeight: 'bold'  }}>
                         Você escolheu Yoga
                       </Typography>
                       <Typography variant="body1" color="text" mb={2}>
-                        Yoga é um conceito é uma filosofia, que trabalha o corpo e a mente, através de disciplinas tradicionais de quem a pratica. Yoga é relacionada ao budismo e ao hinduísmo, com práticas como exercícios e meditação para trabalhar a parte física e também a mente.
+                        Yoga é um conceito é uma filosofia, que trabalha o corpo e a mente, através de disciplinas tradicionais de quem a pratica. Yoga é relacionada ao budismo e ao hinduísmo, com práticas de exercícios e meditação para trabalhar a parte física e também a mente.
                       </Typography>
-                      <button onClick={routeChange} className='buttonProduct'> MATRICULE-SE </button>
-                      
+                      <Box textAlign="right">
+                        <button onClick={routeChange} className='buttonProduct'> MATRICULE-SE </button>
+                      </Box>
                     </Box>
 
                     

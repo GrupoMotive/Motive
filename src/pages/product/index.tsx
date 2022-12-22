@@ -1,21 +1,56 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Box, Grid, Typography } from "@mui/material";
 import Navbar from "../../components/static/navbar";
 import Footer from "../../components/static/footer";
-import { useNavigate } from "react-router-dom";
-import './style.css'
+import { Link, useNavigate, useParams } from "react-router-dom";
 import bgProduct from '../../assets/images/bgproduct.jpg'
+import './style.css'
+import { useSelector } from "react-redux";
+import { TokenState } from "../../store/tokens/tokensReducer";
+import { toast } from "react-toastify";
+import api from "../../services/api";
+import Produto from "../../models/produto";
 
 export default function Product() {
+  const navigate = useNavigate()
+  const [produto, setProduto] = useState<Produto>()
+  const { id } = useParams<{ id: string }>();
+  const token = useSelector<TokenState, TokenState["tokens"]>(
+    (state) => state.tokens
+  );
 
-  let navigate = useNavigate();
-  const routeChange = () => {
-    let path = '/check';
-    navigate(path);
+  useEffect(() => {
+    if (token === "") {
+      toast.error('Você precisa estar logado', {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        theme: "colored",
+        progress: undefined,
+      });
+      navigate("/login")
+
+    }
+  }, [token])
+
+  useEffect(() => {
+    if (id !== undefined) {
+      findById(id);
+    }
+  }, [id])
+
+  async function findById(id: string) {
+    const res = await api.get(`/produto/${id}`, {
+      headers: {
+        'Authorization': token
+      }
+    })
+    setProduto(res.data)
   }
 
-  const email = localStorage.getItem("token")
-  console.log(email);
 
   return (
     <Box>
@@ -23,7 +58,6 @@ export default function Product() {
         width="100%"
         py={6}
         px={{ xs: 2, lg: 0 }}
-        className='bgProduct'
         sx={{
           backgroundImage: `url(${bgProduct})`,
           backgroundSize: "cover",
@@ -31,7 +65,6 @@ export default function Product() {
           display: "grid",
           placeItems: "center",
         }}>
-
         < Navbar />
       </Box>
 
@@ -47,7 +80,6 @@ export default function Product() {
         backgroundPosition: "center",
         display: "grid",
         borderRadius: '16px',
-
       }}>
 
         <Grid container
@@ -72,48 +104,32 @@ export default function Product() {
                   lg={5}
                   position="relative"
                   px={0}
-                  className='bgProduct'
                   sx={{
-                    alignContent: "center",
-                    borderRadius: '16px'
+                    backgroundImage: `url(${produto?.foto_url})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    alignContent: 'center',
+                    borderRadius: '16px',
                   }}
                 >
-                  <Box
-                    display="flex"
-                    justifyContent="center"
-                    alignItems="center"
-                    width="100%"
-                    height="100%"
-                  >
-                    <Box py={6} pr={6} pl={{ xs: 6, sm: 12 }} my="auto">
-                      <Box display="flex" p={1} sx={{ borderRadius: '16px' }}
-                      >
 
-                      </Box>
-
-                      <Box display="flex" color="white" p={1}>
-
-
-                      </Box>
-
-                    </Box>
-                  </Box>
                 </Grid>
                 <Grid item xs={12} lg={7}>
                   <Box component="form" p={2} method="post" sx={{ borderRadius: '16px' }}>
                     <Box px={4} py={{ xs: 2, sm: 6 }}>
-                      <Typography variant="h2" mb={1} sx= {{ fontWeight: 'bold'  }}>
-                        Você escolheu Yoga
+                      <Typography variant="h2" mb={1} sx={{ fontWeight: 'bold' }}>
+                        Você escolheu {produto?.nome}
                       </Typography>
                       <Typography variant="body1" color="text" mb={2}>
-                        Yoga é um conceito é uma filosofia, que trabalha o corpo e a mente, através de disciplinas tradicionais de quem a pratica. Yoga é relacionada ao budismo e ao hinduísmo, com práticas de exercícios e meditação para trabalhar a parte física e também a mente.
+                        {produto?.descricao}
                       </Typography>
                       <Box textAlign="right">
-                        <button onClick={routeChange} className='buttonProduct'> MATRICULE-SE </button>
+                        <Link to={`/check/${produto?.id}`}>
+                          <button className='buttonProduct'> MATRICULE-SE </button>
+                        </Link>
                       </Box>
                     </Box>
 
-                    
                     <Box pt={0.5} pb={3} px={3}>
                       <Grid
                         container
@@ -125,7 +141,7 @@ export default function Product() {
                         ml="auto"
                       >
 
-                        
+
 
                       </Grid>
                     </Box>

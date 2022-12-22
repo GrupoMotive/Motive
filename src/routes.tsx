@@ -25,7 +25,7 @@ export default function RoutesApp() {
             <Route path='/login' element={<Login />} />
             <Route path='/register' element={<Register />} />
             <Route path='/produto/:id' element={<Product />} />
-            <Route path='/check' element={<Check />} />
+            <Route path='/check/:id' element={<Check />} />
 
           </Routes>
         </Router>

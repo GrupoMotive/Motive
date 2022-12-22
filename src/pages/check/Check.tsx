@@ -1,13 +1,56 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Box, Grid, Typography } from "@mui/material";
 import Navbar from "../../components/static/navbar";
 import Footer from "../../components/static/footer";
 import './style.css'
+import { useNavigate, useParams } from "react-router-dom";
+import bgCheck from '../../assets/images/bgproduct.jpg'
+import api from "../../services/api";
+import { toast } from "react-toastify";
+import { useSelector } from "react-redux";
+import { TokenState } from "../../store/tokens/tokensReducer";
+import Produto from "../../models/produto";
 
 export default function Check() {
 
-  const email = localStorage.getItem("token")
-  console.log(email);
+  const navigate = useNavigate()
+  const [produto, setProduto] = useState<Produto>()
+  const { id } = useParams<{ id: string }>();
+  const token = useSelector<TokenState, TokenState["tokens"]>(
+    (state) => state.tokens
+  );
+
+  useEffect(() => {
+    if (token === "") {
+      toast.error('Você precisa estar logado', {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        theme: "colored",
+        progress: undefined,
+      });
+      navigate("/login")
+
+    }
+  }, [token])
+
+  useEffect(() => {
+    if (id !== undefined) {
+      findById(id);
+    }
+  }, [id])
+
+  async function findById(id: string) {
+    const res = await api.get(`/produto/${id}`, {
+      headers: {
+        'Authorization': token
+      }
+    })
+    setProduto(res.data)
+  }
 
   return (
     <Box>
@@ -15,8 +58,10 @@ export default function Check() {
         width="100%"
         py={6}
         px={{ xs: 2, lg: 0 }}
-        className='bgCheck'
         sx={{
+          backgroundImage: `url(${bgCheck})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
           display: "grid",
           placeItems: "center",
         }}>
@@ -57,8 +102,10 @@ export default function Check() {
                   item
                   xs={12}
                   lg={5}
-                  className='check'
                   sx={{
+                    backgroundImage: `url(${produto?.foto_url})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
                     alignContent: "center",
                   }}
                 >
@@ -83,19 +130,19 @@ export default function Check() {
                 <Grid item xs={12} lg={7}>
                   <Box component="form" p={2} method="post">
                     <Box px={3} py={{ xs: 2, sm: 6 }}>
-                      
-                      
-                      <Typography variant="h2" mb={2} sx= {{ fontWeight: 'bold' }}>
-                        Parabéns! 
+
+
+                      <Typography variant="h2" mb={2} sx={{ fontWeight: 'bold' }}>
+                        Parabéns!
                         <svg className="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
-                        <circle className="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
-                        <path className="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
-                      </svg>
+                          <circle className="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                          <path className="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                        </svg>
                       </Typography>
-                      
-                      
+
+
                       <Typography variant="body1" color="text" mb={2}>
-                        Você adquiriu a aula! Confira todas as informações no e-mail cadastrado. Bom treino!
+                        Você adquiriu a aula de {produto?.nome}! Confira todas as informações no e-mail cadastrado. Bom treino!
                       </Typography>
                     </Box>
                     <Box pt={0.5} pb={3} px={3}>

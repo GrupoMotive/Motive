@@ -43,12 +43,13 @@ export default function MediaCard({ titulo, valor, foto_url, id }: CardProps) {
           </Grid>
           <Grid item xs={4} >
             <CardActions>
-              <Link to={`/produto/:${id}`}>
+              <Link to={`/produto/${id}`}>
                 <Button sx={{
                   backgroundColor: "black",
                   color: "white",
                   width: "8rem",
                   transition: "0.2s all",
+                  borderRadius: "20px",
                   ":hover": { backgroundColor: "#191919" }
                 }}>Saiba mais</Button>
               </Link>

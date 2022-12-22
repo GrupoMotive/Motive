@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Box, Divider, Grid, IconButton, TextField, Typography } from "@mui/material";
-import Produtos from "../../models/produto";
+import Produto from "../../models/produto";
 import api from "../../services/api";
 import MediaCard from "../../components/dynamics/card";
 import Footer from "../../components/static/footer";
@@ -14,7 +14,7 @@ type FormValues = {
 }
 
 export default function Classes() {
-  const [produtos, setProdutos] = useState<Produtos[]>([])
+  const [produtos, setProdutos] = useState<Produto[]>([])
   const { register, handleSubmit } = useForm<FormValues>()
 
 

@@ -98,7 +98,9 @@ export default function Register() {
 
 
       <Grid alignItems='center' xs={6}>
-        <Box paddingX={20} sx={{height: 500, width: 800}}>
+
+        <Box paddingX={20} sx={{ height: 500, width: 800 }}>
+
           <form onSubmit={handleSubmit(handleRegister)} className="box-register">
             <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' sx={{ color: "#0DCA70", fontWeight: "bold", fontSize: "24px" }}>CADASTRAR</Typography>
             <TextField {...register('nome')} id='nome' label='Nome' variant='filled' name='nome' margin='normal' fullWidth className='campo-nome' color='green' inputProps={{ style: { color: "#efeeee" } }} />
@@ -118,6 +120,7 @@ export default function Register() {
               </Button>
             </Box>
           </form>
+
         </Box>
       </Grid>
     </Grid>

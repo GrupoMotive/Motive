@@ -10,6 +10,7 @@ import { Flip, toast } from 'react-toastify'
 import logo from '../../assets/images/WhiteLogo-Motive.png'
 import backgroundImg from '../../assets/images/back.jpg'
 import './Login.css';
+import { Height } from '@material-ui/icons';
 
 type FormValues = {
   email: string
@@ -84,22 +85,44 @@ function Login() {
 
     }}>
       <Grid item sx={{
-        display: {
-          alignSelf: 'flex-start',
-          height: 20,
-        }
+        position: 'absolute',
+        top: 5,
+        left: 0,
+        height: { xs: 40, sm: 45, md: 64 }
       }} >
         <Link to='/'>
           <img src={logo} alt="Logo Motive" className='logo-login' />
         </Link>
       </Grid>
 
-      <Grid item xs={12} >
+      <Grid item xs={12} sx={{
+        px: { xs: 1 },
+        height: '65%'
+      }} >
 
-        <form onSubmit={handleSubmit(handleLogin)} className="box-login">
-          <Typography pt={4} pb={4} variant='h3' gutterBottom component='h3' align='center' sx={{ color: "#0DCA70", fontSize: "24px", fontWeight: 'bold', }}>ENTRAR</Typography>
-          <TextField {...register('email')} id='email' label='Email' variant='filled' name='email' margin='normal' color='green' fullWidth className='campo' inputProps={{ style: { color: "#efeeee" } }} />
-          <TextField {...register('senha')} id='senha' label='Senha' variant='filled' name='senha' margin='normal' type='password' color='green' fullWidth className='campo' inputProps={{ style: { color: "#efeeee" } }} />
+        <Box component="form" onSubmit={handleSubmit(handleLogin)} sx={{
+          width: '100%',
+          height: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          backgroundColor: '#000000',
+          borderRadius: '10px',
+          px: { xs: 1 }
+        }}>
+          <Typography gutterBottom component='h3'
+            sx={{
+              textAlign: 'center',
+              mb: 3,
+              color: "#0DCA70",
+              fontSize: "24px",
+              fontWeight: 'bold',
+            }}>
+            ENTRAR
+          </Typography>
+
+          <TextField {...register('email')} id='email' label='Email' variant='filled' name='email' margin='normal' autoFocus required color='green' fullWidth className='campo' inputProps={{ style: { color: "#efeeee" } }} />
+          <TextField {...register('senha')} id='senha' label='Senha' variant='filled' name='senha' margin='normal' type='password' required color='green' fullWidth className='campo' inputProps={{ style: { color: "#efeeee" } }} />
           <Box marginTop={6} textAlign='center'>
             <Button type='submit' variant='contained' color='primary' className='botão-login' sx={{ backgroundColor: "#0DCA70", border: '1px solid #0DCA70', width: "100%", ":hover": { backgroundColor: "#000", border: '1px solid #0DCA70' } }}>
               Login
@@ -113,7 +136,7 @@ function Login() {
               </Link>
             </Box>
           </Box>
-        </form>
+        </Box>
 
       </Grid>
 

@@ -71,7 +71,7 @@ function Login() {
 
   return (
     <Grid container sx={{
-      backgroundImage: { xs: 'none', sm: `url(${backgroundImg})` },
+      backgroundImage: { xs: 'none', sm: `url(https://live.staticflickr.com/65535/52649444948_df2cd26ad6_k.jpg)` },
       backgroundColor: '#212121',
       backgroundRepeat: 'no-repeat',
       backgroundSize: 'cover',

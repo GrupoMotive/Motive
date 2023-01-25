@@ -1,5 +1,5 @@
 .imagemHome {
-    background-image: url(../../assets/images/hero-bg-filter.jpg);
+    background-image: url(https://live.staticflickr.com/65535/52649412230_4c600f1164_k.jpg);
     background-repeat: no-repeat;
     width: 100%;
     min-height: 100%;
@@ -81,12 +81,12 @@
     height: 30px;
 }
 
-.cards-home{
+.cards-home {
     width: 300px;
     height: 300px;
 }
 
-.box-cards{
+.box-cards {
     display: flex;
     justify-content: center;
     align-items: center;

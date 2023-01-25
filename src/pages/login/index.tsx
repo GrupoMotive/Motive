@@ -10,7 +10,6 @@ import { Flip, toast } from 'react-toastify'
 import logo from '../../assets/images/WhiteLogo-Motive.png'
 import backgroundImg from '../../assets/images/back.jpg'
 import './Login.css';
-import { Height } from '@material-ui/icons';
 
 type FormValues = {
   email: string
@@ -97,18 +96,22 @@ function Login() {
 
       <Grid item xs={12} sx={{
         px: { xs: 1 },
-        height: '60%'
+        height: { xs: '60%', sm: '55%' },
+        display: 'flex',
+        justifyContent: { xs: 'center', md: 'flex-end' },
       }} >
 
         <Box component="form" onSubmit={handleSubmit(handleLogin)} sx={{
           width: '100%',
+          maxWidth: '480px',
           height: '100%',
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
           backgroundColor: '#000000',
           borderRadius: '10px',
-          px: { xs: 1 }
+          px: { xs: 1, sm: 3 },
+          mr: { md: 12, lg: 14 }
         }}>
           <Typography gutterBottom component='h3'
             sx={{

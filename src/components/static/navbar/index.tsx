@@ -12,6 +12,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import { ThemeProvider } from '@mui/material/styles';
 import { Link, useNavigate } from 'react-router-dom';
 import './style.css'
 import { TokenState } from '../../../store/tokens/tokensReducer';
@@ -19,6 +20,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Flip, toast } from 'react-toastify';
 import { addToken } from '../../../store/tokens/actions';
 import whiteLogo from '../../../assets/images/WhiteLogo-Motive.png'
+import { theme } from '../../../App'
 
 interface Props {
   /**
@@ -66,10 +68,6 @@ export default function Navbar(props: Props) {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        <img src={whiteLogo} alt="logo" />
-      </Typography>
-      <Divider />
       <List>
         {navItems.map((item) => (
           <ListItem key={item.name} disablePadding>
@@ -85,60 +83,88 @@ export default function Navbar(props: Props) {
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: 'flex', justifyContent: "center", alignItems: "center", height: "80px", }}>
-      <AppBar component="nav" color='transparent' sx={{ display: "flex", justifyContent: "center", height: "80px", boxShadow: "none", position: "absolute" }}>
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Box
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'flex' }, alignItems: 'center' }}
-          >
-            <Link to='/'>
-              <img src={whiteLogo} alt="logo" className='logo' />
-            </Link>
+    <>
+      <ThemeProvider theme={theme}>
+
+
+        <Box sx={{
+          display: 'flex',
+          justifyContent: "center",
+          alignItems: "center",
+          height: "80px",
+        }}>
+          <AppBar component="nav" color='transparent' sx={{
+            display: "flex",
+            alignItems: 'normal',
+            justifyContent: "center",
+            height: "80px",
+            boxShadow: "none",
+            position: "absolute"
+          }}>
+            <Toolbar>
+              <Box
+                component="div"
+                sx={{
+                  flexGrow: '1',
+                  display: { xs: 'flex' },
+                  height: { xs: 40, sm: 45, md: 64 }
+                }}
+              >
+                <Link to='/'>
+                  <img src={whiteLogo} alt="logo" className='logo' />
+                </Link>
+              </Box>
+
+              <IconButton
+                color="inherit"
+                aria-label="open drawer"
+                edge="start"
+                onClick={handleDrawerToggle}
+                sx={{ mr: 2, display: { sm: 'none' } }}
+              >
+                <MenuIcon sx={{
+                  height: { xs: 40 },
+                  color: '#fff'
+                }} />
+              </IconButton>
+
+              <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+                {navItems.map((item) => {
+                  if (item.name === 'LOGIN' && token !== '') {
+                    return (<Button onClick={logout} sx={{ color: '#fff' }}>LOGOUT</Button>)
+                  } else {
+                    return (
+                      <Link to={item.to} key={item.name}>
+                        <Button key={item.name} sx={{ color: '#fff' }}>
+                          {item.name}
+                        </Button>
+                      </Link>
+                    )
+                  }
+                })}
+              </Box>
+            </Toolbar>
+          </AppBar>
+          <Box component="nav">
+            <Drawer
+              container={container}
+              variant="temporary"
+              anchor='right'
+              open={mobileOpen}
+              onClose={handleDrawerToggle}
+              ModalProps={{
+                keepMounted: true, // Better open performance on mobile.
+              }}
+              sx={{
+                display: { xs: 'block', sm: 'none' },
+                '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+              }}
+            >
+              {drawer}
+            </Drawer>
           </Box>
-          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-            {navItems.map((item) => {
-              if (item.name === 'LOGIN' && token !== '') {
-                return (<Button onClick={logout} sx={{ color: '#fff' }}>LOGOUT</Button>)
-              } else {
-                return (
-                  <Link to={item.to} key={item.name}>
-                    <Button key={item.name} sx={{ color: '#fff' }}>
-                      {item.name}
-                    </Button>
-                  </Link>
-                )
-              }
-            })}
-          </Box>
-        </Toolbar>
-      </AppBar>
-      <Box component="nav">
-        <Drawer
-          container={container}
-          variant="temporary"
-          open={mobileOpen}
-          onClose={handleDrawerToggle}
-          ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
-          }}
-          sx={{
-            display: { xs: 'block', sm: 'none' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
-          }}
-        >
-          {drawer}
-        </Drawer>
-      </Box>
-    </Box>
+        </Box >
+      </ThemeProvider>
+    </>
   )
 }

@@ -6,7 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import RoutesApp from './routes';
 import "./global.css"
 
-const theme = createTheme({
+export const theme = createTheme({
   palette: {
     neutral: {
       main: '#64748B',

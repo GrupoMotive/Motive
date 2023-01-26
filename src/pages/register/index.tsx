@@ -81,7 +81,7 @@ export default function Register() {
 
   return (
     <Grid container direction='row' justifyContent='center' alignItems='center' sx={{
-      backgroundImage: `url(${backgroundImg})`,
+      backgroundImage: `url(https://live.staticflickr.com/65535/52650072921_8c2ff488da_k.jpg)`,
       backgroundRepeat: 'no-repeat',
       width: '100%',
       height: '100vh',

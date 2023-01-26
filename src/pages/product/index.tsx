@@ -59,7 +59,7 @@ export default function Product() {
         py={6}
         px={{ xs: 2, lg: 0 }}
         sx={{
-          backgroundImage: `url(${bgProduct})`,
+          backgroundImage: `url(https://live.staticflickr.com/65535/52650344384_235ebe2893_k.jpg)`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           display: "grid",

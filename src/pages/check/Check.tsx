@@ -59,7 +59,7 @@ export default function Check() {
         py={6}
         px={{ xs: 2, lg: 0 }}
         sx={{
-          backgroundImage: `url(${bgCheck})`,
+          backgroundImage: `url(https://live.staticflickr.com/65535/52650349589_df20f14bcf_k.jpg)`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           display: "grid",

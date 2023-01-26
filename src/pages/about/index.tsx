@@ -25,7 +25,7 @@ export default function About() {
         py={6}
         px={{ xs: 2, lg: 0 }}
         sx={{
-          backgroundImage: `url(${bgSobre})`,
+          backgroundImage: `url(https://live.staticflickr.com/65535/52650558278_ceb32eb59e_k.jpg)`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           display: "flex",
@@ -141,15 +141,15 @@ export default function About() {
             <div id='membros'>
               <div className="membro">
                 <img width={150} height={150} src={Bruno} alt='Foto do colaborador Bruno' />
-                
+
                 <h2 style={{ paddingTop: "5px" }}> Bruno Pina </h2>
-                
+
                 <div className="social-media">
                   <a href="https://github.com/Pina98 " target="_blank">
                     <GitHub htmlColor="white" />
                   </a>
                   <a href="https://www.linkedin.com/in/brunopinatrotta/ " target="_blank">
-                    <LinkedIn  htmlColor="white"/>
+                    <LinkedIn htmlColor="white" />
                   </a>
 
                 </div>
@@ -169,10 +169,10 @@ export default function About() {
                 <h2 style={{ paddingTop: "5px" }} > Erika Beatriz </h2>
                 <div className="social-media">
                   <a href="https://github.com/ErikaBeatrizz" target="_blank">
-                    <GitHub  htmlColor="white" />
+                    <GitHub htmlColor="white" />
                   </a>
                   <a href="https://www.linkedin.com/in/erikabeatrizf/" target="_blank">
-                    <LinkedIn  htmlColor="white" />
+                    <LinkedIn htmlColor="white" />
                   </a>
 
                 </div>
@@ -192,10 +192,10 @@ export default function About() {
                 <h2 style={{ paddingTop: "5px" }} > Igor Lima </h2>
                 <div className="social-media">
                   <a href="https://github.com/igor02b1" target="_blank">
-                    <GitHub  htmlColor="white" />
+                    <GitHub htmlColor="white" />
                   </a>
                   <a href="https://www.linkedin.com/in/igor-de-lima-da-silva-a40770244/" target="_blank">
-                    <LinkedIn  htmlColor="white" />
+                    <LinkedIn htmlColor="white" />
                   </a>
 
                 </div>
@@ -214,10 +214,10 @@ export default function About() {
                 <h2 style={{ paddingTop: "5px" }} > Mauricio Carvalho </h2>
                 <div className="social-media">
                   <a href="https://github.com/CarvalhoZD" target="_blank">
-                    <GitHub  htmlColor="white" />
+                    <GitHub htmlColor="white" />
                   </a>
                   <a href="https://www.linkedin.com/in/mauriciocarvalhojb/" target="_blank">
-                    <LinkedIn  htmlColor="white" />
+                    <LinkedIn htmlColor="white" />
                   </a>
 
                 </div>
@@ -237,10 +237,10 @@ export default function About() {
                 <h2 style={{ paddingTop: "5px" }} > Natalia Nery </h2>
                 <div className="social-media">
                   <a href="https://github.com/NataliaNery14" target="_blank">
-                    <GitHub  htmlColor="white" />
+                    <GitHub htmlColor="white" />
                   </a>
                   <a href="https://www.linkedin.com/in/nat%C3%A1lia-dos-santos-nery-897a72248/" target="_blank">
-                    <LinkedIn  htmlColor="white" />
+                    <LinkedIn htmlColor="white" />
                   </a>
 
                 </div>
@@ -261,10 +261,10 @@ export default function About() {
                 <div className="social-media">
 
                   <a href="https://github.com/WallaceArauj" target="_blank">
-                    <GitHub  htmlColor="white" />
+                    <GitHub htmlColor="white" />
                   </a>
                   <a href="https://www.linkedin.com/in/wallacearaujo27/" target="_blank">
-                    <LinkedIn  htmlColor="white" />
+                    <LinkedIn htmlColor="white" />
                   </a>
 
                 </div>
@@ -285,11 +285,11 @@ export default function About() {
                 <div className="social-media">
 
                   <a href="https://github.com/Leeymattos" target="_blank">
-                    <GitHub  htmlColor="white" />
+                    <GitHub htmlColor="white" />
                   </a>
 
                   <a href="https://www.linkedin.com/in/weslley-matos-b267651b1/" target="_blank">
-                    <LinkedIn  htmlColor="white" />
+                    <LinkedIn htmlColor="white" />
                   </a>
 
                 </div>

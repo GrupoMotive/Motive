@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
@@ -20,6 +20,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Flip, toast } from 'react-toastify';
 import { addToken } from '../../../store/tokens/actions';
 import whiteLogo from '../../../assets/images/WhiteLogo-Motive.png'
+import Logo from '../../../assets/images/Logo-Motive.png'
 import { theme } from '../../../App'
 
 interface Props {
@@ -31,6 +32,7 @@ interface Props {
 }
 
 const drawerWidth = 240;
+
 const navItems = [
   { name: "HOME", to: "/" },
   { name: 'AULAS', to: "/aulas" },
@@ -42,8 +44,12 @@ export default function Navbar(props: Props) {
   const token = useSelector<TokenState, TokenState["tokens"]>(
     (state) => state.tokens
   );
+
   const navigate = useNavigate();
   const dispatch = useDispatch();
+
+  const [displayNavbar, setDisplayLogo] = useState('flex');
+
   const logout = () => {
     dispatch(addToken(''));
     toast.success('Deslogado com sucesso', {
@@ -59,20 +65,50 @@ export default function Navbar(props: Props) {
     });
     navigate('/login')
   };
+
   const { window } = props;
+
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
+    if (displayNavbar === 'none') {
+      setDisplayLogo('flex')
+    } else {
+      setDisplayLogo('none');
+    }
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+    <Box onClick={handleDrawerToggle} alignItems='center' sx={{ height: '100%' }}>
+
+      <Box
+        component="div"
+        sx={{
+          my: 2,
+          display: { xs: 'flex' },
+          justifyContent: 'center',
+          height: { xs: 40, sm: 45, md: 64 },
+        }}
+      >
+        <Link to='/'>
+          <img src={Logo} alt="logo" className='logo' />
+        </Link>
+      </Box>
+      <Divider sx={{
+        mb: 2,
+      }} />
+
       <List>
         {navItems.map((item) => (
           <ListItem key={item.name} disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }}>
-              <ListItemText primary={item.name} />
+            <ListItemButton sx={{ display: 'flex', justifyContent: 'center' }}>
+              <Link to={item.to}>
+                <ListItemText primary={item.name} sx={{
+                  color: 'black',
+                  px: 12
+                }} />
+              </Link>
             </ListItemButton>
           </ListItem>
         ))}
@@ -85,8 +121,6 @@ export default function Navbar(props: Props) {
   return (
     <>
       <ThemeProvider theme={theme}>
-
-
         <Box sx={{
           display: 'flex',
           justifyContent: "center",
@@ -106,7 +140,7 @@ export default function Navbar(props: Props) {
                 component="div"
                 sx={{
                   flexGrow: '1',
-                  display: { xs: 'flex' },
+                  display: { xs: `${displayNavbar}` },
                   height: { xs: 40, sm: 45, md: 64 }
                 }}
               >
@@ -120,7 +154,7 @@ export default function Navbar(props: Props) {
                 aria-label="open drawer"
                 edge="start"
                 onClick={handleDrawerToggle}
-                sx={{ mr: 1, display: { sm: 'none' } }}
+                sx={{ mr: 1, display: { xs: `${displayNavbar}`, sm: 'none' } }}
               >
                 <MenuIcon sx={{
                   height: { xs: 40 },
@@ -157,7 +191,7 @@ export default function Navbar(props: Props) {
               }}
               sx={{
                 display: { xs: 'block', sm: 'none' },
-                '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+                '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth }
               }}
             >
               {drawer}

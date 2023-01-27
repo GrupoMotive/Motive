@@ -165,13 +165,38 @@ export default function Navbar(props: Props) {
               <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                 {navItems.map((item) => {
                   if (item.name === 'LOGIN' && token !== '') {
-                    return (<Button onClick={logout} sx={{ color: '#fff' }}>LOGOUT</Button>)
+                    return (<Button onClick={logout} sx={{
+                      color: '#fff',
+                      backgroundColor: "#e74c3c",
+                      border: '1px solid #e74c3c',
+                      borderRadius: '20px',
+                      px: 3,
+                      py: '4px',
+                      ml: 1
+                    }}>LOGOUT</Button>)
                   } else {
                     return (
                       <Link to={item.to} key={item.name}>
-                        <Button key={item.name} sx={{ color: '#fff' }}>
-                          {item.name}
-                        </Button>
+                        {item.name === 'LOGIN' ? (
+                          <Button key={item.name} sx={{
+                            color: '#fff',
+                            backgroundColor: "#0DCA70",
+                            border: '1px solid #0DCA70',
+                            borderRadius: '20px',
+                            px: 3,
+                            py: '4px',
+                            ml: 1
+                          }}>
+
+                            {item.name}
+                          </Button>)
+                          :
+                          (
+                            <Button key={item.name} sx={{ color: '#fff' }}>
+                              {item.name}
+                            </Button>
+                          )}
+
                       </Link>
                     )
                   }

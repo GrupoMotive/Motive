@@ -42,7 +42,7 @@ export default function Classes() {
         width="100%"
         py={6}
         sx={{
-          backgroundImage: `url(${bgAulas})`,
+          backgroundImage: `url(https://live.staticflickr.com/65535/52650506390_e5ce83a6b3_k.jpg)`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           display: "flex",

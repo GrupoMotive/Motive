@@ -80,45 +80,73 @@ export default function Register() {
   }
 
   return (
-    <Grid container direction='row' justifyContent='center' alignItems='center' sx={{
-      backgroundImage: `url(${backgroundImg})`,
+    <Grid container sx={{
+      backgroundImage: { xs: 'none', sm: `url(https://live.staticflickr.com/65535/52650072921_8c2ff488da_k.jpg)` },
+      backgroundColor: '#212121',
       backgroundRepeat: 'no-repeat',
-      width: '100%',
-      height: '100vh',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
+      width: '100vw',
+      height: '100vh',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center'
     }}>
 
 
-      <Grid xs={6} alignSelf='flex-start' >
+      <Grid item sx={{
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        height: { xs: 40, sm: 45, md: 64 }
+      }} >
         <Link to='/'>
           <img src={logo} alt="" className='logo-register' />
         </Link>
       </Grid>
 
 
-      <Grid alignItems='center' xs={6}>
-        <Box paddingX={20} sx={{height: 500, width: 800}}>
-          <form onSubmit={handleSubmit(handleRegister)} className="box-register">
-            <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' sx={{ color: "#0DCA70", fontWeight: "bold", fontSize: "24px" }}>CADASTRAR</Typography>
-            <TextField {...register('nome')} id='nome' label='Nome' variant='filled' name='nome' margin='normal' fullWidth className='campo-nome' color='green' inputProps={{ style: { color: "#efeeee" } }} />
-            <TextField {...register('email')} id='email' label='Email' variant='filled' name='email' margin='normal' fullWidth className='campo-email' color='green' inputProps={{ style: { color: "#efeeee" } }} />
-            <TextField {...register('foto')} id='foto' label='Foto' variant='filled' name='foto' margin='normal' fullWidth className='campo-foto' color='green' inputProps={{ style: { color: "#efeeee" } }} />
-            <TextField {...register('senha')} id='senha' label='Senha' variant='filled' name='senha' margin='normal' type='password' fullWidth className='campo-senha' color='green' inputProps={{ style: { color: "#efeeee" } }} />
-            <TextField {...register('confirmarSenha')} id='Confirmar Senha' label='Confirmar Senha' variant='filled' name='confirmarSenha' margin='normal' type='password' fullWidth className='campo-confirmarSenha' color='green' inputProps={{ style: { color: "#efeeee" } }} />
-            <Box marginTop={2} textAlign='center'>
-              <Link to='/login' className='text-decorator-none'>
-                <Button variant='contained' color='secondary' sx={{ backgroundColor: "#e74c3c", border: '1px solid #e74c3c', ":hover": { backgroundColor: "#000", border: '1px solid #e74c3c' }, }}>
-                  Cancelar
-                </Button>
-              </Link>
-              <Button
-                type='submit' variant='contained' sx={{ backgroundColor: "#0DCA70", border: '1px solid #0DCA70', ":hover": { backgroundColor: "#000", border: '1px solid #0DCA70' }, marginLeft: "30px" }}>
-                Cadastrar
+      <Grid alignItems='center' item xs={12} sx={{
+        px: { xs: 1 },
+        height: { xs: '70%', sm: '65%' },
+        display: 'flex',
+        justifyContent: { xs: 'center', md: 'flex-end' },
+      }}>
+
+
+
+        <Box onSubmit={handleSubmit(handleRegister)} sx={{
+          width: '100%',
+          maxWidth: '480px',
+          height: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          backgroundColor: '#000000',
+          borderRadius: '10px',
+          px: { xs: 1, sm: 3 },
+          mr: { md: 12, lg: 14 }
+        }}>
+          <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' sx={{ color: "#0DCA70", fontWeight: "bold", fontSize: "24px" }}>CADASTRAR</Typography>
+          <TextField {...register('nome')} id='nome' label='Nome' variant='filled' name='nome' required autoFocus margin='normal' fullWidth className='campo-nome' color='green' inputProps={{ style: { color: "#efeeee" } }} />
+          <TextField {...register('email')} id='email' label='Email' variant='filled' name='email' required margin='normal' fullWidth className='campo-email' color='green' inputProps={{ style: { color: "#efeeee" } }} />
+          <TextField {...register('foto')} id='foto' label='Foto' variant='filled' name='foto' required margin='normal' fullWidth className='campo-foto' color='green' inputProps={{ style: { color: "#efeeee" } }} />
+          <TextField {...register('senha')} id='senha' label='Senha' variant='filled' name='senha' required margin='normal' type='password' fullWidth className='campo-senha' color='green' inputProps={{ style: { color: "#efeeee" } }} />
+          <TextField {...register('confirmarSenha')} id='Confirmar Senha' label='Confirmar senha' required variant='filled' name='confirmarSenha' margin='normal' type='password' fullWidth className='campo-confirmarSenha' color='green' inputProps={{ style: { color: "#efeeee" } }} />
+          <Box marginTop={2} textAlign='center'>
+            <Link to='/login' className='text-decorator-none'>
+              <Button variant='contained' color='secondary' sx={{ backgroundColor: "#e74c3c", border: '1px solid #e74c3c', ":hover": { backgroundColor: "#000", border: '1px solid #e74c3c' }, }}>
+                Cancelar
               </Button>
-            </Box>
-          </form>
+            </Link>
+            <Button
+              type='submit' variant='contained' sx={{ backgroundColor: "#0DCA70", border: '1px solid #0DCA70', ":hover": { backgroundColor: "#000", border: '1px solid #0DCA70' }, marginLeft: "30px" }}>
+              Cadastrar
+            </Button>
+          </Box>
         </Box>
+
+
       </Grid>
     </Grid>
   );

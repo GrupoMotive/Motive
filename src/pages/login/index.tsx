@@ -37,7 +37,7 @@ function Login() {
 
       toast.success('Usuário logado com sucesso', {
         transition: Flip,
-        position: "top-right",
+        position: "top-center",
         autoClose: 1000,
         hideProgressBar: false,
         closeOnClick: true,
@@ -127,7 +127,12 @@ function Login() {
           <TextField {...register('email')} id='email' label='Email' variant='filled' name='email' margin='normal' autoFocus required color='green' fullWidth className='campo' inputProps={{ style: { color: "#efeeee" } }} />
           <TextField {...register('senha')} id='senha' label='Senha' variant='filled' name='senha' margin='normal' type='password' required color='green' fullWidth className='campo' inputProps={{ style: { color: "#efeeee" } }} />
           <Box marginTop={6} textAlign='center'>
-            <Button type='submit' variant='contained' color='primary' className='botão-login' sx={{ backgroundColor: "#0DCA70", border: '1px solid #0DCA70', width: "100%", ":hover": { backgroundColor: "#000", border: '1px solid #0DCA70' } }}>
+            <Button type='submit' variant='contained' className='botão-login' sx={{
+              backgroundColor: "#0DCA70",
+              border: '1px solid #0DCA70',
+              width: "100%",
+              ":hover": { backgroundColor: "#000" }
+            }}>
               Login
             </Button>
             <Box display='flex' justifyContent='center' marginTop={2}>

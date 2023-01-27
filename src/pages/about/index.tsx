@@ -146,10 +146,10 @@ export default function About() {
                 <h2 style={{ paddingTop: "5px" }}> Bruno Pina </h2>
 
                 <div className="social-media">
-                  <a href="https://github.com/Pina98 " target="_blank">
+                  <a href="https://github.com/Pina98 " target="_blanktarget">
                     <GitHub htmlColor="white" />
                   </a>
-                  <a href="https://www.linkedin.com/in/brunopinatrotta/ " target="_blank">
+                  <a href="https://www.linkedin.com/in/brunopinatrotta/ " target="_blanktarget">
                     <LinkedIn htmlColor="white" />
                   </a>
 
@@ -157,7 +157,7 @@ export default function About() {
               </div>
             </div>
           </Grid>
-          
+
           <Grid item md={3} xs={4} sx={{
             maxWidth: 300,
             display: 'flex',
@@ -170,10 +170,10 @@ export default function About() {
 
                 <h2 style={{ paddingTop: "5px" }} > Erika Beatriz </h2>
                 <div className="social-media">
-                  <a href="https://github.com/ErikaBeatrizz" target="_blank">
+                  <a href="https://github.com/ErikaBeatrizz" target="_blanktarget">
                     <GitHub htmlColor="white" />
                   </a>
-                  <a href="https://www.linkedin.com/in/erikabeatrizf/" target="_blank">
+                  <a href="https://www.linkedin.com/in/erikabeatrizf/" target="_blanktarget">
                     <LinkedIn htmlColor="white" />
                   </a>
 
@@ -194,10 +194,10 @@ export default function About() {
 
                 <h2 style={{ paddingTop: "5px" }} > Igor Lima </h2>
                 <div className="social-media">
-                  <a href="https://github.com/igor02b1" target="_blank">
+                  <a href="https://github.com/igor02b1" target="_blanktarget">
                     <GitHub htmlColor="white" />
                   </a>
-                  <a href="https://www.linkedin.com/in/igor-de-lima-da-silva-a40770244/" target="_blank">
+                  <a href="https://www.linkedin.com/in/igor-de-lima-da-silva-a40770244/" target="_blanktarget">
                     <LinkedIn htmlColor="white" />
                   </a>
 
@@ -217,10 +217,10 @@ export default function About() {
 
                 <h2 style={{ paddingTop: "5px" }} > Mauricio Carvalho </h2>
                 <div className="social-media">
-                  <a href="https://github.com/CarvalhoZD" target="_blank">
+                  <a href="https://github.com/CarvalhoZD" target="_blanktarget">
                     <GitHub htmlColor="white" />
                   </a>
-                  <a href="https://www.linkedin.com/in/mauriciocarvalhojb/" target="_blank">
+                  <a href="https://www.linkedin.com/in/mauriciocarvalhojb/" target="_blanktarget">
                     <LinkedIn htmlColor="white" />
                   </a>
 
@@ -241,10 +241,10 @@ export default function About() {
 
                 <h2 style={{ paddingTop: "5px" }} > Natalia Nery </h2>
                 <div className="social-media">
-                  <a href="https://github.com/NataliaNery14" target="_blank">
+                  <a href="https://github.com/NataliaNery14" target="_blanktarget">
                     <GitHub htmlColor="white" />
                   </a>
-                  <a href="https://www.linkedin.com/in/nat%C3%A1lia-dos-santos-nery-897a72248/" target="_blank">
+                  <a href="https://www.linkedin.com/in/nat%C3%A1lia-dos-santos-nery-897a72248/" target="_blanktarget">
                     <LinkedIn htmlColor="white" />
                   </a>
 
@@ -266,10 +266,10 @@ export default function About() {
                 <h2 style={{ paddingTop: "5px" }} > Wallace Araujo </h2>
                 <div className="social-media">
 
-                  <a href="https://github.com/WallaceArauj" target="_blank">
+                  <a href="https://github.com/WallaceArauj" target="_blanktarget">
                     <GitHub htmlColor="white" />
                   </a>
-                  <a href="https://www.linkedin.com/in/wallacearaujo27/" target="_blank">
+                  <a href="https://www.linkedin.com/in/wallacearaujo27/" target="_blanktarget">
                     <LinkedIn htmlColor="white" />
                   </a>
 
@@ -291,11 +291,11 @@ export default function About() {
                 <h2 style={{ paddingTop: "5px" }} > Weslley Matos </h2>
                 <div className="social-media">
 
-                  <a href="https://github.com/Leeymattos" target="_blank">
+                  <a href="https://github.com/Leeymattos" target="_blanktarget">
                     <GitHub htmlColor="white" />
                   </a>
 
-                  <a href="https://www.linkedin.com/in/weslley-matos-b267651b1/" target="_blank">
+                  <a href="https://www.linkedin.com/in/weslley-matos-b267651b1/" target="_blanktarget">
                     <LinkedIn htmlColor="white" />
                   </a>
 

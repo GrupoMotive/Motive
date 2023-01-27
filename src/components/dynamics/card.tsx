@@ -20,19 +20,21 @@ export default function MediaCard({ titulo, valor, foto_url, id }: CardProps) {
       background: `url(${foto_url})`,
       backgroundSize: "100%",
       backgroundRepeat: "no-repeat",
-      height: "16rem",
+      height: 250,
+      width:"100%",
       display: "flex",
-      alignItems: "flex-end",
+      alignItems: 'flex-end',
+      maxWidth: 550
     }}>
       <CardContent sx={{
-        height: "35%",
+        height:90,
         backgroundColor: "rgba(1, 255, 132, 0.877)",
         width: "100%",
         padding: "0px",
       }}>
-        <Grid container sx={{ justifyContent: 'space-between', alignItems: "center" }}>
-          <Grid item xs={8}>
-            <Typography sx={{ fontWeight: "bold", fontSize: "20px", marginLeft: "10px", marginTop: "5px" }} color="#000">
+        <Grid container sx={{ justifyContent: 'space-around', alignItems: "center" }}>
+          <Grid item xs={4}>
+            <Typography sx={{ fontWeight: "bold", fontSize: "20px", marginLeft: "10px", marginRight:"10px", marginTop: "5px" }} color="#000">
               {titulo.toUpperCase()}
             </Typography>
 

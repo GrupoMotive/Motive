@@ -23,7 +23,7 @@ export default function About() {
       <Box minHeight="55vh"
         width="100%"
         py={6}
-        px={{ xs: 2, lg: 0 }}
+        px={{ md: 2, lg: 0 }}
         sx={{
           backgroundImage: `url(https://live.staticflickr.com/65535/52650558278_ceb32eb59e_k.jpg)`,
           backgroundSize: "cover",
@@ -54,10 +54,10 @@ export default function About() {
 
       <Box minHeight="25rem" alignItems="center" sx={{
         p: 2,
-        mx: { xs: 2, lg: 3 },
+        mx: { md: 2, lg: 3 },
         mt: -8,
         mb: 4,
-        boxShadow: 3,
+        bomdhadow: 3,
         backgroundColor: "#fff",
         backgroundSize: "cover",
         backgroundPosition: "center",
@@ -134,7 +134,8 @@ export default function About() {
 
 
 
-          <Grid item xs={3} sx={{
+          <Grid item md={3} xs={4} sx={{
+            maxWidth: 300,
             display: 'flex',
             justifyContent: "center"
           }}>
@@ -156,8 +157,9 @@ export default function About() {
               </div>
             </div>
           </Grid>
-
-          <Grid item xs={3} sx={{
+          
+          <Grid item md={3} xs={4} sx={{
+            maxWidth: 300,
             display: 'flex',
             justifyContent: "center"
           }}>
@@ -180,7 +182,8 @@ export default function About() {
             </div>
           </Grid>
 
-          <Grid item xs={3} sx={{
+          <Grid item md={3} xs={4} sx={{
+            maxWidth: 300,
             display: 'flex',
             justifyContent: "center"
           }}>
@@ -203,7 +206,8 @@ export default function About() {
             </div>
           </Grid>
 
-          <Grid item xs={3} sx={{
+          <Grid item md={3} xs={4} sx={{
+            maxWidth: 300,
             display: 'flex',
             justifyContent: "center"
           }}>
@@ -225,7 +229,8 @@ export default function About() {
             </div>
           </Grid>
 
-          <Grid item xs={4} sx={{
+          <Grid item md={3} xs={4} sx={{
+            maxWidth: 300,
             display: 'flex',
             justifyContent: "center"
           }}>
@@ -248,7 +253,8 @@ export default function About() {
             </div>
           </Grid>
 
-          <Grid item xs={4} sx={{
+          <Grid item md={3} xs={4} sx={{
+            maxWidth: 300,
             display: 'flex',
             justifyContent: "center"
           }}>
@@ -272,7 +278,8 @@ export default function About() {
             </div>
           </Grid>
 
-          <Grid item xs={4} sx={{
+          <Grid item md={3} xs={4} sx={{
+            maxWidth: 300,
             display: 'flex',
             justifyContent: "center"
           }}>
@@ -301,4 +308,4 @@ export default function About() {
       <Footer />
     </Box>
   )
-} 
+}

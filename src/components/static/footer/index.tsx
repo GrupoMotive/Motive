@@ -22,11 +22,11 @@ export default function Footer() {
     >
       <Container maxWidth="lg">
         <Grid container spacing={5}>
-          <Grid item xs={12} sm={4}>
+          <Grid item xs={12} sm={12} md={4} >
             <Box>
               <img src={whiteLogo} alt="logo" height={50} width={200} />
             </Box>
-            <Box pr={15}>
+            <Box pr={1}>
               <Typography>
                 Somos a MOTIVE, site de saúde e bem-estar. {"\n"}
               </Typography>
@@ -35,7 +35,7 @@ export default function Footer() {
               </Typography>
             </Box>
           </Grid>
-          <Grid item xs={12} sm={4}>
+          <Grid item xs={12} md={4}>
             <Box borderBottom={3} borderColor={"#0DCA70"} pb={1}>LINKS ÚTEIS</Box>
             <Box pt={3} pb={1} borderBottom={2} borderColor={"#101522"}>
               <Link to='/' className="LinkFooter" onClick={() => {
@@ -68,7 +68,7 @@ export default function Footer() {
               </Link>
             </Box>
           </Grid>
-          <Grid item xs={12} sm={4}>
+          <Grid item xs={12} md={4}>
             <Box borderBottom={3} borderColor={"#0DCA70"} pb={1}>DÚVIDAS, SUGESTÕES E ELOGIOS:</Box>
             <Box pt={3} pb={1} borderBottom={2} borderColor={"#101522"}>
               <a href="https://grupo1.generation.rj@gmail.com" className="LinkFooter" >

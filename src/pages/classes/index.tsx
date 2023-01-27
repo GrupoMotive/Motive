@@ -8,6 +8,7 @@ import Navbar from "../../components/static/navbar";
 import SearchIcon from '@mui/icons-material/Search';
 import bgAulas from '../../assets/images/bgaulas.jpg'
 import { useForm } from 'react-hook-form'
+import { Container, flexbox } from "@mui/system";
 
 type FormValues = {
   search: string
@@ -67,47 +68,50 @@ export default function Classes() {
           }} />
 
         </Typography>
-        <form onSubmit={handleSubmit(handleGetProducts)}>
-          <TextField
-            {...register('search')}
-            label="Buscar Aulas"
-            color='green'
-            sx={{ backgroundColor: "#f5f5f5", borderRadius: "8px", width: "600px", marginBottom: "60px" }}
-            variant="filled"
-            inputProps={{ style: { color: "#2e2e2e" } }}
-            InputProps={{
-              endAdornment: (
-                <IconButton>
-                  <SearchIcon />
-                </IconButton>
-              )
-            }}
-          />
-        </form>
-
+        <Container maxWidth="sm">
+          <form onSubmit={handleSubmit(handleGetProducts)}>
+            <TextField
+              {...register('search')}
+              label="Buscar Aulas"
+              color='green'
+              sx={{ width: "100%", backgroundColor: "#f5f5f5", borderRadius: "8px", marginBottom: "60px" }}
+              variant="filled"
+              inputProps={{ style: { color: "#2e2e2e" } }}
+              InputProps={{
+                endAdornment: (
+                  <IconButton>
+                    <SearchIcon />
+                  </IconButton>
+                )
+              }}
+            />
+          </form>
+        </Container>
 
       </Box>
-      <Box minHeight="25rem" alignItems="center" sx={{
+      <Box minHeight="5rem" alignItems="center" sx={{
         p: 2,
-        mx: { xs: 2, lg: 3 },
+        mx: { xs: 2, lg: 12 },
         mt: -8,
         mb: 4,
-        boxShadow: 3,
+        boxShadow: 8,
         backgroundColor: "#f5f5f5",
         backgroundSize: "cover",
         backgroundPosition: "center",
         display: "grid",
         borderRadius: '16px',
+        justifyContent: "space-between"
       }}>
-        <Grid container spacing={4} sx={{ width: '100%', }}>
+        <Grid container spacing={3} alignItems="stretch" >
           {produtos.map(produto => (
-            <Grid item xs={4} sx={{ marginY: "5px" }}>
+            <Grid item xs={12} sm={6} md={4} sx={{ marginY: "5px", display: "flex", justifyContent: "center" }}>
               <MediaCard titulo={produto.nome} foto_url={produto.foto_url} valor={produto.valor} id={String(produto.id)} key={produto.id} />
             </Grid>
           ))}
         </Grid>
 
       </Box>
+
       <Footer />
     </Box>
   )

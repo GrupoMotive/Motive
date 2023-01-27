@@ -70,27 +70,27 @@
     transition: all 1s;
 }
 
-#membros .membro:hover .social-media {
+#membros .membro .social-media {
     width: 100%;
     opacity: 1;
 }
 
-#membros .membro:hover {
+#membros .membro {
     background-color: rgba(8, 61, 119, 0.2);
     transform: scale(1.01);
 }
 
-#membros .membro:hover img {
+#membros .membro img {
     transform: scale(1.1);
     border: 2px solid #0dca70;
 }
 
 
-#membros .membro:hover::before {
+#membros .membro::before {
     width: 50%;
 }
 
-#membros .membro:hover::after {
+#membros .membro::after {
     width: 50%;
 }
 

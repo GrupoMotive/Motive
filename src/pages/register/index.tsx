@@ -101,14 +101,14 @@ export default function Register() {
         height: { xs: 40, sm: 45, md: 64 }
       }} >
         <Link to='/'>
-          <img src={logo} alt="" className='logo-register' />
+          <img src={logo} alt="logo" className='logo-register' />
         </Link>
       </Grid>
 
 
       <Grid alignItems='center' item xs={12} sx={{
         px: { xs: 1 },
-        height: { xs: '70%', sm: '65%' },
+        height: { xs: '70%', sm: '65%', md: '70%' },
         display: 'flex',
         justifyContent: { xs: 'center', md: 'flex-end' },
       }}>

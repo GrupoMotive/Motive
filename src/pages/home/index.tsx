@@ -35,17 +35,39 @@ export default function Home() {
         <Navbar />
         <Grid container xs={12} justifyContent='center' alignItems='center'  >
 
-          <Grid item xs={8} display='flex' flexDirection='column' justifyContent='center' alignItems='center' className="animationfade"
+          <Grid item xs={8} className="animationfade"
             sx={{
               height: "calc(100vh - 80px)",
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
             }}>
 
-            <Typography sx={{ fontWeight: 'bold', fontSize: '65px', }} className='TituloHome' lineHeight='100%' align="center" >
-              <br /> <br />  VOCÊ MAIS <span style={{ color: '#0DCA70', }}>SAUDÁVEL</span> <br /> COM ATIVIDADES AO AR LIVRE.
+            <Typography
+              sx={{
+                textAlign: 'center',
+                fontWeight: 'bold',
+                fontSize: { xs: 45, sm: 48, md: 60 },
+                color: '#f0f8ff',
+                lineHeight: '100%',
+                mb: { xs: 3, sm: 2 }
+              }}
+
+            >
+
+              VOCÊ MAIS <span style={{ color: '#0DCA70', }}>SAUDÁVEL</span> <br /> COM ATIVIDADES AO AR LIVRE.
             </Typography>
 
-            <Typography sx={{ fontWeight: 'bold', fontSize: '30px', paddingTop: '10px' }} className='SubTituloHome' align="center" >
-              Atividades físicas e esportes em geral são a melhor forma de cuidar da saúde.
+            <Typography
+              sx={{
+                fontWeight: 'bold',
+                fontSize: { xs: 25, sm: 28, md: 30 },
+                color: '#f0f8ff',
+                mb: 5
+              }}
+              align="center" >
+              Atividades físicas e esportes em geral são a melhor forma de cuidar da saúde. <br />
               Motivamos você a se exercitar!
             </Typography>
 

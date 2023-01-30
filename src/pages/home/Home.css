@@ -7,15 +7,11 @@
     background-position: center;
 }
 
-.TituloHome {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: aliceblue;
-
-}
+.TituloHome {}
 
 .SubTituloHome {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: aliceblue;
+    color: #f0f8ff;
 }
 
 

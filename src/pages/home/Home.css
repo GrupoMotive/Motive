@@ -1,20 +1,3 @@
-.imagemHome {
-    background-image: url(https://live.staticflickr.com/65535/52649412230_4c600f1164_k.jpg);
-    background-repeat: no-repeat;
-    width: 100%;
-    min-height: 100%;
-    background-size: cover;
-    background-position: center;
-}
-
-.TituloHome {}
-
-.SubTituloHome {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #f0f8ff;
-}
-
-
 .animationfade {
     animation: fadeIn 1.5s;
 }

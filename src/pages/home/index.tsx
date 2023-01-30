@@ -14,7 +14,8 @@ export default function Home() {
 
   async function BuscaProduto() {
     const res = await api.get('produto');
-    setProdutos(res.data);
+    const todosProdutos: Produtos[] = res.data
+    setProdutos(todosProdutos.slice(-3));
   }
 
   useEffect(() => {
@@ -53,9 +54,7 @@ export default function Home() {
                 lineHeight: '100%',
                 mb: { xs: 3, sm: 2 }
               }}
-
             >
-
               VOCÊ MAIS <span style={{ color: '#0DCA70', }}>SAUDÁVEL</span> <br /> COM ATIVIDADES AO AR LIVRE.
             </Typography>
 
@@ -64,9 +63,9 @@ export default function Home() {
                 fontWeight: 'bold',
                 fontSize: { xs: 25, sm: 28, md: 30 },
                 color: '#f0f8ff',
+                textAlign: 'center',
                 mb: 5
-              }}
-              align="center" >
+              }}>
               Atividades físicas e esportes em geral são a melhor forma de cuidar da saúde. <br />
               Motivamos você a se exercitar!
             </Typography>
@@ -81,7 +80,7 @@ export default function Home() {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        height: '100vh',
+        minHeight: '100vh',
         width: "100%",
         padding: "50px",
         flexDirection: "column"
@@ -100,23 +99,19 @@ export default function Home() {
           }} />
 
         </Typography>
-        <Grid container spacing={4}
+        <Grid container justifyContent='center' spacing={4}
           sx={{
 
           }}>
 
-          {produtos.map((produto, i) => {
-            if (i >= 3)
-              return (<></>)
-            else {
+          {
+            produtos.map((produto, i) => {
               return (
-                <Grid item xs={4} sx={{ marginY: "5px" }}>
+                <Grid item xs={12} sm={6} md={4} sx={{ marginY: "5px" }}>
                   <MediaCard titulo={produto.nome} foto_url={produto.foto_url} valor={produto.valor} id={String(produto.id)} key={produto.id} />
                 </Grid>
               )
-            }
-
-          })}
+            })}
 
         </Grid>
       </Box>

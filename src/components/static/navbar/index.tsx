@@ -133,7 +133,7 @@ export default function Navbar(props: Props) {
             justifyContent: "center",
             height: "80px",
             boxShadow: "none",
-            position: "absolute"
+            position: "absolute",
           }}>
             <Toolbar>
               <Box

@@ -23,14 +23,21 @@ export default function Home() {
 
   return (
     <>
-      <Box className="imagemHome">
+      <Box sx={{
+        backgroundImage: `url(https://live.staticflickr.com/65535/52649412230_4c600f1164_k.jpg)`,
+        backgroundRepeat: 'no-repeat',
+        width: '100%',
+        minHeight: '100%',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}>
+
         <Navbar />
         <Grid container xs={12} justifyContent='center' alignItems='center'  >
 
           <Grid item xs={8} display='flex' flexDirection='column' justifyContent='center' alignItems='center' className="animationfade"
             sx={{
               height: "calc(100vh - 80px)",
-
             }}>
 
             <Typography sx={{ fontWeight: 'bold', fontSize: '65px', }} className='TituloHome' lineHeight='100%' align="center" >
@@ -45,6 +52,7 @@ export default function Home() {
           </Grid>
 
         </Grid>
+
       </Box>
 
       <Box sx={{
@@ -90,6 +98,7 @@ export default function Home() {
 
         </Grid>
       </Box>
+
       <Footer />
     </>
   );

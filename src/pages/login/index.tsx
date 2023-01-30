@@ -85,8 +85,8 @@ function Login() {
     }}>
       <Grid item sx={{
         position: 'absolute',
-        top: 3,
-        left: 0,
+        top: { xs: 20, sm: 18, md: 8 },
+        left: { xs: 16, sm: 24 },
         height: { xs: 40, sm: 45, md: 64 }
       }} >
         <Link to='/'>

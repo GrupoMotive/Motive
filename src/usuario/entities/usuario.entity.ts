@@ -24,9 +24,4 @@ export class Usuario {
     @Column({ length: 255, nullable: false })
     @ApiProperty()
     senha: string
-
-    @IsNotEmpty({ message: "Foto não informada!" })
-    @Column({ length: 5000, nullable: false })
-    @ApiProperty()
-    foto: string
 }

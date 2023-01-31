@@ -35,6 +35,8 @@ export class UsuarioService {
         const buscaUsuario = await this.findByEmail(usuario.email);
 
         if (!buscaUsuario) {
+            usuario.email.toLocaleLowerCase()
+
             usuario.senha = await this.bcrypt.hashPassword(usuario.senha)
             return await this.usuarioRepository.save(usuario)
         }

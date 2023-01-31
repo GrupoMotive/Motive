@@ -25,10 +25,16 @@ export class Produto {
     @ApiProperty()
     valor: number
 
+
+    @IsNotEmpty()
+    @Column({ length: 400, nullable: false })
+    @ApiProperty()
+    descricao_breve: string
+
     @IsNotEmpty()
     @Column({ length: 4000, nullable: false })
     @ApiProperty()
-    descricao: string
+    descricao_completa: string
 
     @ApiProperty({ type: () => Categoria })
     @ManyToOne(() => Categoria, (categoria) => categoria.product, {

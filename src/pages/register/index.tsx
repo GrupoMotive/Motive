@@ -12,7 +12,6 @@ import backgroundImg from '../../assets/images/cadastro2.jpg'
 type FormValues = {
   nome: string
   email: string
-  foto: string
   senha: string,
   confirmarSenha?: string
 }
@@ -130,7 +129,6 @@ export default function Register() {
           <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' sx={{ color: "#0DCA70", fontWeight: "bold", fontSize: "24px" }}>CADASTRAR</Typography>
           <TextField {...register('nome')} id='nome' label='Nome' variant='filled' name='nome' required autoFocus margin='normal' fullWidth className='campo-nome' color='green' inputProps={{ style: { color: "#efeeee" } }} />
           <TextField {...register('email')} id='email' label='Email' variant='filled' name='email' required margin='normal' fullWidth className='campo-email' color='green' inputProps={{ style: { color: "#efeeee" } }} />
-          <TextField {...register('foto')} id='foto' label='Foto' variant='filled' name='foto' required margin='normal' fullWidth className='campo-foto' color='green' inputProps={{ style: { color: "#efeeee" } }} />
           <TextField {...register('senha')} id='senha' label='Senha' variant='filled' name='senha' required margin='normal' type='password' fullWidth className='campo-senha' color='green' inputProps={{ style: { color: "#efeeee" } }} />
           <TextField {...register('confirmarSenha')} id='Confirmar Senha' label='Confirmar senha' required variant='filled' name='confirmarSenha' margin='normal' type='password' fullWidth className='campo-confirmarSenha' color='green' inputProps={{ style: { color: "#efeeee" } }} />
           <Box marginTop={2} textAlign='center'>

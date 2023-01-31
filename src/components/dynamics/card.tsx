@@ -10,12 +10,12 @@ import { Height } from '@material-ui/icons';
 
 interface CardProps {
   titulo: string,
-  descricao: string,
+  descricao_breve: string,
   foto_url: string
   id: string
 }
 
-export default function MediaCard({ titulo, descricao, foto_url, id }: CardProps) {
+export default function MediaCard({ titulo, descricao_breve, foto_url, id }: CardProps) {
   return (
     <Card sx={{ maxWidth: 450, backgroundColor: "rgba(1, 255, 132, 0.877)" }}>
       <CardMedia
@@ -25,10 +25,10 @@ export default function MediaCard({ titulo, descricao, foto_url, id }: CardProps
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div" fontWeight="bold" fontSize={24}>
-          {titulo}
+          {titulo.toLocaleUpperCase()}
         </Typography>
         <Typography variant="body2" color="text.primary" fontSize={16}>
-          {descricao}
+          {descricao_breve}
         </Typography>
       </CardContent>
 

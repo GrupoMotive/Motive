@@ -11,17 +11,17 @@ import { AppController } from './app.controller';
 
 @Module({
   imports: [
-    /*     TypeOrmModule.forRoot({
-          type: 'mysql',
-          host: 'localhost',
-          port: 3306,
-          username: 'root',
-          password: 'root',
-          database: 'db_motive',
-          entities: [Categoria, Usuario, Produto],
-          synchronize: true,
-        }), */
     TypeOrmModule.forRoot({
+      type: 'mysql',
+      host: 'localhost',
+      port: 3306,
+      username: 'root',
+      password: 'root',
+      database: 'db_motive',
+      entities: [Categoria, Usuario, Produto],
+      synchronize: true,
+    }),
+    /* TypeOrmModule.forRoot({
       type: 'postgres',
       url: process.env.DATABASE_URL,
       autoLoadEntities: true,
@@ -31,7 +31,7 @@ import { AppController } from './app.controller';
         rejectUnauthorized: false
       },
       synchronize: true
-    }),
+    }), */
     CategoriaModule,
     UsuarioModule,
     ProdutoModule,

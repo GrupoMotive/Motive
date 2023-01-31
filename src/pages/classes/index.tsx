@@ -38,7 +38,7 @@ export default function Classes() {
   }, [])
 
   return (
-    <Box>
+    <Box sx={{ backgroundColor: "#fefefe" }}>
       <Box minHeight="55vh"
         width="100%"
         py={6}
@@ -95,17 +95,16 @@ export default function Classes() {
         mt: -8,
         mb: 4,
         boxShadow: 8,
-        backgroundColor: "#f5f5f5",
+        backgroundColor: "#fefefe",
         backgroundSize: "cover",
         backgroundPosition: "center",
-        display: "grid",
         borderRadius: '16px',
-        justifyContent: "space-between"
+
       }}>
-        <Grid container spacing={3} alignItems="stretch" >
+        <Grid container spacing={4} justifyContent='center' >
           {produtos.map(produto => (
-            <Grid item xs={12} sm={6} md={4} sx={{ marginY: "5px", display: "flex", justifyContent: "center" }}>
-              <MediaCard titulo={produto.nome} foto_url={produto.foto_url} valor={produto.valor} id={String(produto.id)} key={produto.id} />
+            <Grid item xs={12} sm={6} md={4} >
+              <MediaCard titulo={produto.nome} foto_url={produto.foto_url} descricao={produto.descricao} id={String(produto.id)} key={produto.id} />
             </Grid>
           ))}
         </Grid>

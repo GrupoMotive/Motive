@@ -41,7 +41,10 @@ export default function Register() {
       } else {
         delete (data.confirmarSenha);
 
-        await api.post('usuario', data);
+        console.log(data);
+
+        await api.post('usuario', data)
+
 
         toast.success('Cadastro realizado com sucesso', {
           transition: Flip,
@@ -114,7 +117,7 @@ export default function Register() {
 
 
 
-        <Box onSubmit={handleSubmit(handleRegister)} sx={{
+        <Box component='form' onSubmit={handleSubmit(handleRegister)} sx={{
           width: '100%',
           maxWidth: '480px',
           height: '100%',

@@ -100,18 +100,35 @@ export default function Navbar(props: Props) {
       }} />
 
       <List>
-        {navItems.map((item) => (
-          <ListItem key={item.name} disablePadding>
-            <ListItemButton sx={{ display: 'flex', justifyContent: 'center' }}>
-              <Link to={item.to}>
-                <ListItemText primary={item.name} sx={{
-                  color: 'black',
-                  px: 12
-                }} />
-              </Link>
-            </ListItemButton>
-          </ListItem>
-        ))}
+        {navItems.map((item) => {
+          if (item.name === 'LOGIN' && token !== '') {
+            return (
+              <ListItem key={'LOGOUT'} disablePadding>
+                <ListItemButton onClick={logout} sx={{ display: 'flex', justifyContent: 'center' }}>
+                  <Box>
+                    <ListItemText primary={'LOGOUT'} sx={{
+                      color: 'black',
+                      px: 12
+                    }} />
+                  </Box>
+                </ListItemButton>
+              </ListItem>)
+          } else {
+            return (
+              <ListItem key={item.name} disablePadding>
+                <ListItemButton sx={{ display: 'flex', justifyContent: 'center' }}>
+                  <Link to={item.to}>
+                    <ListItemText primary={item.name} sx={{
+                      color: 'black',
+                      px: 12
+                    }} />
+                  </Link>
+                </ListItemButton>
+              </ListItem>
+            )
+          }
+
+        })}
       </List>
     </Box>
   );

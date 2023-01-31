@@ -12,29 +12,11 @@ import api from "../../services/api";
 import Produto from "../../models/produto";
 
 export default function Product() {
-  const navigate = useNavigate()
   const [produto, setProduto] = useState<Produto>()
   const { id } = useParams<{ id: string }>();
   const token = useSelector<TokenState, TokenState["tokens"]>(
     (state) => state.tokens
   );
-
-  useEffect(() => {
-    if (token === "") {
-      toast.error('Você precisa estar logado', {
-        position: "top-right",
-        autoClose: 2000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: false,
-        draggable: false,
-        theme: "colored",
-        progress: undefined,
-      });
-      navigate("/login")
-
-    }
-  }, [token, navigate])
 
   useEffect(() => {
     if (id !== undefined) {
@@ -54,7 +36,7 @@ export default function Product() {
 
   return (
     <Box>
-      <Box minHeight="20vh"
+      <Box minHeight="35vh"
         width="100%"
         py={6}
         px={{ xs: 2, lg: 0 }}
@@ -71,40 +53,32 @@ export default function Product() {
 
       <Box minHeight="25rem" alignItems="center" sx={{
         p: 2,
-        mx: { xs: 2, lg: 3 },
+        mx: 2,
         mt: -8,
         mb: 4,
         boxShadow: 3,
         backgroundColor: "#fff",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        display: "grid",
-        borderRadius: '16px',
+        
+        
+        
+        borderRadius: '16px'
       }}>
 
-        <Grid container
-          justifyContent="center"
-          alignItems="center"
-          sx={{ borderRadius: '16px' }}
-        >
-
-          <Grid container item>
             <Box
               width="100%"
               bgcolor="white"
               borderRadius="xl"
               boxShadow="xl"
-              mb={6}
-              sx={{ overflow: "hidden", borderRadius: '16px' }}
+              mb={1}
+              mt={3}
+              ml={2}
+              pr={2}
+              sx={{ borderRadius: '16px' }}
             >
               <Grid container spacing={2}>
-                <Grid
-                  item
-                  xs={12}
-                  lg={5}
-                  position="relative"
-                  px={0}
+                <Grid item xs={12} lg={4}
                   sx={{
+                    height: {xs: 250, sm: 400, md:400},
                     backgroundImage: `url(${produto?.foto_url})`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
@@ -114,16 +88,18 @@ export default function Product() {
                 >
 
                 </Grid>
-                <Grid item xs={12} lg={7}>
-                  <Box component="form" p={2} method="post" sx={{ borderRadius: '16px' }}>
-                    <Box px={4} py={{ xs: 2, sm: 6 }}>
-                      <Typography variant="h2" mb={1} sx={{ fontWeight: 'bold' }}>
-                        Você escolheu {produto?.nome}
+                <Grid item xs={12} lg={8}>
+                  <Box component="form" p={1} method="post" sx={{ borderRadius: '16px' }}>
+                    <Box px={4} py={{ xs: 1 , sm: 6 }} display={"initial"}>
+                      <Typography variant="h2" mb={1} sx={{ fontWeight: 'bold', fontSize: {md: 60, sm: 45, xs: 35} }}>
+                        {produto?.nome}
                       </Typography>
-                      <Typography variant="body1" color="text" mb={2}>
+                      <Typography variant="body1" color="text" pt={1} pb={3} textAlign={"justify"}>
                         {produto?.descricao}
                       </Typography>
-                      <Box textAlign="right">
+                      <Box textAlign="end" sx={{
+                        paddingTop: {md: 14, sm: 4, xs: 1}
+                      }}>
                         <Link to={`/check/${produto?.id}`}>
                           <button className='buttonProduct'> MATRICULE-SE </button>
                         </Link>
@@ -149,14 +125,8 @@ export default function Product() {
                 </Grid>
               </Grid>
             </Box>
-          </Grid>
-
-
-        </Grid>
-
       </Box>
 
-      <br></br>
       <Footer />
 
 

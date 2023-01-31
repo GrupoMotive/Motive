@@ -8,9 +8,7 @@ import Erika from '../../assets/images/Erika.png'
 import Mauricio from '../../assets/images/Mauricio.jpg'
 import Nat from '../../assets/images/Nat.jpg'
 import Wallace from '../../assets/images/Wallace.jpg'
-import Ygor from '../../assets/images/Ygor.jpg'
 import Weslley from '../../assets/images/Wesley.jpg'
-import bgSobre from '../../assets/images/yog.jpg'
 import './style.css'
 
 export default function About() {
@@ -189,7 +187,7 @@ export default function About() {
           }}>
             <div id='membros'>
               <div className="membro">
-                <img width={150} height={150} src={Ygor} alt='Foto do colaborador Ygor' />
+                <img width={150} height={150} src={'https://media.licdn.com/dms/image/C4E03AQFnyQUIzYG_cg/profile-displayphoto-shrink_800_800/0/1657165818900?e=1680739200&v=beta&t=v0y0ZHqZ_WHjjltzQ3AZ23Y-2tszBVBokprx91zqocg'} alt='Foto do colaborador Ygor' />
 
 
                 <h2 style={{ paddingTop: "5px" }} > Igor Lima </h2>

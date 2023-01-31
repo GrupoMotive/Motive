@@ -66,7 +66,7 @@ export default function Home() {
                 textAlign: 'center',
                 mb: 5
               }}>
-              Atividades físicas e esportes em geral são a melhor forma de cuidar da saúde. <br />
+              Atividades físicas e esportes são a melhor forma de cuidar da saúde. <br />
               Motivamos você a se exercitar!
             </Typography>
 

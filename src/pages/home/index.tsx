@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Box, Divider, Grid, Typography } from "@mui/material";
 import api from "../../services/api";
-import Produtos from "../../models/produto";
+import Produto from "../../models/produto";
 import Navbar from "../../components/static/navbar";
 import './Home.css'
 import Footer from "../../components/static/footer";
@@ -10,11 +10,11 @@ import MediaCard from "../../components/dynamics/card";
 
 export default function Home() {
 
-  const [produtos, setProdutos] = useState<Produtos[]>([])
+  const [produtos, setProdutos] = useState<Produto[]>([])
 
   async function BuscaProduto() {
     const res = await api.get('produto');
-    const todosProdutos: Produtos[] = res.data
+    const todosProdutos: Produto[] = res.data
     setProdutos(todosProdutos.slice(-3));
   }
 
@@ -83,7 +83,8 @@ export default function Home() {
         minHeight: '100vh',
         width: "100%",
         padding: "50px",
-        flexDirection: "column"
+        flexDirection: "column",
+        backgroundColor: '#fefefe'
       }}>
         <Typography variant="h2" sx={{
           fontWeight: 'bold',
@@ -105,10 +106,10 @@ export default function Home() {
           }}>
 
           {
-            produtos.map((produto, i) => {
+            produtos.map((produto) => {
               return (
                 <Grid item xs={12} sm={6} md={4} sx={{ marginY: "5px" }}>
-                  <MediaCard titulo={produto.nome} foto_url={produto.foto_url} valor={produto.valor} id={String(produto.id)} key={produto.id} />
+                  <MediaCard titulo={produto.nome} foto_url={produto.foto_url} descricao={produto.descricao} id={String(produto.id)} key={produto.id} />
                 </Grid>
               )
             })}

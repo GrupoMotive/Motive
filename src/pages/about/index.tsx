@@ -19,7 +19,7 @@ export default function About() {
   console.log(email);
 
   return (
-    <Box>
+    <Box sx={{ backgroundColor: '#fefefe' }}>
       <Box minHeight="55vh"
         width="100%"
         py={6}
@@ -57,8 +57,8 @@ export default function About() {
         mx: { md: 2, lg: 3 },
         mt: -8,
         mb: 4,
-        bomdhadow: 3,
-        backgroundColor: "#fff",
+        boxShadow: 8,
+        backgroundColor: "#fefefe",
         backgroundSize: "cover",
         backgroundPosition: "center",
         display: "grid",

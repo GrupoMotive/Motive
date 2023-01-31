@@ -48,9 +48,9 @@ export default function Product() {
           display: "grid",
           placeItems: "center",
         }}>
+
         < Navbar />
       </Box>
-
 
       <Box minHeight="25rem" alignItems="center" sx={{
         p: 2,
@@ -59,9 +59,6 @@ export default function Product() {
         mb: 4,
         boxShadow: 3,
         backgroundColor: "#fff",
-
-
-
         borderRadius: '16px'
       }}>
 
@@ -76,7 +73,8 @@ export default function Product() {
           pr={2}
           sx={{ borderRadius: '16px' }}
         >
-          <Grid container spacing={2}>
+          <Grid container spacing={2} justifyContent='center'>
+
             <Grid item xs={12} lg={4}
               sx={{
                 height: { xs: 250, sm: 400, md: 400 },
@@ -87,52 +85,37 @@ export default function Product() {
                 borderRadius: '16px',
               }}
             >
-
             </Grid>
-            <Grid item xs={12} lg={8}>
-              <Box component="form" p={1} method="post" sx={{ borderRadius: '16px' }}>
-                <Box px={4} py={{ xs: 1, sm: 6 }} display={"initial"}>
+
+            <Grid item xs={12} lg={6}>
+              <Box p={1} sx={{ borderRadius: '16px', width: '100%', maxWidth: 700 }}>
+                <Box px={4} py={{ xs: 1, sm: 6 }} display={"initial"} >
                   <Typography variant="h2" mb={1} sx={{ fontWeight: 'bold', fontSize: { md: 60, sm: 45, xs: 35 } }}>
                     {produto?.nome}
                   </Typography>
                   <Typography variant="body1" color="text" pt={1} pb={3} textAlign={"justify"} sx={{
-                    width: { md: 700 },
                     pr: { xs: 2 },
-                    fontSize: { md: 18, sm: 18, xs: 18}
+                    fontSize: { md: 18, sm: 18, xs: 18 }
                   }}>
                     {produto?.descricao_completa}
                   </Typography>
-                  <Typography alignSelf={'flex-start'} color={'#0DCA70'} fontWeight={'Bold'} sx={{
-                    fontSize: 35,
-                  }}>
-                        R$ {produto?.valor}
-                      </Typography>
-                </Box>
                   <Box sx={{
-                    paddingTop: { md: 6, sm: 4, xs: 1 },
-                    width: { md: 700 }
-                    }}>
-                  <Grid item textAlign={'right'}>
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
+                    gap: 1
+                  }}>
+                    <Typography alignSelf={'flex-start'} color={'#0DCA70'} fontWeight={'Bold'}
+                      sx={{
+                        fontSize: { xs: 30, md: 35 }
+                      }}>
+                      R$ {produto?.valor}
+                    </Typography>
+
                     <Link to={`/check/${produto?.id}`}>
                       <button className='buttonProduct'> MATRICULE-SE </button>
                     </Link>
-                    </Grid>
                   </Box>
-
-                <Box pt={0.5} pb={3} px={3}>
-                  <Grid
-                    container
-                    item
-                    xs={12}
-                    md={6}
-                    justifyContent="flex-end"
-                    textAlign="right"
-                    ml="auto"
-                  >
-
-
-
-                  </Grid>
                 </Box>
               </Box>
             </Grid>

@@ -109,7 +109,7 @@ export default function Home() {
             produtos.map((produto) => {
               return (
                 <Grid item xs={12} sm={6} md={4} sx={{ marginY: "5px" }}>
-                  <MediaCard titulo={produto.nome} foto_url={produto.foto_url} descricao={produto.descricao} id={String(produto.id)} key={produto.id} />
+                  <MediaCard titulo={produto.nome} foto_url={produto.foto_url} descricao_breve={produto.descricao_breve} id={String(produto.id)} key={produto.id} />
                 </Grid>
               )
             })}

@@ -58,73 +58,73 @@ export default function Product() {
         mb: 4,
         boxShadow: 3,
         backgroundColor: "#fff",
-        
-        
-        
+
+
+
         borderRadius: '16px'
       }}>
 
-            <Box
-              width="100%"
-              bgcolor="white"
-              borderRadius="xl"
-              boxShadow="xl"
-              mb={1}
-              mt={3}
-              ml={2}
-              pr={2}
-              sx={{ borderRadius: '16px' }}
+        <Box
+          width="100%"
+          bgcolor="white"
+          borderRadius="xl"
+          boxShadow="xl"
+          mb={1}
+          mt={3}
+          ml={2}
+          pr={2}
+          sx={{ borderRadius: '16px' }}
+        >
+          <Grid container spacing={2}>
+            <Grid item xs={12} lg={4}
+              sx={{
+                height: { xs: 250, sm: 400, md: 400 },
+                backgroundImage: `url(${produto?.foto_url})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                alignContent: 'center',
+                borderRadius: '16px',
+              }}
             >
-              <Grid container spacing={2}>
-                <Grid item xs={12} lg={4}
-                  sx={{
-                    height: {xs: 250, sm: 400, md:400},
-                    backgroundImage: `url(${produto?.foto_url})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    alignContent: 'center',
-                    borderRadius: '16px',
-                  }}
-                >
 
-                </Grid>
-                <Grid item xs={12} lg={8}>
-                  <Box component="form" p={1} method="post" sx={{ borderRadius: '16px' }}>
-                    <Box px={4} py={{ xs: 1 , sm: 6 }} display={"initial"}>
-                      <Typography variant="h2" mb={1} sx={{ fontWeight: 'bold', fontSize: {md: 60, sm: 45, xs: 35} }}>
-                        {produto?.nome}
-                      </Typography>
-                      <Typography variant="body1" color="text" pt={1} pb={3} textAlign={"justify"}>
-                        {produto?.descricao}
-                      </Typography>
-                      <Box textAlign="end" sx={{
-                        paddingTop: {md: 14, sm: 4, xs: 1}
-                      }}>
-                        <Link to={`/check/${produto?.id}`}>
-                          <button className='buttonProduct'> MATRICULE-SE </button>
-                        </Link>
-                      </Box>
-                    </Box>
-
-                    <Box pt={0.5} pb={3} px={3}>
-                      <Grid
-                        container
-                        item
-                        xs={12}
-                        md={6}
-                        justifyContent="flex-end"
-                        textAlign="right"
-                        ml="auto"
-                      >
-
-
-
-                      </Grid>
-                    </Box>
+            </Grid>
+            <Grid item xs={12} lg={8}>
+              <Box component="form" p={1} method="post" sx={{ borderRadius: '16px' }}>
+                <Box px={4} py={{ xs: 1, sm: 6 }} display={"initial"}>
+                  <Typography variant="h2" mb={1} sx={{ fontWeight: 'bold', fontSize: { md: 60, sm: 45, xs: 35 } }}>
+                    {produto?.nome}
+                  </Typography>
+                  <Typography variant="body1" color="text" pt={1} pb={3} textAlign={"justify"}>
+                    {produto?.descricao_completa}
+                  </Typography>
+                  <Box textAlign="end" sx={{
+                    paddingTop: { md: 14, sm: 4, xs: 1 }
+                  }}>
+                    <Link to={`/check/${produto?.id}`}>
+                      <button className='buttonProduct'> MATRICULE-SE </button>
+                    </Link>
                   </Box>
-                </Grid>
-              </Grid>
-            </Box>
+                </Box>
+
+                <Box pt={0.5} pb={3} px={3}>
+                  <Grid
+                    container
+                    item
+                    xs={12}
+                    md={6}
+                    justifyContent="flex-end"
+                    textAlign="right"
+                    ml="auto"
+                  >
+
+
+
+                  </Grid>
+                </Box>
+              </Box>
+            </Grid>
+          </Grid>
+        </Box>
       </Box>
 
       <Footer />

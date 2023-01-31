@@ -104,7 +104,7 @@ export default function Classes() {
         <Grid container spacing={4} justifyContent='center' >
           {produtos.map(produto => (
             <Grid item xs={12} sm={6} md={4} >
-              <MediaCard titulo={produto.nome} foto_url={produto.foto_url} descricao={produto.descricao} id={String(produto.id)} key={produto.id} />
+              <MediaCard titulo={produto.nome} foto_url={produto.foto_url} descricao_breve={produto.descricao_breve} id={String(produto.id)} key={produto.id} />
             </Grid>
           ))}
         </Grid>

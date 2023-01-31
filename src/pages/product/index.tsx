@@ -96,22 +96,28 @@ export default function Product() {
                     {produto?.nome}
                   </Typography>
                   <Typography variant="body1" color="text" pt={1} pb={3} textAlign={"justify"} sx={{
-                    width: { md: 700, sm: 500 },
-                    pr: { xs: 2 }
+                    width: { md: 700 },
+                    pr: { xs: 2 },
+                    fontSize: { md: 18, sm: 18, xs: 18}
                   }}>
                     {produto?.descricao_completa}
                   </Typography>
-                  <Box textAlign="end" sx={{
-                    paddingTop: { md: 14, sm: 4, xs: 1 }
+                  <Typography alignSelf={'flex-start'} color={'#0DCA70'} fontWeight={'Bold'} sx={{
+                    fontSize: 35,
                   }}>
-                    <Link to={`/check/${produto?.id}`}>
-                      <Typography textAlign={"left"} >
-                        {produto?.valor}
+                        R$ {produto?.valor}
                       </Typography>
+                </Box>
+                  <Box sx={{
+                    paddingTop: { md: 6, sm: 4, xs: 1 },
+                    width: { md: 700 }
+                    }}>
+                  <Grid item textAlign={'right'}>
+                    <Link to={`/check/${produto?.id}`}>
                       <button className='buttonProduct'> MATRICULE-SE </button>
                     </Link>
+                    </Grid>
                   </Box>
-                </Box>
 
                 <Box pt={0.5} pb={3} px={3}>
                   <Grid

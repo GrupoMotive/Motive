@@ -145,26 +145,25 @@ export default function Navbar(props: Props) {
           height: "80px",
         }}>
           <AppBar component="nav" color='transparent' sx={{
-            display: "flex",
-            alignItems: 'normal',
-            justifyContent: "center",
+            display: 'flex',
+            justifyContent: 'center',
             height: "80px",
             boxShadow: "none",
             position: "absolute",
           }}>
-            <Toolbar>
-              <Box
-                component="div"
-                sx={{
-                  flexGrow: '1',
-                  display: { xs: `${displayNavbar}` },
-                  height: { xs: 40, sm: 45, md: 64 }
-                }}
-              >
-                <Link to='/'>
-                  <img src={whiteLogo} alt="logo" className='logo' />
-                </Link>
-              </Box>
+            <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
+              <Link to='/'>
+                <Box
+                  component='img'
+                  alt='logo'
+                  src={whiteLogo}
+                  sx={{
+                    display: { xs: `${displayNavbar}` },
+                    height: { xs: 40, sm: 45, md: 64 }
+                  }}
+                />
+              </Link>
+
 
               <IconButton
                 color="inherit"
@@ -221,6 +220,7 @@ export default function Navbar(props: Props) {
               </Box>
             </Toolbar>
           </AppBar>
+
           <Box component="nav">
             <Drawer
               container={container}

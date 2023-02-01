@@ -1,5 +1,6 @@
 import React from "react";
-import Container from "@material-ui/core/Container";
+import { Link } from "react-router-dom";
+import { Container } from "@mui/material";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
@@ -7,9 +8,8 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import { Link } from "react-router-dom";
-import './footer.css'
 import whiteLogo from '../../../assets/images/WhiteLogo-Motive.png'
+import './footer.css'
 
 
 export default function Footer() {

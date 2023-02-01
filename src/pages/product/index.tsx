@@ -1,15 +1,13 @@
 import React, { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
+import { useSelector } from "react-redux";
 import { Box, Grid, Typography } from "@mui/material";
 import Navbar from "../../components/static/navbar";
 import Footer from "../../components/static/footer";
-import { Link, useNavigate, useParams } from "react-router-dom";
-import bgProduct from '../../assets/images/bgproduct.jpg'
-import './style.css'
-import { useSelector } from "react-redux";
 import { TokenState } from "../../store/tokens/tokensReducer";
-import { toast } from "react-toastify";
 import api from "../../services/api";
 import Produto from "../../models/produto";
+import './style.css'
 
 export default function Product() {
   const [produto, setProduto] = useState<Produto>()
@@ -33,7 +31,6 @@ export default function Product() {
     })
     setProduto(res.data)
   }
-
 
   return (
     <Box>

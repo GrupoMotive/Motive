@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { Box, Grid, Typography } from "@mui/material";
-import Navbar from "../../components/static/navbar";
-import Footer from "../../components/static/footer";
-import './style.css'
 import { useNavigate, useParams } from "react-router-dom";
-import bgCheck from '../../assets/images/bgproduct.jpg'
-import api from "../../services/api";
-import { toast } from "react-toastify";
 import { useSelector } from "react-redux";
+import { toast } from "react-toastify";
+import { Box, Grid, Typography } from "@mui/material";
+import Footer from "../../components/static/footer";
+import api from "../../services/api";
+import Navbar from "../../components/static/navbar";
 import { TokenState } from "../../store/tokens/tokensReducer";
 import Produto from "../../models/produto";
+import './style.css'
 
 export default function Check() {
 

@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { Flip, toast } from 'react-toastify';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
@@ -10,18 +13,20 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { ThemeProvider } from '@mui/material/styles';
-import { Link, useNavigate } from 'react-router-dom';
-import './style.css'
+import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
+import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
+import LoginOutlinedIcon from "@mui/icons-material/LoginOutlined";
+import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
+import RunCircleOutlinedIcon from '@mui/icons-material/RunCircleOutlined';
+import { ListItemIcon } from '@mui/material';
 import { TokenState } from '../../../store/tokens/tokensReducer';
-import { useDispatch, useSelector } from 'react-redux';
-import { Flip, toast } from 'react-toastify';
 import { addToken } from '../../../store/tokens/actions';
 import whiteLogo from '../../../assets/images/WhiteLogo-Motive.png'
 import Logo from '../../../assets/images/Logo-Motive.png'
 import { theme } from '../../../App'
+import './style.css'
 
 interface Props {
   /**
@@ -33,11 +38,27 @@ interface Props {
 
 const drawerWidth = 240;
 
+const aulasIcon = (
+  <RunCircleOutlinedIcon />
+)
+
+const loginIcon = (
+  <LoginOutlinedIcon />
+)
+
+const homeIcon = (
+  <HomeOutlinedIcon />
+)
+
+const aboutIcon = (
+  <InfoOutlinedIcon />
+)
+
 const navItems = [
-  { name: "HOME", to: "/" },
-  { name: 'AULAS', to: "/aulas" },
-  { name: 'SOBRE', to: "/sobre" },
-  { name: 'LOGIN', to: "/login" }
+  { name: "HOME", to: "/", icon: homeIcon },
+  { name: 'AULAS', to: "/aulas", icon: aulasIcon },
+  { name: 'SOBRE', to: "/sobre", icon: aboutIcon },
+  { name: 'LOGIN', to: "/login", icon: loginIcon }
 ];
 
 export default function Navbar(props: Props) {
@@ -106,28 +127,25 @@ export default function Navbar(props: Props) {
         {navItems.map((item) => {
           if (item.name === 'LOGIN' && token !== '') {
             return (
-              <ListItem key={'LOGOUT'} disablePadding>
-                <ListItemButton onClick={logout} sx={{ display: 'flex', justifyContent: 'center' }}>
-                  <Box>
-                    <ListItemText primary={'LOGOUT'} sx={{
-                      color: 'black',
-                      px: 12
-                    }} />
-                  </Box>
-                </ListItemButton>
-              </ListItem>)
+              <ListItemButton onClick={logout}>
+                <ListItem>
+                  <ListItemIcon>
+                    <LogoutOutlinedIcon />
+                  </ListItemIcon>
+                  <ListItemText primary={'LOGOUT'} sx={{ color: '#000' }} />
+                </ListItem>
+              </ListItemButton>
+            )
           } else {
             return (
-              <ListItem key={item.name} disablePadding>
-                <ListItemButton sx={{ display: 'flex', justifyContent: 'center' }}>
-                  <Link to={item.to}>
-                    <ListItemText primary={item.name} sx={{
-                      color: 'black',
-                      px: 12
-                    }} />
-                  </Link>
-                </ListItemButton>
-              </ListItem>
+              <ListItemButton>
+                <ListItem component={Link} to={item.to}>
+                  <ListItemIcon>
+                    {item.icon}
+                  </ListItemIcon>
+                  <ListItemText primary={item.name} sx={{ color: '#000' }} />
+                </ListItem>
+              </ListItemButton>
             )
           }
 

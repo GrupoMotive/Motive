@@ -10,7 +10,23 @@ import Produto from "../../models/produto";
 import './style.css'
 
 export default function Product() {
-  const [produto, setProduto] = useState<Produto>()
+  const initialValuesCategoria = {
+    id: 0,
+    modalidae: '',
+    municipio: ''
+  }
+
+  const initialValuesProduto = {
+    id: 0,
+    nome: '',
+    descricao_breve: '',
+    descricao_completa: '',
+    foto_url: '',
+    valor: 0,
+    categoria: initialValuesCategoria
+  }
+
+  const [produto, setProduto] = useState<Produto>(initialValuesProduto)
   const { id } = useParams<{ id: string }>();
   const token = useSelector<TokenState, TokenState["tokens"]>(
     (state) => state.tokens
@@ -104,9 +120,10 @@ export default function Product() {
                   }}>
                     <Typography alignSelf={'flex-start'} color={'#0DCA70'} fontWeight={'Bold'}
                       sx={{
-                        fontSize: { xs: 30, md: 35 }
+                        fontSize: { xs: 28, md: 35 }
                       }}>
-                      R$ {produto?.valor}
+                      {Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' })
+                        .format(produto?.valor)}
                     </Typography>
 
                     <Link to={`/check/${produto?.id}`}>

@@ -95,7 +95,7 @@ export default function Product() {
                   </Typography>
                   <Typography variant="body1" color="text" pt={1} pb={3} textAlign={"justify"} sx={{
                     pr: { xs: 2 },
-                    fontSize: { md: 18, sm: 18, xs: 18 }
+                    fontSize: { xs: 18 }
                   }}>
                     {produto?.descricao_completa}
                   </Typography>

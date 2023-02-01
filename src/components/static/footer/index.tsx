@@ -71,20 +71,20 @@ export default function Footer() {
           <Grid item xs={12} md={4}>
             <Box borderBottom={3} borderColor={"#0DCA70"} pb={1}>DÚVIDAS, SUGESTÕES E ELOGIOS:</Box>
             <Box pt={3} pb={1} borderBottom={2} borderColor={"#101522"}>
-              <a href="https://grupo1.generation.rj@gmail.com" className="LinkFooter" >
+              <a href="https://motivegrupo@gmail.com" className="LinkFooter" >
                 <MailOutlineIcon sx={{ color: "#0DCA70", fontSize: 30 }} />
                 <Typography pl={1} sx={{ color: "white", ":hover": { opacity: 0.7 }, transition: "0.2s all" }}>
-                  grupo1.generation.rj@gmail.com
+                  motivegrupo@gmail.com
                 </Typography>
               </a>
             </Box>
             <Box pt={1} pb={1} borderBottom={2} borderColor={"#101522"}>
-              <Link to='/' className="LinkFooter">
+              <a href='https://wa.me/5521991323526' className="LinkFooter">
                 <WhatsAppIcon sx={{ color: "#0DCA70", fontSize: 30 }} />
                 <Typography pl={1} sx={{ color: "white", ":hover": { opacity: 0.7 }, transition: "0.2s all" }}>
                   +55 21 99132-3526
                 </Typography>
-              </Link>
+              </a>
             </Box>
             <Box pt={1} pb={1} borderBottom={2} borderColor={"#101522"}>
               <a href='https://github.com/GrupoMotive' className="LinkFooter">

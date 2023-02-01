@@ -131,7 +131,7 @@ export default function Check() {
                     pr: { xs: 2 },
                     fontSize: { xs: 18 }
                   }}>
-                    Você adquiriu a aula de {produto?.nome}! Confira todas as informações no e-mail cadastrado. Bom treino!
+                    Você adquiriu o evento de {produto?.nome}! Confira todas as informações no e-mail cadastrado. Bom treino!
                   </Typography>
 
                   <Box sx={{

@@ -140,9 +140,6 @@ export default function Check() {
                     justifyContent: 'space-between',
                     gap: 1
                   }}>
-
-
-
                   </Box>
                 </Box>
               </Box>

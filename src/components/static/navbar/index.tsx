@@ -82,19 +82,22 @@ export default function Navbar(props: Props) {
   const drawer = (
     <Box onClick={handleDrawerToggle} alignItems='center' sx={{ height: '100%' }}>
 
-      <Box
-        component="div"
-        sx={{
-          my: 2,
-          display: { xs: 'flex' },
-          justifyContent: 'center',
-          height: { xs: 40, sm: 45, md: 64 },
-        }}
-      >
-        <Link to='/'>
-          <img src={Logo} alt="logo" className='logo' />
-        </Link>
-      </Box>
+      <Link to='/'>
+        <Box
+          component="img"
+          alt='logo'
+          src={Logo}
+          sx={{
+            mx: 'auto',
+            my: 2,
+            display: { xs: 'flex' },
+            justifyContent: 'center',
+            alignItems: 'center',
+            height: { xs: 40, sm: 45, md: 64 },
+          }}
+        />
+      </Link>
+
       <Divider sx={{
         mb: 2,
       }} />

@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { Box, Button, Grid, TextField, Typography } from '@mui/material';
+import axios from 'axios';
+import { useDispatch } from 'react-redux';
+import { Flip, toast } from 'react-toastify'
 import { Link, useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
-import axios from 'axios';
+import { Box, Button, Grid, TextField, Typography } from '@mui/material';
 import api from '../../services/api';
-import { useDispatch } from 'react-redux';
 import { addToken } from '../../store/tokens/actions';
-import { Flip, toast } from 'react-toastify'
 import logo from '../../assets/images/WhiteLogo-Motive.png'
-import backgroundImg from '../../assets/images/back.jpg'
 import './Login.css';
 
 type FormValues = {

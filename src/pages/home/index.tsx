@@ -3,10 +3,9 @@ import { Box, Divider, Grid, Typography } from "@mui/material";
 import api from "../../services/api";
 import Produto from "../../models/produto";
 import Navbar from "../../components/static/navbar";
-import './Home.css'
 import Footer from "../../components/static/footer";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 import MediaCard from "../../components/dynamics/card";
+import './Home.css'
 
 export default function Home() {
 

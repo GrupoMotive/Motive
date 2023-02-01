@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from "react";
+import { useForm } from 'react-hook-form'
+import SearchIcon from '@mui/icons-material/Search';
+import { Container } from "@mui/system";
 import { Box, Divider, Grid, IconButton, TextField, Typography } from "@mui/material";
 import Produto from "../../models/produto";
 import api from "../../services/api";
 import MediaCard from "../../components/dynamics/card";
 import Footer from "../../components/static/footer";
 import Navbar from "../../components/static/navbar";
-import SearchIcon from '@mui/icons-material/Search';
-import bgAulas from '../../assets/images/bgaulas.jpg'
-import { useForm } from 'react-hook-form'
-import { Container, flexbox } from "@mui/system";
 
 type FormValues = {
   search: string

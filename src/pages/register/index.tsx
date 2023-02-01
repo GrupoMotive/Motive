@@ -1,13 +1,13 @@
 import React from 'react'
-import { Box, Button, Grid, TextField, Typography } from '@mui/material';
-import { Link, useNavigate } from 'react-router-dom';
-import { useForm } from 'react-hook-form'
-import "./register.css"
 import axios from 'axios';
+import { useForm } from 'react-hook-form'
+import { Link, useNavigate } from 'react-router-dom';
+import { Box, Button, Grid, TextField, Typography } from '@mui/material';
 import api from '../../services/api';
 import { toast, Flip } from 'react-toastify';
 import logo from '../../assets/images/WhiteLogo-Motive.png'
-import backgroundImg from '../../assets/images/cadastro2.jpg'
+import "./register.css"
+
 
 type FormValues = {
   nome: string
@@ -41,10 +41,7 @@ export default function Register() {
       } else {
         delete (data.confirmarSenha);
 
-        console.log(data);
-
         await api.post('usuario', data)
-
 
         toast.success('Cadastro realizado com sucesso', {
           transition: Flip,
